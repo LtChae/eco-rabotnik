@@ -1,0 +1,34 @@
+<ecopedia icon="BuildContract" priority="-5">
+  <summary>Rabotniks take hauling and harvest contracts from contract boards in their settlement.</summary>
+  <section>
+Besides [Work Parties], Rabotniks take [Contracts] posted on a [Contract Board|Contract Board Component] in their settlement. A Rabotnik holds one contract at a time. It takes a new contract only on an update where it did no work party labor. Once it has accepted a contract, it finishes that contract before doing anything else.
+  </section>
+  <section type="header">What a contract needs</section>
+  <section>
+A Rabotnik only accepts a contract that:
+- pays in currency,
+- has <b>Auto-Accept</b> checked, so the system confirms the job is done,
+- asks for <b>no deposit</b>,
+- pays enough to cover the food the work burns (see [Rabotnik Work Parties]), and
+- gives enough time: the Rabotnik's estimated work time must be at most half of the contract's time limit, by default. A contractor can't quit a contract, so this leaves room for delays.
+  </section>
+  <section type="header">Hauling</section>
+  <section>
+<b>Transport</b> contracts ask the contractor to move items from one container to another. A Rabotnik hauls up to 40 items per update, by default, and burns calories for each item. A big job takes several updates.
+
+The items to haul are fixed when the contract is accepted. If you use up items in the source container afterwards, the contract stalls until you restock them. The Rabotnik tells you what is missing and does work party labor in the meantime.
+  </section>
+  <section type="header">Harvesting</section>
+  <section>
+<b>Harvest Field</b> contracts ask the contractor to harvest ripe plants on a deed and deliver the harvest to a container. A Rabotnik needs a tool, kept in its [Rabotnik Logbook] or its own inventory:
+- a <b>sickle or scythe</b> for crops and bushes,
+- an <b>axe</b> for trees. A chainsaw doesn't count.
+
+Tools wear down with use. If a Rabotnik has no working tool, by default it sells its broken ones to settlement shops that buy them and buys the best working one it can afford. It never spends money it needs for rent and food.
+
+A Rabotnik doesn't fell trees physically. It works out the swings and calories a player would need, then removes the tree and delivers the logs, with no falling trunk and no debris left behind. Rabotniks leave very large trees (over 200 logs, by default) and trees a player has already felled to players.
+  </section>
+  <section>
+A client whose contract pays generously gets [Reputation] from the Rabotnik when it pays out. See [Rabotniks in Society].
+  </section>
+</ecopedia>

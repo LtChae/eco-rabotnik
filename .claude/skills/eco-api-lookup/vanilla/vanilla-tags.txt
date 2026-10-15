@@ -1,0 +1,113 @@
+# Tag name	number of [Tag(...)] uses in __core__
+Advanced Research	7
+AdvancedModule	1
+Animal Skin	2
+Animals	2
+AshlarStone	30
+BakedFood	8
+BakedVegetable	7
+Basic Research	6
+BasicModule	1
+Bread	2
+Burnable Fuel	88
+CampfireSalad	4
+CanHoldFlowers	6
+CharredFruit	3
+CharredGreen	3
+CharredVegetable	8
+Clothes	76
+Coal	2
+CompositeLumber	55
+ConcentratedOre	3
+Concrete	5
+Constructable	4106
+Construction	1
+Crop	37
+Crop Seed	23
+CrushedRock	9
+Currency	18
+DebrisPickupable	1
+Decontaminant	3
+Diggable	3
+Economy	1
+Excavatable	93
+Excavation	3
+Explosives	3
+Fabric	5
+Fat	3
+Fertilizer	10
+FertilizerFiller	3
+Fish	8
+FriedVegetable	5
+Fruit	6
+Fuel	36
+Fungus	4
+Garbage	13
+Gear	2
+Grain	3
+Greens	4
+Hardwood	15
+HardwoodLumber	15
+Harvestable	26
+Harvester	4
+HerbivoreFeed	15
+HewnLog	12
+Hoer	1
+Housing	414
+Insulation	3
+LargeDoor	5
+LargeFish	2
+Liquid	1
+Liquid Fuel	2
+LoaderLiftable	12
+Lumber	15
+Marine Life	2
+MediumCarcass	7
+MediumFish	4
+MediumLeatherCarcass	4
+MediumWoolyCarcass	2
+Metal	20
+Minable	13
+Modern Research	6
+ModernModule	1
+MortaredStone	16
+Mountable	107
+NaturalFiber	8
+Oil	2
+Ore	20
+Petals	8
+Pigment	8
+PlaceableOnUnownedLand	1
+Planter	1
+Plants	66
+Plow	1
+Profession	10
+Raw Food	23
+Reapable	42
+Research	19
+Road	3
+RoadType	2
+Rock	35
+Root	3
+Salad	2
+Samplable	1
+Silica	2
+SmallCarcass	2
+SmallFish	2
+Softwood	20
+SoftwoodLumber	15
+Specialty	34
+SpecialtyModule	44
+Teachable	34
+TinyCarcass	6
+TinyFurCarcass	2
+TinyLeatherCarcass	3
+Tool	56
+Torch	1
+UnderWater	5
+Upgrade	59
+Usable	778
+Vegetable	7
+Waste Product	7
+Wood	50
+WoodBoard	3

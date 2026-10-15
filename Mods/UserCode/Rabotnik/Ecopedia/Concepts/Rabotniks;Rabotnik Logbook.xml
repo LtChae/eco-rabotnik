@@ -1,0 +1,39 @@
+<ecopedia icon="RabotnikLogbookItem" priority="-9">
+  <summary>The Rabotnik Logbook is a Rabotnik's home base: place it to bring in a worker, and stock it to keep the worker going.</summary>
+  <section>
+The <b>Rabotnik Logbook</b> is crafted at a Carpentry Table with Carpentry level 1, from 20 Plant Fibers and 10 Wood Boards.
+
+Place it inside a room of a house within a settlement. It can sit on tables, like a lamp. A Logbook outside a settlement still gets a Rabotnik, but the Rabotnik waits and does nothing until the Logbook is inside one.
+
+Once a Rabotnik moves in, the Logbook is named after it, and its name is printed in gold on the spine. You can edit the spine text like a sign's, but the Rabotnik's name comes back on its next update.
+
+Picking the Logbook up retires its Rabotnik. The Rabotnik moves out, leaves the settlement and keeps its savings. See [Rabotniks Overview].
+  </section>
+  <section type="header">Storage</section>
+  <section>
+The Logbook has 8 storage slots and accepts only what the Rabotnik uses:
+- <b>Food</b>, which the Rabotnik eats when it gets hungry.
+- <b>Skill scrolls</b>. The first one stocked becomes the Rabotnik's skill, if it has none yet.
+- <b>Harvest tools</b>: sickles and scythes for crops, and axes for trees. A Rabotnik needs these for [Rabotnik Contracts|Rabotnik Contracts] that involve harvesting. Chainsaws don't count.
+  </section>
+  <section type="header">The three tabs</section>
+  <section>
+- <b>Rabotnik</b>: the Rabotnik's name, skill and level, calories, supplies, and the nutrition and housing parts of its [Experience] rate. This tab also has the base skill buttons.
+- <b>Home and Money</b>: citizenship, home, rent, bank balance, and what the Rabotnik has earned and spent. Choose a currency and an amount, then press <b>Fund Worker</b> to send money from your own account to the Rabotnik.
+- <b>Activity</b>: what the Rabotnik did on its last update, its lifetime record (labor, meals, parties, items hauled, plants harvested, contracts), and an event log.
+  </section>
+  <section type="header">Notices</section>
+  <section>
+By default, the Logbook's owner gets a chat message when the Rabotnik's situation changes. For example, when it:
+- becomes a citizen,
+- moves in or loses its home,
+- learns its skill,
+- runs out of food,
+- runs low on rent money (fewer than 12 hours of rent left), or
+- joins a work party.
+  </section>
+  <section type="header">Culture</section>
+  <section>
+A Logbook counts as a <b>Cultural</b> furnishing, like a painting. Its value is the culture its Rabotnik creates, which grows with the Rabotnik's quality of life and reputation. See [Rabotniks in Society].
+  </section>
+</ecopedia>

@@ -1,0 +1,35 @@
+<ecopedia icon="RabotnikMaskItem" priority="-10">
+  <summary>What Rabotniks are and how to get one working.</summary>
+  <section>
+A <b>Rabotnik</b> is a worker who has no body in the world. Rabotniks are real citizens: they join your settlement, rent a home, pay rent and taxes, eat food, and supply labor to [Work Parties] and [Contracts]. They show up in the census, vote, and follow the same laws as everyone else.
+
+Every Rabotnik is tied to a [Rabotnik Logbook]. Placing a Logbook brings in a Rabotnik, and picking it up sends that Rabotnik away. A Logbook is the only way to get a Rabotnik, so its owner controls how many there are.
+  </section>
+  <section type="header">Getting a Rabotnik started</section>
+  <section>
+1. Craft a [Rabotnik Logbook] and place it in a room of a house inside a settlement. A Rabotnik is assigned on its next update, which comes about every 30 seconds.
+2. The Rabotnik asks to become a citizen of the settlement. The settlement's [Immigration Policy] must allow it. See [Rabotnik Housing].
+3. Invite the Rabotnik to a residence and fund it so it can pay the move-in fee and rent. Use the Fund button on the Logbook's Home and Money tab.
+4. Give it one skill: press a base skill button on the Logbook, or put a skill scroll in the Logbook. See [Rabotnik Food and Skills].
+5. Stock the Logbook with food, or let the Rabotnik buy food from shops.
+6. The Rabotnik now looks for [Work Parties] that need its skill, and for hauling and harvest contracts. See [Rabotnik Work Parties] and [Rabotnik Contracts].
+
+The Logbook's Activity tab always says what the Rabotnik is doing, or why it isn't working.
+  </section>
+  <section type="header">Money belongs to the Rabotnik</section>
+  <section>
+Money you give a Rabotnik becomes <b>its own</b>. You can't take it back, and picking up the Logbook doesn't refund it. Only laws, such as [Taxes] and fines, can take a Rabotnik's money. A Rabotnik also keeps the wages it earns and spends them on rent, food and tools.
+
+When a Logbook is picked up, its Rabotnik leaves its home and settlement and waits in a pool, keeping its savings. The next Logbook placed anywhere gets a pooled Rabotnik before a new one is created.
+  </section>
+  <section>
+More about Rabotniks:
+- [Rabotnik Logbook]: crafting, placing and using the Logbook.
+- [Rabotnik Housing]: citizenship, residence and rent.
+- [Rabotnik Food and Skills]: eating, shopping and the Rabotnik's one skill.
+- [Rabotnik Work Parties]: which parties a Rabotnik joins.
+- [Rabotnik Contracts]: hauling and harvest contracts.
+- [Rabotniks in Society]: reputation, culture, laws and elections.
+- [Rabotnik Server Settings]: for server admins.
+  </section>
+</ecopedia>

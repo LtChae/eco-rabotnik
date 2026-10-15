@@ -1,0 +1,29 @@
+<ecopedia icon="Work Party" priority="-6">
+  <summary>Rabotniks supply labor to work parties in their settlement, when the pay is worth it.</summary>
+  <section>
+A Rabotnik with a home and a skill looks for active [Work Parties] posted in its own settlement. To hire Rabotniks, post a work party at a [Contract Board|Contract Board Component] that pays for labor.
+
+A Rabotnik finishes the parties it has already joined before joining new ones. It only works on orders that need no skill, or need its one skill at a level it has. Once it has joined, it labors until it runs out of calories or the order is done, then eats and continues on its next update.
+  </section>
+  <section type="header">Is the pay worth it?</section>
+  <section>
+Before joining a party, a Rabotnik compares the pay against food, by default. It estimates the party's pay for each point of labor and compares it with what the cheapest shop food costs for the calories that labor burns. If the pay doesn't cover the food, the Rabotnik skips the party.
+
+So that a Rabotnik will join:
+- Pay in a <b>currency</b>. A party that pays no currency is skipped.
+- Make sure a shop in the settlement <b>sells food in that currency</b>. Otherwise the Rabotnik can't price its food and skips the party.
+- Offer pay that covers at least the food cost of the work.
+
+A party with generous pay also earns its creator [Reputation] from the Rabotnik. See [Rabotniks in Society].
+  </section>
+  <section type="header">Why isn't my Rabotnik working?</section>
+  <section>
+The Logbook's Activity tab lists every party the Rabotnik passed over, with the reason, for example:
+- the order needs a skill or level it doesn't have,
+- the party has no open laborer slot,
+- the pay doesn't cover food, or
+- the Rabotnik has too few calories.
+
+As in vanilla, a Rabotnik can't leave a party after it has contributed labor, so it stays until the party finishes.
+  </section>
+</ecopedia>

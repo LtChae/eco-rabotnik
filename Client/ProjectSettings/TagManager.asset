@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - UMAKeepChain
+  - Atmosphere
+  - Meteor
+  - ModItem
+  - ModObject
+  - ModBlock
+  - Block
+  - WorldObject
+  - Item
+  - ModBenefit
+  - FirstPersonCamera
+  - Hand
+  - ModImage
+  - UMAIgnore
+  - Animal_Non Ragdoll Collider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - RoomObjects
+  - Water
+  - UI
+  - Harvesters
+  - BlocksPlayerMovement
+  - PostProcess
+  - Terrain
+  - IgnorePlayer
+  - Player
+  - PlayerFeet
+  - Minimap
+  - Atmosphere
+  - IgnoreSelfCollision
+  - Avatar
+  - Fade
+  - CollidesWithTerrain
+  - Animals
+  - Foliage
+  - OnlyGI
+  - IgnoreInteraction
+  - DecorationSpawnQuery
+  - MovingPlatform
+  - MovingPlatformSimulation
+  - FirstPersonView
+  - AvatarFaceView
+  - BlockSelection
+  - Projectiles
+  - TitleScreen
+  - ShadowPlacement
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  m_RenderingLayers:
+  - Default

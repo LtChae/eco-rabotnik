@@ -1,0 +1,601 @@
+F:Eco.World.BlockChange.BlockType	public Type BlockType
+F:Eco.World.BlockChange.ParamArray	public object[] ParamArray
+F:Eco.World.BlockChange.Position	public Vector3i Position
+F:Eco.World.BlockManager.GetCurrentEvent	public static Func<string> GetCurrentEvent
+F:Eco.World.Blocks.Fertile.Fertility	public float Fertility
+F:Eco.World.Blocks.GroundPollutionType.AcidRain	public const GroundPollutionType AcidRain
+F:Eco.World.Blocks.GroundPollutionType.Chemical	public const GroundPollutionType Chemical
+F:Eco.World.Blocks.GroundPollutionType.HeavyMineral	public const GroundPollutionType HeavyMineral
+F:Eco.World.Blocks.GroundPollutionType.None	public const GroundPollutionType None
+F:Eco.World.Blocks.GroundPollutionType.Soil	public const GroundPollutionType Soil
+F:Eco.World.Blocks.GroundPollutionType.value__	public int value__
+F:Eco.World.Blocks.LookAtTooltip.IconItemType	public Type IconItemType
+F:Eco.World.Blocks.LookAtTooltip.IconName	public string IconName
+F:Eco.World.Blocks.LookAtTooltip.Text	public readonly string Text
+F:Eco.World.Blocks.MoveEfficiency.Efficiency	public readonly float Efficiency
+F:Eco.World.Blocks.Ramp.RampType	public Type RampType
+F:Eco.World.Blocks.Road.RoadType	public readonly Type RoadType
+F:Eco.World.Blocks.WaterBlock.MaxWater	public const float MaxWater = 1F
+F:Eco.World.Blocks.WaterBlock.WaterLoss	public const float WaterLoss = 0.1F
+F:Eco.World.MaxYCache.SerializationTimestamp	public SerializationTimestamp SerializationTimestamp
+F:Eco.World.PersistentChunk.NumIdleTicksBeforeFreezing	public const int NumIdleTicksBeforeFreezing = 15
+F:Eco.World.Pipes.PassThroughEntry.Orientation	public Direction Orientation
+F:Eco.World.Pipes.PassThroughEntry.PipeBlockType	public Type PipeBlockType
+F:Eco.World.TopBlockCache.SerializationTimestamp	public SerializationTimestamp SerializationTimestamp
+F:Eco.World.WaterHeightCache.SerializationTimestamp	public SerializationTimestamp SerializationTimestamp
+F:Eco.World.WorldChunk.blocks	protected Block[] blocks
+F:Eco.World.WorldChunk.ChunkAndBlockChangedEvent	public static readonly ThreadSafeAction<Vector3i, Vector3i, Block, Block> ChunkAndBlockChangedEvent
+F:Eco.World.WorldChunk.ChunkChangedEvent	public static readonly ThreadSafeAction<WorldChunk> ChunkChangedEvent
+F:Eco.World.WorldCurveMode.CylinderX	public const WorldCurveMode CylinderX
+F:Eco.World.WorldCurveMode.CylinderZ	public const WorldCurveMode CylinderZ
+F:Eco.World.WorldCurveMode.Flat	public const WorldCurveMode Flat
+F:Eco.World.WorldCurveMode.InverseCylinderX	public const WorldCurveMode InverseCylinderX
+F:Eco.World.WorldCurveMode.InverseCylinderZ	public const WorldCurveMode InverseCylinderZ
+F:Eco.World.WorldCurveMode.InverseSphere	public const WorldCurveMode InverseSphere
+F:Eco.World.WorldCurveMode.Sphere	public const WorldCurveMode Sphere
+F:Eco.World.WorldCurveMode.value__	public int value__
+F:Eco.World.WorldUtils.PosDescription.DeepUnderwater	public const WorldUtils.PosDescription DeepUnderwater
+F:Eco.World.WorldUtils.PosDescription.HighInAir	public const WorldUtils.PosDescription HighInAir
+F:Eco.World.WorldUtils.PosDescription.JustAboveGround	public const WorldUtils.PosDescription JustAboveGround
+F:Eco.World.WorldUtils.PosDescription.JustAboveWater	public const WorldUtils.PosDescription JustAboveWater
+F:Eco.World.WorldUtils.PosDescription.RiverBed	public const WorldUtils.PosDescription RiverBed
+F:Eco.World.WorldUtils.PosDescription.TopGround	public const WorldUtils.PosDescription TopGround
+F:Eco.World.WorldUtils.PosDescription.Underground	public const WorldUtils.PosDescription Underground
+F:Eco.World.WorldUtils.PosDescription.Unknown	public const WorldUtils.PosDescription Unknown
+F:Eco.World.WorldUtils.PosDescription.value__	public int value__
+F:Eco.World.WorldUtils.PosDescription.WaterSurface	public const WorldUtils.PosDescription WaterSurface
+M:Eco.World.AtmosphereObject.#ctor	public AtmosphereObject()
+M:Eco.World.AtmosphereObject.Destroy	public void Destroy()
+M:Eco.World.AtmosphereObject.IsNotRelevant(Eco.Shared.Networking.INetObjectViewer)	public bool IsNotRelevant(INetObjectViewer viewer)
+M:Eco.World.AtmosphereObject.IsRelevant(Eco.Shared.Networking.INetObjectViewer)	public bool IsRelevant(INetObjectViewer viewer)
+M:Eco.World.AtmosphereObject.IsUpdated(Eco.Shared.Networking.INetObjectViewer)	public bool IsUpdated(INetObjectViewer viewer)
+M:Eco.World.AtmosphereObject.ReceiveInitialState(Eco.Shared.Serialization.BSONObject)	public void ReceiveInitialState(BSONObject bsonObj)
+M:Eco.World.AtmosphereObject.ReceiveUpdate(Eco.Shared.Serialization.BSONObject)	public void ReceiveUpdate(BSONObject bsonObj)
+M:Eco.World.AtmosphereObject.SendInitialState(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public void SendInitialState(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.World.AtmosphereObject.SendUpdate(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public void SendUpdate(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.World.AtmosphereObject.SetDestroyedAtmosphere(System.Single,System.Single)	public void SetDestroyedAtmosphere(float percent, float time = 120F)
+M:Eco.World.AtmosphereType.#ctor	public AtmosphereType()
+M:Eco.World.AtmosphereType.#ctor(System.Type)	public AtmosphereType(Type type)
+M:Eco.World.BlockChange.#ctor(System.Type,Eco.Shared.Math.Vector3i)	public BlockChange(Type blockType, Vector3i position)
+M:Eco.World.BlockChange.#ctor(System.Type,Eco.Shared.Math.Vector3i,System.Object[])	public BlockChange(Type blockType, Vector3i position, params object[] additionalData)
+M:Eco.World.BlockExtensions.GetID(Eco.World.Blocks.Block)	public static ushort GetID(this Block block)
+M:Eco.World.BlockManager.Create(System.Type,System.Object[])	public static Block Create(Type blockType, params object[] args)
+M:Eco.World.BlockManager.Create``1(System.Object[])	public static Block Create<T>(params object[] args) where T : Block
+M:Eco.World.BlockManager.FromId(System.UInt16)	public static Type FromId(ushort blockId)
+M:Eco.World.BlockManager.FromTypeName(System.String)	public static Type FromTypeName(string s)
+M:Eco.World.BlockManager.FromTypeNameNoCase(System.String)	public static Type FromTypeNameNoCase(string s)
+M:Eco.World.BlockManager.GetBlockID(System.Type)	public static ushort GetBlockID(Type type)
+M:Eco.World.BlockManager.IsShared(System.Type)	public static bool IsShared(Type type)
+M:Eco.World.BlockManager.SetBlockTestFuncs(System.Func{System.Type,System.Boolean},System.Action{System.Type})	public static void SetBlockTestFuncs(Func<Type, bool> func, Action<Type> destroyBlock)
+M:Eco.World.BlockManager.ToBson	public static BSONObject ToBson()
+M:Eco.World.BlockManager.TryConvert(Eco.World.Blocks.Block,Eco.World.Blocks.Block@)	public static bool TryConvert(Block block, out Block convert)
+M:Eco.World.Blocks.BiomeBlock.#ctor(System.String)	public BiomeBlock(string friendlyName)
+M:Eco.World.Blocks.BiomeDestructible.#ctor(System.Type[])	public BiomeDestructible(params Type[] destructedBy)
+M:Eco.World.Blocks.Block.#ctor	protected Block()
+M:Eco.World.Blocks.Block.BlockTypesWithAttribute(System.Type)	public static IEnumerable<Type> BlockTypesWithAttribute(Type block)
+M:Eco.World.Blocks.Block.Get``1	public T Get<T>() where T : BlockAttribute
+M:Eco.World.Blocks.Block.Get``1(System.Type)	public static T Get<T>(Type blockType) where T : BlockAttribute
+M:Eco.World.Blocks.Block.Initialize	public static void Initialize()
+M:Eco.World.Blocks.Block.Is``1	public bool Is<T>() where T : BlockAttribute
+M:Eco.World.Blocks.Block.Is``1(System.Type)	public static bool Is<T>(Type blockType) where T : BlockAttribute
+M:Eco.World.Blocks.Block.IsAny``2	public bool IsAny<T1, T2>()	// Checks if Eco.World.Blocks.Block is either or . More efficient than block.Is<T1>() || block.Is<T2>().
+M:Eco.World.Blocks.Block.IsWater	public bool IsWater()
+M:Eco.World.Blocks.Block.TryGet``1(``0@)	public bool TryGet<T>(out T blockAttribute) where T : BlockAttribute
+M:Eco.World.Blocks.BlockAttribute.#ctor	protected BlockAttribute()
+M:Eco.World.Blocks.BlockType.#ctor	public BlockType()
+M:Eco.World.Blocks.BlockType.#ctor(System.Type)	public BlockType(Type type)
+M:Eco.World.Blocks.BuildRoomMaterialOption.#ctor	public BuildRoomMaterialOption()
+M:Eco.World.Blocks.CharredEarthBlock.#ctor	public CharredEarthBlock()
+M:Eco.World.Blocks.ChemicalWasteFluidBlock.#ctor	public ChemicalWasteFluidBlock()
+M:Eco.World.Blocks.Cliff.#ctor	public Cliff()
+M:Eco.World.Blocks.ColdForestSoilBlock.#ctor	public ColdForestSoilBlock()
+M:Eco.World.Blocks.Constructed.#ctor	public Constructed()
+M:Eco.World.Blocks.Crushed.#ctor	public Crushed()
+M:Eco.World.Blocks.DesertSandBlock.#ctor	public DesertSandBlock()
+M:Eco.World.Blocks.Diggable.#ctor	public Diggable()
+M:Eco.World.Blocks.DirtBlock.#ctor	public DirtBlock()
+M:Eco.World.Blocks.DoesntEncase.#ctor	public DoesntEncase()
+M:Eco.World.Blocks.Empty.#ctor	public Empty()
+M:Eco.World.Blocks.EncasedWaterBlock.#ctor	public EncasedWaterBlock()
+M:Eco.World.Blocks.EncasedWaterBlock.FillWithWater(Eco.Shared.Math.Vector3i)	public void FillWithWater(Vector3i pos)
+M:Eco.World.Blocks.Features.IColorBlockData.GetColor(Eco.Shared.Math.Vector3i)	virtual ByteColor GetColor(Vector3i worldPosition)
+M:Eco.World.Blocks.Features.IExtraBlockData.GetExtra(Eco.Shared.Math.Vector3i)	virtual byte GetExtra(Vector3i worldPosition)
+M:Eco.World.Blocks.Fertile.#ctor	public Fertile()
+M:Eco.World.Blocks.ForestSoilBlock.#ctor	public ForestSoilBlock()
+M:Eco.World.Blocks.FrozenSoilBlock.#ctor	public FrozenSoilBlock()
+M:Eco.World.Blocks.FulfillsRoomRequirementAttribute.#ctor(System.Type)	public FulfillsRoomRequirementAttribute(Type itemType)
+M:Eco.World.Blocks.GrassBlock.#ctor	public GrassBlock()
+M:Eco.World.Blocks.IceBlock.#ctor	public IceBlock()
+M:Eco.World.Blocks.IDestroyAwareBlock.Destroyed(Eco.Shared.Math.Vector3i,Eco.World.Blocks.Block)	void Destroyed(Vector3i worldPosition, Block replacement)
+M:Eco.World.Blocks.Impenetrable.#ctor	public Impenetrable()
+M:Eco.World.Blocks.ImpenetrableStoneBlock.#ctor	public ImpenetrableStoneBlock()
+M:Eco.World.Blocks.IndustrialSewageBlock.#ctor	public IndustrialSewageBlock()
+M:Eco.World.Blocks.IPlaceAwareBlock.Placed(Eco.Shared.Math.Vector3i)	void Placed(Vector3i worldPosition)
+M:Eco.World.Blocks.IsFormAttribute.#ctor(System.Type,System.Type)	public IsFormAttribute(Type formType, Type materialType)
+M:Eco.World.Blocks.ITickableBlock.Tick(Eco.Shared.Math.Vector3i,Eco.World.PersistentChunk,Eco.Shared.Pools.Collections.PoolableListWrapper{Eco.World.BlockChange})	void Tick(Vector3i worldPosition, PersistentChunk chunk, PoolableListWrapper<BlockChange> blockChanges)
+M:Eco.World.Blocks.LookAtTooltip.#ctor(System.String)	public LookAtTooltip(string tooltip)
+M:Eco.World.Blocks.Minable.#ctor(System.Int32)	public Minable(int hardness)
+M:Eco.World.Blocks.MoveEfficiency.#ctor(System.Single)	public MoveEfficiency(float efficiency)
+M:Eco.World.Blocks.MudBlock.#ctor	public MudBlock()
+M:Eco.World.Blocks.NextRamp.#ctor(System.Type,System.Int32)	public NextRamp(Type nextRamp, int yOffset)
+M:Eco.World.Blocks.Occupied.#ctor	public Occupied()
+M:Eco.World.Blocks.OceanSandBlock.#ctor	public OceanSandBlock()
+M:Eco.World.Blocks.Paint.#ctor	public Paint()
+M:Eco.World.Blocks.PetrolBlock.#ctor	public PetrolBlock()
+M:Eco.World.Blocks.PollutedSaltWaterBlock.#ctor	public PollutedSaltWaterBlock()
+M:Eco.World.Blocks.PollutedWaterBlock.#ctor	public PollutedWaterBlock()
+M:Eco.World.Blocks.PolluteGround.#ctor(Eco.World.Blocks.GroundPollutionType,System.Single)	public PolluteGround(GroundPollutionType type, float amount)
+M:Eco.World.Blocks.RailTrackBlock.#ctor	public RailTrackBlock()
+M:Eco.World.Blocks.RainforestSoilBlock.#ctor	public RainforestSoilBlock()
+M:Eco.World.Blocks.Ramp.#ctor(System.Type)	public Ramp(Type type)
+M:Eco.World.Blocks.RiverbedBlock.#ctor	public RiverbedBlock()
+M:Eco.World.Blocks.RiverSandBlock.#ctor	public RiverSandBlock()
+M:Eco.World.Blocks.Road.#ctor(System.Single,System.Type)	public Road(float efficiency, Type roadType = null)
+M:Eco.World.Blocks.Road.#ctor(System.Type)	public Road(Type roadType)
+M:Eco.World.Blocks.RockySoilBlock.#ctor	public RockySoilBlock()
+M:Eco.World.Blocks.RotatedVariants.#ctor(System.Type[])	public RotatedVariants(params Type[] variantTypes)
+M:Eco.World.Blocks.SaltWaterBlock.#ctor	public SaltWaterBlock()
+M:Eco.World.Blocks.SandBlock.#ctor	public SandBlock()
+M:Eco.World.Blocks.SewageBlock.#ctor	public SewageBlock()
+M:Eco.World.Blocks.SnowBlock.#ctor	public SnowBlock()
+M:Eco.World.Blocks.Solid.#ctor	public Solid()
+M:Eco.World.Blocks.TaigaSoilBlock.#ctor	public TaigaSoilBlock()
+M:Eco.World.Blocks.Tillable.#ctor	public Tillable()
+M:Eco.World.Blocks.Tilled.#ctor	public Tilled()
+M:Eco.World.Blocks.TilledDirtBlock.#ctor	public TilledDirtBlock()
+M:Eco.World.Blocks.Transient.#ctor	public Transient()
+M:Eco.World.Blocks.TreeBlock.#ctor	public TreeBlock()
+M:Eco.World.Blocks.TreeDebris.#ctor(System.String)	public TreeDebris(string species)
+M:Eco.World.Blocks.TundraSoilBlock.#ctor	public TundraSoilBlock()
+M:Eco.World.Blocks.UnderWater.#ctor	public UnderWater()
+M:Eco.World.Blocks.Wall.#ctor	public Wall()
+M:Eco.World.Blocks.WarmForestSoilBlock.#ctor	public WarmForestSoilBlock()
+M:Eco.World.Blocks.WaterBlock.#ctor	public WaterBlock()
+M:Eco.World.Blocks.WaterBlock.#ctor(System.Single)	public WaterBlock(float water)
+M:Eco.World.Blocks.WaterBlock.#ctor(System.Single,System.Boolean)	public WaterBlock(float water, bool pipeSupplied = false)
+M:Eco.World.Blocks.WaterBlock.Destroyed(Eco.Shared.Math.Vector3i,Eco.World.Blocks.Block)	public void Destroyed(Vector3i worldPosition, Block replacement)
+M:Eco.World.Blocks.WaterBlock.GetExtra(Eco.Shared.Math.Vector3i)	public byte GetExtra(Vector3i worldPosition)
+M:Eco.World.Blocks.WaterBlock.Tick(Eco.Shared.Math.Vector3i,Eco.World.PersistentChunk,Eco.Shared.Pools.Collections.PoolableListWrapper{Eco.World.BlockChange})	public void Tick(Vector3i worldPosition, PersistentChunk chunk, PoolableListWrapper<BlockChange> blockChanges)
+M:Eco.World.Blocks.Watertight.#ctor	public Watertight()
+M:Eco.World.Blocks.WetlandsSoilBlock.#ctor	public WetlandsSoilBlock()
+M:Eco.World.Color.BlockColorManager.#ctor	public BlockColorManager()
+M:Eco.World.Color.BlockColorManager.BlockColorData.#ctor	public BlockColorData()
+M:Eco.World.Color.BlockColorManager.ClearColor(Eco.Shared.Math.Vector3i,System.Boolean)	public bool ClearColor(Vector3i pos, bool notify = true)
+M:Eco.World.Color.BlockColorManager.ClearColor(Eco.Shared.Math.WrappedWorldPosition3i,System.Boolean)	public bool ClearColor(WrappedWorldPosition3i pos, bool notify = true)
+M:Eco.World.Color.BlockColorManager.ClearColors(System.Collections.Generic.IEnumerable{Eco.Shared.Math.Vector3i},System.Boolean)	public void ClearColors(IEnumerable<Vector3i> positions, bool notify = true)
+M:Eco.World.Color.BlockColorManager.Initialize	public void Initialize()	// Initializes the Eco.World.Color.BlockColorManager instance.
+M:Eco.World.Color.BlockColorManager.SetColor(Eco.Shared.Math.Vector3i,Eco.Shared.Utils.ByteColor)	public void SetColor(Vector3i pos, ByteColor color)
+M:Eco.World.Color.BlockColorManager.SetColor(Eco.Shared.Math.WrappedWorldPosition3i,Eco.Shared.Utils.ByteColor)	public void SetColor(WrappedWorldPosition3i pos, ByteColor color)
+M:Eco.World.Color.BlockColorManager.TryGetColorData(Eco.Shared.Math.Vector3i,Eco.Shared.Utils.ByteColor@)	public bool TryGetColorData(Vector3i pos, out ByteColor color)
+M:Eco.World.Color.BlockColorManager.TryGetColorDataWrappedPos(Eco.Shared.Math.Vector3i,Eco.Shared.Utils.ByteColor@)	public bool TryGetColorDataWrappedPos(Vector3i pos, out ByteColor color)
+M:Eco.World.Color.IColoredBlock.Eco#World#Blocks#Features#IColorBlockData#GetColor(Eco.Shared.Math.Vector3i)	ByteColor IColorBlockData.GetColor(Vector3i pos)
+M:Eco.World.DefaultAtmosphere.#ctor	public DefaultAtmosphere()
+M:Eco.World.MaxYCache.#ctor(Eco.Core.Serialization.IPersistent)	public MaxYCache(IPersistent storageHandle)
+M:Eco.World.Migrations.BlocksMigration78to80.#ctor	public BlocksMigration78to80()
+M:Eco.World.Migrations.BlocksMigration78to80.ThawMigration.#ctor	public ThawMigration()
+M:Eco.World.NonSharedBlockAttribute.#ctor	public NonSharedBlockAttribute()
+M:Eco.World.PersistentChunk.#ctor	public PersistentChunk()
+M:Eco.World.PersistentChunk.#ctor(Eco.World.PersistentChunkPack)	public PersistentChunk(PersistentChunkPack container)
+M:Eco.World.PersistentChunk.Convert(Eco.Core.Serialization.Migrations.MigrationManager,System.Boolean)	public void Convert(MigrationManager migrationManager, bool legacy)	// Converts chunk from old format to new chunk format using . It is required, because for optimization purposes chunk contains serialized blocks data, but when schema changes block ids may be changed as well.
+M:Eco.World.PersistentChunk.Freeze	public void Freeze()
+M:Eco.World.PersistentChunk.GetBlock(Eco.Shared.Math.Vector3i)	public override Block GetBlock(Vector3i localPosition)
+M:Eco.World.PersistentChunk.OnChanged	public override void OnChanged()
+M:Eco.World.PersistentChunk.OnDeserialized	protected void OnDeserialized()
+M:Eco.World.PersistentChunk.OnNeighborEdgeChanged(System.Type)	public void OnNeighborEdgeChanged(Type blockType)
+M:Eco.World.PersistentChunk.PackIntoBson	public override BSONObject PackIntoBson()
+M:Eco.World.PersistentChunk.RemoveTransientBlocks	public void RemoveTransientBlocks()
+M:Eco.World.PersistentChunk.SetBlockInternal(Eco.World.Blocks.Block,Eco.Shared.Math.Vector3i)	protected override void SetBlockInternal(Block block, Vector3i localPosition)
+M:Eco.World.PersistentChunk.SetContainer(Eco.World.PersistentChunkPack)	public void SetContainer(PersistentChunkPack container)
+M:Eco.World.PersistentChunk.Thaw(System.Boolean)	public void Thaw(bool invalidateCache = true)
+M:Eco.World.PersistentChunk.TryFreeze	public void TryFreeze()
+M:Eco.World.PersistentChunk.TryTick	public void TryTick()
+M:Eco.World.PersistentChunk.UpdateHasTransientBlocks	public bool UpdateHasTransientBlocks()	// Recalculates if chunk has Eco.World.Blocks.Transient blocks, updates Eco.World.PersistentChunk.HasTransientBlocks property and returns new value. If the chunk is frozen then just returns current value or false if undefined.
+M:Eco.World.PersistentChunk.WakeUp(Eco.Shared.Math.Vector3i)	public void WakeUp(Vector3i localPosition)
+M:Eco.World.PersistentChunk.WakeUpFromNeighbour(Eco.Shared.Math.Vector3i)	public void WakeUpFromNeighbour(Vector3i localPosition)
+M:Eco.World.PersistentChunkGrid.#ctor	public PersistentChunkGrid()
+M:Eco.World.PersistentChunkGrid.Clear(System.Guid)	public override void Clear(Guid newGuid)
+M:Eco.World.PersistentChunkGrid.CreateChunk(Eco.Shared.Math.Vector3i)	public override PersistentChunk CreateChunk(Vector3i chunkPos)
+M:Eco.World.PersistentChunkGrid.GetDirtyState(System.Int32@,System.Int32@)	public void GetDirtyState(out int numDirty, out int total)
+M:Eco.World.PersistentChunkGrid.Initialize	public void Initialize()
+M:Eco.World.PersistentChunkGrid.MarkAllDirty	public void MarkAllDirty()
+M:Eco.World.PersistentChunkGrid.RemoveChunk(Eco.World.PersistentChunk)	public override void RemoveChunk(PersistentChunk chunk)
+M:Eco.World.PersistentChunkObject.#ctor	protected PersistentChunkObject()
+M:Eco.World.PersistentChunkPack.#ctor	public PersistentChunkPack()
+M:Eco.World.PersistentChunkPack.#ctor(Eco.Shared.Math.Vector3i,Eco.Core.Serialization.IPersistent)	public PersistentChunkPack(Vector3i key, IPersistent storageHandle)
+M:Eco.World.PersistentChunkPack.AddChunk(Eco.World.PersistentChunk)	public void AddChunk(PersistentChunk chunk)
+M:Eco.World.PersistentChunkPack.ForEachChunk(System.Action{Eco.World.PersistentChunk})	public void ForEachChunk(Action<PersistentChunk> action)
+M:Eco.World.PersistentChunkPack.MarkDirty	public void MarkDirty()
+M:Eco.World.PersistentChunkPack.OnDeserialized	public void OnDeserialized()
+M:Eco.World.PersistentChunkPack.RemoveChunk(Eco.World.PersistentChunk)	public void RemoveChunk(PersistentChunk chunk)
+M:Eco.World.Pipes.PassThroughEntry.#ctor(System.Type,Eco.Shared.Math.Direction)	public PassThroughEntry(Type pipeBlockType, Direction orientation)
+M:Eco.World.Pipes.PipePassThroughManager.#ctor	public PipePassThroughManager()
+M:Eco.World.Pipes.PipePassThroughManager.Add(Eco.Shared.Math.Vector3i,System.Type,Eco.Shared.Math.Direction)	public void Add(Vector3i pos, Type pipeBlockType, Direction orientation)
+M:Eco.World.Pipes.PipePassThroughManager.Initialize	public void Initialize()
+M:Eco.World.Pipes.PipePassThroughManager.PackForChunk(Eco.Shared.Math.Vector3i)	public ushort[] PackForChunk(Vector3i chunkPos)
+M:Eco.World.Pipes.PipePassThroughManager.PassThroughCacheData.#ctor	public PassThroughCacheData()
+M:Eco.World.Pipes.PipePassThroughManager.Remove(Eco.Shared.Math.Vector3i,Eco.World.Pipes.PassThroughEntry@)	public bool Remove(Vector3i pos, out PassThroughEntry entry)
+M:Eco.World.Pipes.PipePassThroughManager.TryGet(Eco.Shared.Math.Vector3i,Eco.World.Pipes.PassThroughEntry@)	public bool TryGet(Vector3i pos, out PassThroughEntry entry)
+M:Eco.World.PrimitiveRenderer.#ctor	public PrimitiveRenderer()
+M:Eco.World.PrimitiveRenderer.IsNotRelevant(Eco.Shared.Networking.INetObjectViewer)	public bool IsNotRelevant(INetObjectViewer viewer)
+M:Eco.World.PrimitiveRenderer.IsRelevant(Eco.Shared.Networking.INetObjectViewer)	public bool IsRelevant(INetObjectViewer viewer)
+M:Eco.World.PrimitiveRenderer.IsUpdated(Eco.Shared.Networking.INetObjectViewer)	public bool IsUpdated(INetObjectViewer viewer)
+M:Eco.World.PrimitiveRenderer.ReceiveInitialState(Eco.Shared.Serialization.BSONObject)	public void ReceiveInitialState(BSONObject bsonObj)
+M:Eco.World.PrimitiveRenderer.ReceiveUpdate(Eco.Shared.Serialization.BSONObject)	public void ReceiveUpdate(BSONObject bsonObj)
+M:Eco.World.PrimitiveRenderer.SendInitialState(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public void SendInitialState(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.World.PrimitiveRenderer.SendUpdate(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public void SendUpdate(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.World.Serializers.BlockMigrationSerializer`1.#ctor(Eco.Core.Serialization.Migrations.MigrationManager,Eco.Core.Serialization.SimpleSerializer,Eco.Core.Serialization.SerializerSchema)	public BlockMigrationSerializer(MigrationManager migrationManager, SimpleSerializer parent, SerializerSchema schema)
+M:Eco.World.Serializers.BlockSerializer`1.#ctor(Eco.Core.Serialization.SimpleSerializer)	public BlockSerializer(SimpleSerializer parent)
+M:Eco.World.TopBlockCache.#ctor(Eco.Core.Serialization.IPersistent)	public TopBlockCache(IPersistent storageHandle)
+M:Eco.World.Utils.Flooding.AddWaterLayer(Eco.Shared.Math.Vector3i)	public static bool AddWaterLayer(Vector3i startPos)
+M:Eco.World.Utils.Flooding.DeleteTopWaterLayer(Eco.Shared.Math.Vector3i)	public static bool DeleteTopWaterLayer(Vector3i startPos)
+M:Eco.World.Utils.Flooding.FloodFill(Eco.Shared.Math.WorldPosition3i,System.Func{Eco.Shared.Math.WorldPosition3i,System.Boolean},System.Action{Eco.Shared.Math.WorldPosition3i})	public static void FloodFill(WorldPosition3i start, Func<WorldPosition3i, bool> checkVisited, Action<WorldPosition3i> visit)
+M:Eco.World.Utils.Flooding.GetAllConectedWater(Eco.Shared.Math.Vector3i,System.Collections.Generic.HashSet{Eco.Shared.Math.Vector3i}@)	public static Result GetAllConectedWater(Vector3i start, out HashSet<Vector3i> waters)
+M:Eco.World.Utils.MapIterators.#ctor	public MapIterators()
+M:Eco.World.Utils.MapIterators.ChunkColumnVoxels(Eco.Shared.Math.Vector2i)	public static IEnumerable<Vector3i> ChunkColumnVoxels(Vector2i col)
+M:Eco.World.Utils.MapIterators.GetVoxelRangeFromChunkCol(Eco.Shared.Math.Vector2i)	public static WorldArea GetVoxelRangeFromChunkCol(Vector2i chunkcol)
+M:Eco.World.Utils.MapIterators.LandSurfacesInColumn(System.Int32,System.Int32,System.Boolean)	public static IEnumerable<Vector3i> LandSurfacesInColumn(int cx, int cz, bool mustBeEmptyAbove = true)
+M:Eco.World.Utils.MapIterators.Neighbors(Eco.Shared.Math.Vector3i)	public static IEnumerable<Tuple<Block, Vector3i>> Neighbors(Vector3i pos)
+M:Eco.World.Utils.MapIterators.Neighbors(Eco.Shared.Math.Vector3i,System.Type)	public static IEnumerable<Tuple<Block, Vector3i>> Neighbors(Vector3i pos, Type enumType)
+M:Eco.World.Utils.MapIterators.NeighborsHorizontal(Eco.Shared.Math.Vector3i)	public static IEnumerable<Tuple<Block, Vector3i>> NeighborsHorizontal(Vector3i pos)
+M:Eco.World.Utils.MapIterators.Surface	public static IEnumerable<Vector2i> Surface()
+M:Eco.World.Utils.MapIterators.VecRange(Eco.Shared.Math.Range,Eco.Shared.Math.Range,Eco.Shared.Math.Range)	public static Vector3i[] VecRange(Range xRange, Range yRange, Range zRange)
+M:Eco.World.Utils.MapIterators.VoxelColumn(Eco.Shared.Math.Vector2i)	public static IEnumerable<Vector3i> VoxelColumn(Vector2i pos)
+M:Eco.World.Utils.MapIterators.Voxels(Eco.Shared.Math.WorldRange)	public static IEnumerable<Vector3i> Voxels(WorldRange range)
+M:Eco.World.Water.IWaterLoggedBlock.Eco#World#Blocks#Features#IExtraBlockData#GetExtra(Eco.Shared.Math.Vector3i)	byte IExtraBlockData.GetExtra(Vector3i pos)
+M:Eco.World.Water.WaterManager.#ctor	public WaterManager()
+M:Eco.World.Water.WaterManager.Initialize	public void Initialize()
+M:Eco.World.Water.WaterManager.TryGetExtraData(Eco.Shared.Math.Vector3i,System.Byte@)	public bool TryGetExtraData(Vector3i pos, out byte extraData)
+M:Eco.World.Water.WaterManager.WaterCacheData.#ctor	public WaterCacheData()
+M:Eco.World.WaterHeightCache.#ctor(Eco.Core.Serialization.IPersistent)	public WaterHeightCache(IPersistent storageHandle)
+M:Eco.World.World.#ctor	protected World()
+M:Eco.World.World.AllNeighborsMatchOrHigher(Eco.Shared.Math.Vector3i)	public static bool AllNeighborsMatchOrHigher(Vector3i pos)
+M:Eco.World.World.AwakeNear(Eco.Shared.Math.WrappedWorldPosition3i,Eco.World.PersistentChunk)	public static void AwakeNear(WrappedWorldPosition3i worldPos, PersistentChunk chunkAtPosition)
+M:Eco.World.World.AwakeNearDiagonals(Eco.Shared.Math.WrappedWorldPosition3i)	public static void AwakeNearDiagonals(WrappedWorldPosition3i worldPos)
+M:Eco.World.World.BatchApply(System.Collections.Generic.IEnumerable{Eco.World.BlockChange})	public static void BatchApply(IEnumerable<BlockChange> changes)
+M:Eco.World.World.BlockAtOrBelow(Eco.Shared.Math.Vector3i)	public static Vector3i BlockAtOrBelow(Vector3i pos)
+M:Eco.World.World.CalculateChunkEncasement(System.Action{System.Single})	public static void CalculateChunkEncasement(Action<float> updateAction)
+M:Eco.World.World.ChunksInRange(Eco.Shared.Math.WorldRange)	public static IEnumerable<PersistentChunk> ChunksInRange(WorldRange range)
+M:Eco.World.World.ClampToWaterHeight(Eco.Shared.Math.Vector3i)	public static Vector3i ClampToWaterHeight(Vector3i pos)	// Clamps Y coordinate of to water height
+M:Eco.World.World.Clear	public static void Clear()
+M:Eco.World.World.ClearChunkPreloadAnchor(Eco.Shared.Networking.INetClient)	public static void ClearChunkPreloadAnchor(INetClient client)	// Clears the preload anchor set by Eco.World.World.SetChunkPreloadAnchor(Eco.Shared.Networking.INetClient,System.Numerics.Vector3,System.Single).
+M:Eco.World.World.DeleteBlock(Eco.Shared.Math.WrappedWorldPosition3i,System.Boolean)	public static void DeleteBlock(WrappedWorldPosition3i worldPos, bool checkForWaterFlow = true)
+M:Eco.World.World.FindPyramidPos(Eco.Shared.Math.Vector3i)	public static Vector3i FindPyramidPos(Vector3i start)
+M:Eco.World.World.ForceUpdate(Eco.Shared.Math.WrappedWorldPosition3i)	public static void ForceUpdate(WrappedWorldPosition3i worldPos)
+M:Eco.World.World.ForceUpdateBatch(System.Collections.Generic.IEnumerable{Eco.Shared.Math.WrappedWorldPosition3i})	public static void ForceUpdateBatch(IEnumerable<WrappedWorldPosition3i> worldPositions)
+M:Eco.World.World.GetBlock(Eco.Shared.Math.Vector3i)	public static Block GetBlock(Vector3i worldPos)	// Returns the block at the location or Block.Empty. Returns Eco.World.Blocks.Block.Empty for invalid (i.e. Y negative or Z above top block).
+M:Eco.World.World.GetBlock(Eco.Shared.Math.WrappedPosition3i)	public static Block GetBlock(WrappedPosition3i worldPos)
+M:Eco.World.World.GetBlock(Eco.Shared.Math.WrappedWorldPosition3i)	public static Block GetBlock(WrappedWorldPosition3i worldPos)
+M:Eco.World.World.GetBlockFromChunkIfPossible(Eco.Shared.Math.Vector3i,Eco.World.PersistentChunk)	public static Block GetBlockFromChunkIfPossible(Vector3i pos, PersistentChunk chunk)
+M:Eco.World.World.GetBlockProbablyTop(Eco.Shared.Math.WrappedWorldPosition3i)	public static Block GetBlockProbablyTop(WrappedWorldPosition3i worldPos)
+M:Eco.World.World.GetBlockType(Eco.Shared.Math.Vector3i)	public static Type GetBlockType(Vector3i worldPos)
+M:Eco.World.World.GetBlockType(Eco.Shared.Math.WrappedPosition3i)	public static Type GetBlockType(WrappedPosition3i worldPos)
+M:Eco.World.World.GetBlockType(Eco.Shared.Math.WrappedWorldPosition3i)	public static Type GetBlockType(WrappedWorldPosition3i worldPos)
+M:Eco.World.World.GetChunk(Eco.Shared.Math.Vector3i)	public static PersistentChunk GetChunk(Vector3i chunkPos)
+M:Eco.World.World.GetChunkColumn(Eco.Shared.Math.Vector2i)	public static IEnumerable<PersistentChunk> GetChunkColumn(Vector2i pos)
+M:Eco.World.World.GetChunkColumnAscendingFrom(Eco.Shared.Math.Vector3i)	public static IEnumerable<PersistentChunk> GetChunkColumnAscendingFrom(Vector3i pos)
+M:Eco.World.World.GetChunkColumnFromTop(Eco.Shared.Math.Vector2i)	public static IEnumerable<PersistentChunk> GetChunkColumnFromTop(Vector2i pos)
+M:Eco.World.World.GetChunkWorld(Eco.Shared.Math.Vector3i)	public static PersistentChunk GetChunkWorld(Vector3i worldPos)
+M:Eco.World.World.GetDeepestNeighbor(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector3i@)	public static int GetDeepestNeighbor(Vector3i pos, out Vector3i outvec)
+M:Eco.World.World.GetDepth(Eco.Shared.Math.Vector3i)	public static int GetDepth(Vector3i pos)
+M:Eco.World.World.GetEmptyPilePosition(Eco.Shared.Math.Vector2i)	public static Vector3i GetEmptyPilePosition(Vector2i xzPos)
+M:Eco.World.World.GetRandomLandPos	public static WorldPosition3i GetRandomLandPos()
+M:Eco.World.World.GetRandomLandPos(System.Random)	public static WorldPosition3i GetRandomLandPos(Random randomizer)
+M:Eco.World.World.GetRandomLandPosNear(Eco.Shared.Math.Vector3i,System.Single)	public static Vector3i GetRandomLandPosNear(Vector3i nearPos, float radius = 10F)
+M:Eco.World.World.GetTopBlock(Eco.Shared.Math.Vector2i)	public static Block GetTopBlock(Vector2i worldPos)
+M:Eco.World.World.GetTopBlockPos(Eco.Shared.Math.Vector2i)	public static Vector3i GetTopBlockPos(Vector2i pos)
+M:Eco.World.World.GetTopBlockY(Eco.Shared.Math.Vector2i)	public static int GetTopBlockY(Vector2i pos)
+M:Eco.World.World.GetTopEmptyBlock(Eco.Shared.Math.Vector2i)	public static int GetTopEmptyBlock(Vector2i worldPos)
+M:Eco.World.World.GetTopEmptyPos(Eco.Shared.Math.Vector2i)	public static Vector3i GetTopEmptyPos(Vector2i worldPos)
+M:Eco.World.World.GetTopEmptyPos(Eco.Shared.Math.WorldPosition2i)	public static WorldPosition3i GetTopEmptyPos(WorldPosition2i worldPos)
+M:Eco.World.World.GetTopEmptyPosOrWaterBlock(Eco.Shared.Math.Vector2i)	public static Vector3i GetTopEmptyPosOrWaterBlock(Vector2i worldPos)
+M:Eco.World.World.GetTopGroundPos(Eco.Shared.Math.Vector2i)	public static Vector3i GetTopGroundPos(Vector2i worldPos)
+M:Eco.World.World.GetTopGroundPos(Eco.Shared.Math.Vector3i)	public static Vector3i GetTopGroundPos(Vector3i worldPos)
+M:Eco.World.World.GetTopPathPos(Eco.Shared.Math.Vector2i)	public static Vector3i GetTopPathPos(Vector2i worldPos)
+M:Eco.World.World.GetTopPathPos(Eco.Shared.Math.WorldPosition2i)	public static WorldPosition3i GetTopPathPos(WorldPosition2i worldPos)
+M:Eco.World.World.GetTopSolidBlockUnderwater(Eco.Shared.Math.Vector2i,System.Int32)	public static int GetTopSolidBlockUnderwater(Vector2i waterPos, int maxDeep = 5)
+M:Eco.World.World.GetTopSolidBlockY(Eco.Shared.Math.Vector2i)	public static int GetTopSolidBlockY(Vector2i worldPos)
+M:Eco.World.World.GetTopSolidBlockYRaw(Eco.Shared.Math.Vector2i)	public static int GetTopSolidBlockYRaw(Vector2i worldPos)
+M:Eco.World.World.GetTopSolidBlockYRaw(System.Int32,System.Int32)	public static int GetTopSolidBlockYRaw(int x, int y)
+M:Eco.World.World.GetTopSolidNonConstructedPos(Eco.Shared.Math.Vector2i)	public static (Vector3i, Block, bool) GetTopSolidNonConstructedPos(Vector2i worldColumn)
+M:Eco.World.World.GetWaterHeight(Eco.Shared.Math.Vector2i)	public static int GetWaterHeight(Vector2i worldPos)
+M:Eco.World.World.InitCachedData(Eco.Shared.Math.Vector2i)	public static void InitCachedData(Vector2i size)
+M:Eco.World.World.Initialize(Eco.Shared.Math.Vector3i)	public static void Initialize(Vector3i chunkSize)
+M:Eco.World.World.Initialize(Eco.World.WorldChunkGrid)	public static void Initialize(WorldChunkGrid chunkGrid)
+M:Eco.World.World.IsConstructed(Eco.Shared.Math.Vector2i)	public static bool IsConstructed(Vector2i blockPos)
+M:Eco.World.World.IsLegalVerticalPosition(System.Numerics.Vector3)	public static bool IsLegalVerticalPosition(Vector3 pos)
+M:Eco.World.World.IsPathPos(Eco.Shared.Math.WrappedPosition3i)	public static bool IsPathPos(WrappedPosition3i pos)
+M:Eco.World.World.IsSolidOrOccupied(Eco.Shared.Math.WrappedWorldPosition3i)	public static bool IsSolidOrOccupied(WrappedWorldPosition3i blockPos)
+M:Eco.World.World.IsTopGround(Eco.Shared.Math.WrappedPosition3i)	public static bool IsTopGround(WrappedPosition3i pos)
+M:Eco.World.World.IsUnderwater(Eco.Shared.Math.Vector2i)	public static bool IsUnderwater(Vector2i blockPos)
+M:Eco.World.World.IsUnderwater(Eco.Shared.Math.WorldPosition3i)	public static bool IsUnderwater(WorldPosition3i blockPos)
+M:Eco.World.World.IsUnderwater(Eco.Shared.Math.WrappedPosition3i)	public static bool IsUnderwater(WrappedPosition3i blockPos)
+M:Eco.World.World.IsUnderwater(Eco.Shared.Math.WrappedWorldPosition3i)	public static bool IsUnderwater(WrappedWorldPosition3i blockPos)
+M:Eco.World.World.Lock	public static void Lock()
+M:Eco.World.World.MaxWaterPos(Eco.Shared.Math.WorldPosition3i)	public static WorldPosition3i MaxWaterPos(WorldPosition3i pos)
+M:Eco.World.World.MaxYPos(Eco.Shared.Math.Vector2i)	public static Vector3i MaxYPos(Vector2i pos)
+M:Eco.World.World.MaxYPos(Eco.Shared.Math.WorldPosition3i)	public static WorldPosition3i MaxYPos(WorldPosition3i pos)
+M:Eco.World.World.NextBlockUp(Eco.Shared.Math.Vector3i)	public static Block NextBlockUp(Vector3i pos)
+M:Eco.World.World.PendingChunkColumns(Eco.Shared.Networking.INetClient)	public static int PendingChunkColumns(INetClient client)	// Approximate number of chunk column deliveries still queued for . Safe to poll from any thread.
+M:Eco.World.World.RandomMapPos	public static Vector3i RandomMapPos()
+M:Eco.World.World.RandomMapPos(System.Random)	public static Vector3i RandomMapPos(Random randomizer)
+M:Eco.World.World.ReCacheAllData(System.Boolean)	public static void ReCacheAllData(bool notify = true)	// Invalidates top block and underwater block caches for every X,Z in the world. It will only trigger cache update events if set to true.
+M:Eco.World.World.ReCacheColumns(System.Collections.Generic.IEnumerable{Eco.Shared.Math.Vector2i},System.Int32,System.Boolean)	public static void ReCacheColumns(IEnumerable<Vector2i> chunkPosXZ, int columnsCount, bool notify = true)
+M:Eco.World.World.ResetCache	public static void ResetCache()
+M:Eco.World.World.SetBlock(System.Type,Eco.Shared.Math.WrappedWorldPosition3i,Eco.World.PersistentChunk,System.Object[])	public static Block SetBlock(Type blockType, WrappedWorldPosition3i worldPos, PersistentChunk chunk = null, params object[] args)
+M:Eco.World.World.SetBlock(System.Type,Eco.Shared.Math.WrappedWorldPosition3i,System.Object[])	public static Block SetBlock(Type blockType, WrappedWorldPosition3i worldPos, params object[] args)
+M:Eco.World.World.SetBlock``1(Eco.Shared.Math.WrappedWorldPosition3i,Eco.World.PersistentChunk,System.Object[])	public static T SetBlock<T>(WrappedWorldPosition3i worldPos, PersistentChunk chunk = null, params object[] args) where T : Block
+M:Eco.World.World.SetBlock``1(Eco.Shared.Math.WrappedWorldPosition3i,System.Object[])	public static T SetBlock<T>(WrappedWorldPosition3i worldPos, params object[] args) where T : Block
+M:Eco.World.World.SetChunkPreloadAnchor(Eco.Shared.Networking.INetClient,System.Numerics.Vector3,System.Single)	public static void SetChunkPreloadAnchor(INetClient client, Vector3 pos, float radius)	// Streams chunk columns around to in addition to its own view range (teleport preload).
+M:Eco.World.World.TopIsWater(Eco.Shared.Math.Vector2i)	public static bool TopIsWater(Vector2i pos)
+M:Eco.World.World.Unlock	public static void Unlock()
+M:Eco.World.World.UpdateMaxHeight(System.Int32)	public static void UpdateMaxHeight(int maxHeight)
+M:Eco.World.World.WaterAtTop(Eco.Shared.Math.Vector2i)	public static bool WaterAtTop(Vector2i pos)
+M:Eco.World.World.WorldWrapChunkPos(Eco.Shared.Math.Vector3i)	public static Vector3i WorldWrapChunkPos(Vector3i chunkPos)
+M:Eco.World.World.XZChunks(Eco.Shared.Math.Vector2i)	public static IEnumerable<PersistentChunk> XZChunks(Vector2i columnPos)
+M:Eco.World.WorldChunk.#ctor	public WorldChunk()
+M:Eco.World.WorldChunk.ConvertBlocks	protected void ConvertBlocks()
+M:Eco.World.WorldChunk.DeleteBlock(Eco.Shared.Math.Vector3i)	public void DeleteBlock(Vector3i localPosition)
+M:Eco.World.WorldChunk.EncasesNeighbors	public bool[] EncasesNeighbors()
+M:Eco.World.WorldChunk.EncasesWaterNeighbors	public bool[] EncasesWaterNeighbors()
+M:Eco.World.WorldChunk.GetBlock(Eco.Shared.Math.Vector3i)	public virtual Block GetBlock(Vector3i localPosition)
+M:Eco.World.WorldChunk.OnChanged	public virtual void OnChanged()
+M:Eco.World.WorldChunk.PackIntoBson	public virtual BSONObject PackIntoBson()
+M:Eco.World.WorldChunk.SetBlock(System.Type,Eco.Shared.Math.Vector3i,System.Object[])	public Block SetBlock(Type blockType, Vector3i localPosition, params object[] args)
+M:Eco.World.WorldChunk.SetBlock``1(Eco.Shared.Math.Vector3i,System.Object[])	public Block SetBlock<T>(Vector3i localPosition, params object[] args) where T : Block
+M:Eco.World.WorldChunk.SetBlockInternal(Eco.World.Blocks.Block,Eco.Shared.Math.Vector3i)	protected virtual void SetBlockInternal(Block block, Vector3i localPosition)
+M:Eco.World.WorldChunk.SetBlockUnsafe(Eco.World.Blocks.Block,Eco.Shared.Math.Vector3i)	public void SetBlockUnsafe(Block block, Vector3i localPos)
+M:Eco.World.WorldChunk.ToString	public override string ToString()
+M:Eco.World.WorldChunkGrid.#ctor	public WorldChunkGrid()
+M:Eco.World.WorldChunkGrid.#ctor(Eco.Shared.Networking.NetObject,Eco.Shared.Voxel.IChunkContainer{Eco.World.PersistentChunk},System.Boolean)	public WorldChunkGrid(NetObject owner, IChunkContainer<PersistentChunk> container, bool threadSafe)
+M:Eco.World.WorldChunkGrid.#ctor(Eco.Shared.Voxel.IChunkContainer{Eco.World.PersistentChunk},System.Boolean)	public WorldChunkGrid(IChunkContainer<PersistentChunk> container, bool threadSafe)
+M:Eco.World.WorldChunkGrid.CalculateChunkEncasement(System.Action{System.Single})	public void CalculateChunkEncasement(Action<float> updateAction)
+M:Eco.World.WorldChunkGrid.ClearPreloadAnchor(Eco.Shared.Networking.INetClient)	public void ClearPreloadAnchor(INetClient client)
+M:Eco.World.WorldChunkGrid.DeleteBlock(Eco.Shared.Math.WrappedWorldPosition3i,System.Boolean)	public virtual void DeleteBlock(WrappedWorldPosition3i worldPos, bool checkForWaterFlow = true)	// See Eco.World.World.DeleteBlock(Eco.Shared.Math.WrappedWorldPosition3i,System.Boolean)
+M:Eco.World.WorldChunkGrid.FillCache(Eco.Shared.Math.Vector2i,Eco.Shared.Utils.Array2D{System.Int32},Eco.Shared.Utils.Array2D{Eco.World.Blocks.Block})	public void FillCache(Vector2i chunkPos2D, Array2D<int> topBlockHeight, Array2D<Block> topSolidBlock)
+M:Eco.World.WorldChunkGrid.GetBlock(Eco.Shared.Math.WrappedWorldPosition3i)	public Block GetBlock(WrappedWorldPosition3i worldPos)
+M:Eco.World.WorldChunkGrid.GetMaxY(Eco.Shared.Math.Vector2i)	public int GetMaxY(Vector2i worldPos)
+M:Eco.World.WorldChunkGrid.GetTopBlockHeight(Eco.Shared.Math.Vector2i)	public int GetTopBlockHeight(Vector2i worldPos)
+M:Eco.World.WorldChunkGrid.GetTopSolidBlock(Eco.Shared.Math.Vector2i)	public Block GetTopSolidBlock(Vector2i worldPos)
+M:Eco.World.WorldChunkGrid.IsNotRelevant(Eco.Shared.Networking.INetObjectViewer)	public virtual bool IsNotRelevant(INetObjectViewer viewer)
+M:Eco.World.WorldChunkGrid.IsRelevant(Eco.Shared.Networking.INetObjectViewer)	public virtual bool IsRelevant(INetObjectViewer viewer)
+M:Eco.World.WorldChunkGrid.IsUpdated(Eco.Shared.Networking.INetObjectViewer)	public virtual bool IsUpdated(INetObjectViewer viewer)
+M:Eco.World.WorldChunkGrid.ReceiveInitialState(Eco.Shared.Serialization.BSONObject)	public virtual void ReceiveInitialState(BSONObject bsonObj)
+M:Eco.World.WorldChunkGrid.ReceiveUpdate(Eco.Shared.Serialization.BSONObject)	public virtual void ReceiveUpdate(BSONObject bsonObj)
+M:Eco.World.WorldChunkGrid.RemovePreloadAnchor(Eco.Shared.Networking.INetClient)	public void RemovePreloadAnchor(INetClient client)
+M:Eco.World.WorldChunkGrid.SendInitialState(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public virtual void SendInitialState(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.World.WorldChunkGrid.SendUpdate(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public virtual void SendUpdate(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.World.WorldChunkGrid.SetBlock(System.Type,Eco.Shared.Math.WrappedWorldPosition3i,Eco.World.PersistentChunk,System.Object[])	public Block SetBlock(Type blockType, WrappedWorldPosition3i worldPos, PersistentChunk chunk = null, params object[] args)
+M:Eco.World.WorldChunkGrid.SetBlock(System.Type,Eco.Shared.Math.WrappedWorldPosition3i,System.Object[])	public Block SetBlock(Type blockType, WrappedWorldPosition3i worldPos, params object[] args)
+M:Eco.World.WorldChunkGrid.SetBlock``1(Eco.Shared.Math.WrappedWorldPosition3i,Eco.World.PersistentChunk,System.Object[])	public Block SetBlock<T>(WrappedWorldPosition3i worldPos, PersistentChunk chunk = null, params object[] args) where T : Block
+M:Eco.World.WorldChunkGrid.SetBlock``1(Eco.Shared.Math.WrappedWorldPosition3i,System.Object[])	public Block SetBlock<T>(WrappedWorldPosition3i worldPos, params object[] args) where T : Block
+M:Eco.World.WorldChunkGrid.SetBlocks(System.Collections.Generic.IEnumerable{Eco.World.BlockChange})	public void SetBlocks(IEnumerable<BlockChange> blocks)
+M:Eco.World.WorldChunkGrid.SetPreloadAnchor(Eco.Shared.Networking.INetClient,System.Numerics.Vector3,System.Single)	public void SetPreloadAnchor(INetClient client, Vector3 pos, float radius)	// Registers a preload anchor for : chunk columns around stream in addition to the observer's own view range.
+M:Eco.World.WorldChunkGridBuilder.#ctor	public WorldChunkGridBuilder()
+M:Eco.World.WorldChunkGridBuilder.#ctor(Eco.World.WorldChunkGrid)	public WorldChunkGridBuilder(WorldChunkGrid grid)
+M:Eco.World.WorldChunkGridBuilder.AddCube(System.Type,Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector3i)	public WorldChunkGridBuilder AddCube(Type blockType, Vector3i origin, Vector3i size)
+M:Eco.World.WorldChunkGridBuilder.AddCube``1(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector3i)	public WorldChunkGridBuilder AddCube<T>(Vector3i origin, Vector3i size) where T : Block
+M:Eco.World.WorldChunkGridBuilder.AddFrontPlane(System.Type,Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector2i)	public WorldChunkGridBuilder AddFrontPlane(Type blockType, Vector3i origin, Vector2i size)
+M:Eco.World.WorldChunkGridBuilder.AddFrontPlane``1(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector2i)	public WorldChunkGridBuilder AddFrontPlane<T>(Vector3i origin, Vector2i size) where T : Block
+M:Eco.World.WorldChunkGridBuilder.AddHorizontalPlane(System.Type,Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector2i)	public WorldChunkGridBuilder AddHorizontalPlane(Type blockType, Vector3i origin, Vector2i size)
+M:Eco.World.WorldChunkGridBuilder.AddHorizontalPlane``1(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector2i)	public WorldChunkGridBuilder AddHorizontalPlane<T>(Vector3i origin, Vector2i size) where T : Block
+M:Eco.World.WorldChunkGridBuilder.AddRoom(System.Type,Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector3i)	public WorldChunkGridBuilder AddRoom(Type blockType, Vector3i origin, Vector3i interiorSize)
+M:Eco.World.WorldChunkGridBuilder.AddRoom``1(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector3i)	public WorldChunkGridBuilder AddRoom<T>(Vector3i origin, Vector3i interiorSize) where T : Block
+M:Eco.World.WorldChunkGridBuilder.AddSidePlane(System.Type,Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector2i)	public WorldChunkGridBuilder AddSidePlane(Type blockType, Vector3i origin, Vector2i size)
+M:Eco.World.WorldChunkGridBuilder.AddSidePlane``1(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector2i)	public WorldChunkGridBuilder AddSidePlane<T>(Vector3i origin, Vector2i size) where T : Block
+M:Eco.World.WorldChunkGridBuilder.BuildFromImportString(Eco.Shared.Math.WrappedWorldPosition3i,System.String)	public Result BuildFromImportString(WrappedWorldPosition3i origin, string importString)
+M:Eco.World.WorldPlugin.#ctor	public WorldPlugin()
+M:Eco.World.WorldPlugin.GetCategory	public string GetCategory()
+M:Eco.World.WorldPlugin.GetDisplayText	public string GetDisplayText()
+M:Eco.World.WorldPlugin.GetEditObject	public object GetEditObject()
+M:Eco.World.WorldPlugin.GetStatus	public string GetStatus()
+M:Eco.World.WorldPlugin.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask initializeTask)
+M:Eco.World.WorldPlugin.OnEditObjectChanged(System.Object,System.String)	public void OnEditObjectChanged(object o, string param)
+M:Eco.World.WorldPlugin.Run	public void Run()
+M:Eco.World.WorldPlugin.ShutdownAsync	public Task ShutdownAsync()
+M:Eco.World.WorldPlugin.TickAll(System.Threading.CancellationToken)	public Task TickAll(CancellationToken cancellationToken)
+M:Eco.World.WorldPlugin.ToString	public override string ToString()
+M:Eco.World.WorldUtils.Describe(Eco.Shared.Math.Vector3i)	public static WorldUtils.PosDescription Describe(this Vector3i pos)
+M:Eco.World.WorldUtils.Describe(Eco.Shared.Math.WorldPosition3i)	public static WorldUtils.PosDescription Describe(this WorldPosition3i pos)
+M:Eco.World.WorldUtils.DoForNeighborChunks``1(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Vector3i,``0,System.Action{Eco.Shared.Math.Vector3i,``0})	public static void DoForNeighborChunks<T>(Vector3i chunkPos, Vector3i localPos, T context, Action<Vector3i, T> action)
+M:Eco.World.WorldUtils.GetTopEmptyBlockPos(Eco.Shared.Math.Vector2i)	public static Vector3i GetTopEmptyBlockPos(this Vector2i worldPos)
+M:Eco.World.WorldUtils.IsInWorldBounds(Eco.Shared.Math.Vector3i)	public static bool IsInWorldBounds(this Vector3i worldPos)
+M:Eco.World.WorldUtils.IsJustAboveGround(Eco.Shared.Math.Vector3i)	public static bool IsJustAboveGround(this Vector3i pos)
+M:Eco.World.WorldUtils.IsJustAboveGround(Eco.Shared.Math.WorldPosition3i)	public static bool IsJustAboveGround(this WorldPosition3i pos)
+M:Eco.World.WorldUtils.IsTopGround(Eco.Shared.Math.Vector3i)	public static bool IsTopGround(this Vector3i pos)
+M:Eco.World.WorldUtils.IsTopGround(Eco.Shared.Math.WorldPosition3i)	public static bool IsTopGround(this WorldPosition3i pos)
+M:Eco.World.WorldUtils.IsValidPathPos(Eco.Shared.Math.Vector3i)	public static bool IsValidPathPos(this Vector3i pos)
+M:Eco.World.WorldUtils.IsValidPathPos(Eco.Shared.Math.WorldPosition3i)	public static bool IsValidPathPos(this WorldPosition3i pos)
+M:Eco.World.WorldUtils.Wrap(Eco.Shared.Math.Vector3i)	public static Vector3i Wrap(this Vector3i worldPos)
+M:Eco.World.WorldUtils.Wrap(System.Numerics.Vector3)	public static Vector3 Wrap(this Vector3 worldPos)
+P:Eco.World.AtmosphereObject.Active	public bool Active { get; }
+P:Eco.World.AtmosphereObject.ID	public int ID { get; }
+P:Eco.World.AtmosphereObject.NetObjectCreationRealtime	public double NetObjectCreationRealtime { get; set; }
+P:Eco.World.AtmosphereObject.Priority	public float Priority { get; }
+P:Eco.World.BlockManager.BlockTypes	public static IEnumerable<Type> BlockTypes { get; }
+P:Eco.World.BlockManager.DestroyBlock	public static Action<Type> DestroyBlock { get; }
+P:Eco.World.BlockManager.NumBlocks	public static int NumBlocks { get; }
+P:Eco.World.BlockManager.TrySetBlock	public static Func<Type, bool> TrySetBlock { get; }
+P:Eco.World.Blocks.BiomeBlock.Name	public string Name { get; }
+P:Eco.World.Blocks.BiomeDestructible.DestructedBy	public Type[] DestructedBy { get; }
+P:Eco.World.Blocks.Block.Empty	public static Block Empty { get; }
+P:Eco.World.Blocks.BlockAttribute.Unset	public bool Unset { get; set; }
+P:Eco.World.Blocks.EncasedWaterBlock.PipeSupplied	public bool PipeSupplied { get; }
+P:Eco.World.Blocks.EncasedWaterBlock.Water	public float Water { get; }
+P:Eco.World.Blocks.FulfillsRoomRequirementAttribute.FulfillsItemType	public Type FulfillsItemType { get; set; }
+P:Eco.World.Blocks.IsFormAttribute.FormType	public Type FormType { get; }
+P:Eco.World.Blocks.IsFormAttribute.MaterialType	public Type MaterialType { get; }
+P:Eco.World.Blocks.ITickableBlock.Asleep	bool Asleep { get; set; }
+P:Eco.World.Blocks.IWaterBlock.PipeSupplied	bool PipeSupplied { get; }
+P:Eco.World.Blocks.IWaterBlock.Water	float Water { get; }
+P:Eco.World.Blocks.Minable.Hardness	public int Hardness { get; set; }
+P:Eco.World.Blocks.NextRamp.Next	public Type Next { get; }
+P:Eco.World.Blocks.NextRamp.YOffset	public int YOffset { get; }
+P:Eco.World.Blocks.PolluteGround.Amount	public float Amount { get; set; }
+P:Eco.World.Blocks.PolluteGround.Type	public GroundPollutionType Type { get; set; }
+P:Eco.World.Blocks.RotatedVariants.Variants	public Type[] Variants { get; }
+P:Eco.World.Blocks.TreeDebris.Species	public string Species { get; set; }
+P:Eco.World.Blocks.WaterBlock.Asleep	public bool Asleep { get; set; }
+P:Eco.World.Blocks.WaterBlock.PipeSupplied	public bool PipeSupplied { get; set; }
+P:Eco.World.Blocks.WaterBlock.Water	public float Water { get; set; }
+P:Eco.World.Color.BlockColorManager.BlockColorData.StorageHandle	public IPersistent StorageHandle { get; set; }
+P:Eco.World.MaxYCache.Cache	public Array2D<int> Cache { get; }
+P:Eco.World.PersistentChunk.Active	public bool Active { get; }
+P:Eco.World.PersistentChunk.ActiveChunks	public static ConcurrentHashSet<PersistentChunk> ActiveChunks { get; }
+P:Eco.World.PersistentChunk.Container	public PersistentChunkPack Container { get; }
+P:Eco.World.PersistentChunk.Frozen	public bool Frozen { get; }
+P:Eco.World.PersistentChunk.HasTransientBlocks	public bool HasTransientBlocks { get; }
+P:Eco.World.PersistentChunkObject.StorageHandle	public IPersistent StorageHandle { get; set; }
+P:Eco.World.PersistentChunkPack.Key	public Vector3i Key { get; set; }
+P:Eco.World.PersistentChunkPack.StorageManager	public IStorageManager StorageManager { get; set; }
+P:Eco.World.Pipes.PipePassThroughManager.PassThroughCacheData.StorageHandle	public IPersistent StorageHandle { get; set; }
+P:Eco.World.PrimitiveRenderer.Active	public bool Active { get; }
+P:Eco.World.PrimitiveRenderer.ID	public int ID { get; }
+P:Eco.World.PrimitiveRenderer.NetObjectCreationRealtime	public double NetObjectCreationRealtime { get; set; }
+P:Eco.World.PrimitiveRenderer.Obj	public static PrimitiveRenderer Obj { get; }
+P:Eco.World.Serializers.BlockMigrationSerializer`1.NewInstance	public override object NewInstance { get; }
+P:Eco.World.Serializers.BlockSerializer`1.NewInstance	public override object NewInstance { get; }
+P:Eco.World.TopBlockCache.Cache	public Array2D<Block> Cache { get; }
+P:Eco.World.Utils.MapIterators.BorderingNeighborBlocks	public static Vector3i[][] BorderingNeighborBlocks { get; }
+P:Eco.World.Water.WaterManager.WaterCacheData.StorageHandle	public IPersistent StorageHandle { get; set; }
+P:Eco.World.WaterHeightCache.Cache	public Array2D<int> Cache { get; }
+P:Eco.World.World.Chunks	public static IEnumerable<PersistentChunk> Chunks { get; }
+P:Eco.World.World.ChunksCount	public static int ChunksCount { get; }
+P:Eco.World.World.Locked	public static bool Locked { get; }
+P:Eco.World.World.MaxWaterHeight	public static Array2D<int> MaxWaterHeight { get; set; }
+P:Eco.World.World.MaxYCache	public static Array2D<int> MaxYCache { get; set; }
+P:Eco.World.World.OnBlockChanged	public static ThreadSafeAction<WrappedWorldPosition3i> OnBlockChanged { get; }
+P:Eco.World.World.OnTopBlockChanged	public static ThreadSafeAction<Vector2i, int> OnTopBlockChanged { get; }
+P:Eco.World.World.OnTopOrWaterBlockCacheChanged	public static ThreadSafeAction<Vector2i> OnTopOrWaterBlockCacheChanged { get; }
+P:Eco.World.World.TopBlockCache	public static Array2D<Block> TopBlockCache { get; set; }
+P:Eco.World.WorldChunk.Blocks	public IEnumerable<Block> Blocks { get; }
+P:Eco.World.WorldChunk.Encasement	public int Encasement { get; }
+P:Eco.World.WorldChunk.LastUpdated	public double LastUpdated { get; }
+P:Eco.World.WorldChunk.Position	public Vector3i Position { get; set; }
+P:Eco.World.WorldChunkGrid.Active	public bool Active { get; set; }
+P:Eco.World.WorldChunkGrid.ChunkSize	public Vector3i ChunkSize { get; }
+P:Eco.World.WorldChunkGrid.ID	public int ID { get; }
+P:Eco.World.WorldChunkGrid.InitialStateChannel	public NetworkChannel InitialStateChannel { get; }
+P:Eco.World.WorldChunkGrid.NetObj	public NetObject NetObj { get; }
+P:Eco.World.WorldChunkGrid.NetObjectCreationRealtime	public double NetObjectCreationRealtime { get; set; }
+P:Eco.World.WorldChunkGrid.Priority	public float Priority { get; }
+P:Eco.World.WorldChunkGrid.UpdateChannel	public NetworkChannel UpdateChannel { get; }
+P:Eco.World.WorldChunkGrid.VoxelSize	public Vector3i VoxelSize { get; }
+P:Eco.World.WorldCurve.Mode	public static WorldCurveMode Mode { get; set; }
+P:Eco.World.WorldCurve.Radius	public static float Radius { get; set; }
+P:Eco.World.WorldPlugin.Atmosphere	public AtmosphereObject Atmosphere { get; }
+P:Eco.World.WorldPlugin.ParamChanged	public ThreadSafeAction<object, string> ParamChanged { get; set; }
+P:Eco.World.WorldPlugin.PluginConfig	public IPluginConfig PluginConfig { get; }
+T:Eco.World.AtmosphereObject	public abstract class AtmosphereObject : Object, INetObject, INetObjectPriority
+T:Eco.World.AtmosphereType	public class AtmosphereType : EditableObjectInCollection<AtmosphereType, AtmosphereObject>
+T:Eco.World.BlockChange	public sealed class BlockChange : ValueType
+T:Eco.World.BlockExtensions	public static class BlockExtensions : Object	// Static extension methods for Eco.World.Blocks.Block objects.
+T:Eco.World.BlockManager	public static class BlockManager : Object
+T:Eco.World.Blocks.BiomeBlock	public sealed class BiomeBlock : BlockAttribute
+T:Eco.World.Blocks.BiomeDestructible	public sealed class BiomeDestructible : BlockAttribute	// This block type may be destructed by Biome block. If no Eco.World.Blocks.BiomeDestructible.DestructedBy blocks specified then may be destructed by any biome block.
+T:Eco.World.Blocks.Block	public abstract class Block : Object
+T:Eco.World.Blocks.BlockAttribute	public abstract class BlockAttribute : Attribute
+T:Eco.World.Blocks.BlockType	public class BlockType : EditableObjectInCollection<BlockType, Block>
+T:Eco.World.Blocks.BuildRoomMaterialOption	public sealed class BuildRoomMaterialOption : BlockAttribute
+T:Eco.World.Blocks.CharredEarthBlock	[Solid] [Wall] [Diggable] public class CharredEarthBlock : DirtBlock
+T:Eco.World.Blocks.ChemicalWasteFluidBlock	public class ChemicalWasteFluidBlock : Block
+T:Eco.World.Blocks.Cliff	public sealed class Cliff : BlockAttribute
+T:Eco.World.Blocks.ColdForestSoilBlock	[BiomeBlock("ColdForest")] public class ColdForestSoilBlock : DirtBlock
+T:Eco.World.Blocks.Constructed	public sealed class Constructed : BlockAttribute
+T:Eco.World.Blocks.Crushed	public sealed class Crushed : BlockAttribute
+T:Eco.World.Blocks.DesertSandBlock	[MoveEfficiency(0.9F)] [LookAtTooltip("Desert Sand")] [Fertile(Fertility = 0.25F)] [BiomeBlock("Desert")] public class DesertSandBlock : DirtBlock
+T:Eco.World.Blocks.Diggable	public sealed class Diggable : BlockAttribute
+T:Eco.World.Blocks.DirtBlock	[BuildRoomMaterialOption] [MoveEfficiency(0.9F)] [Solid] [Wall] [Fertile] [Diggable] [Tillable] [BiomeBlock("Barren")] public class DirtBlock : Block
+T:Eco.World.Blocks.DoesntEncase	public sealed class DoesntEncase : BlockAttribute
+T:Eco.World.Blocks.Empty	public sealed class Empty : BlockAttribute
+T:Eco.World.Blocks.EmptyBlock	[Empty] public class EmptyBlock : Block
+T:Eco.World.Blocks.EncasedWaterBlock	[UnderWater] public class EncasedWaterBlock : Block, IWaterBlock
+T:Eco.World.Blocks.Features.IColorBlockData	public interface IColorBlockData
+T:Eco.World.Blocks.Features.IExtraBlockData	public interface IExtraBlockData
+T:Eco.World.Blocks.Fertile	public sealed class Fertile : BlockAttribute
+T:Eco.World.Blocks.ForestSoilBlock	[BiomeBlock("Forest")] public class ForestSoilBlock : DirtBlock
+T:Eco.World.Blocks.FrozenSoilBlock	[Fertile(Unset = true)] [Tillable(Unset = true)] [BiomeBlock("FrozenSoil")] public class FrozenSoilBlock : DirtBlock
+T:Eco.World.Blocks.FulfillsRoomRequirementAttribute	public sealed class FulfillsRoomRequirementAttribute : BlockAttribute
+T:Eco.World.Blocks.GrassBlock	[BiomeBlock("Grassland")] public class GrassBlock : DirtBlock
+T:Eco.World.Blocks.GroundPollutionType	public sealed class GroundPollutionType : Enum	// Discriminator on Eco.World.Blocks.PolluteGround selecting which buffer pollution layer the block feeds into.
+T:Eco.World.Blocks.IceBlock	[Fertile(Unset = true)] [Tillable(Unset = true)] [BiomeBlock("Ice")] public class IceBlock : DirtBlock
+T:Eco.World.Blocks.IDestroyAwareBlock	public interface IDestroyAwareBlock
+T:Eco.World.Blocks.Impenetrable	public sealed class Impenetrable : BlockAttribute
+T:Eco.World.Blocks.ImpenetrableStoneBlock	[Solid] [Wall] [Impenetrable] public class ImpenetrableStoneBlock : Block
+T:Eco.World.Blocks.IndustrialSewageBlock	public class IndustrialSewageBlock : Block
+T:Eco.World.Blocks.IPlaceAwareBlock	public interface IPlaceAwareBlock
+T:Eco.World.Blocks.IsFormAttribute	public sealed class IsFormAttribute : BlockAttribute
+T:Eco.World.Blocks.ITickableBlock	public interface ITickableBlock
+T:Eco.World.Blocks.IWaterBlock	public interface IWaterBlock
+T:Eco.World.Blocks.LookAtTooltip	public sealed class LookAtTooltip : BlockAttribute
+T:Eco.World.Blocks.Minable	public sealed class Minable : BlockAttribute
+T:Eco.World.Blocks.MoveEfficiency	public class MoveEfficiency : BlockAttribute
+T:Eco.World.Blocks.MudBlock	[Solid] [Wall] [Diggable] [Tillable] public class MudBlock : Block
+T:Eco.World.Blocks.NextRamp	public sealed class NextRamp : BlockAttribute
+T:Eco.World.Blocks.Occupied	public sealed class Occupied : BlockAttribute
+T:Eco.World.Blocks.OceanSandBlock	[MoveEfficiency(0.9F)] [LookAtTooltip("Ocean Sand")] [Tillable(Unset = true)] [BiomeBlock("Ocean")] public class OceanSandBlock : DirtBlock
+T:Eco.World.Blocks.Paint	public sealed class Paint : BlockAttribute
+T:Eco.World.Blocks.PetrolBlock	[Solid] [Wall] public class PetrolBlock : Block
+T:Eco.World.Blocks.PollutedSaltWaterBlock	public class PollutedSaltWaterBlock : Block
+T:Eco.World.Blocks.PollutedWaterBlock	public class PollutedWaterBlock : Block
+T:Eco.World.Blocks.PolluteGround	public sealed class PolluteGround : BlockAttribute
+T:Eco.World.Blocks.RailTrackBlock	[Constructed] public class RailTrackBlock : Block
+T:Eco.World.Blocks.RainforestSoilBlock	[BiomeBlock("Rainforest")] public class RainforestSoilBlock : DirtBlock
+T:Eco.World.Blocks.Ramp	public sealed class Ramp : BlockAttribute
+T:Eco.World.Blocks.RiverbedBlock	[MoveEfficiency(0.9F)] [LookAtTooltip("River Sand")] [Tillable] public class RiverbedBlock : DirtBlock
+T:Eco.World.Blocks.RiverSandBlock	[MoveEfficiency(0.9F)] [LookAtTooltip("River Sand")] [Tillable(Unset = true)] public class RiverSandBlock : DirtBlock
+T:Eco.World.Blocks.Road	public sealed class Road : MoveEfficiency
+T:Eco.World.Blocks.RockySoilBlock	[MoveEfficiency(0.9F)] [LookAtTooltip("Dirt")] [Tillable] public class RockySoilBlock : DirtBlock
+T:Eco.World.Blocks.RotatedVariants	public sealed class RotatedVariants : BlockAttribute
+T:Eco.World.Blocks.SaltWaterBlock	public class SaltWaterBlock : Block
+T:Eco.World.Blocks.SandBlock	[BuildRoomMaterialOption] [MoveEfficiency(0.8F)] [Solid] [Wall] [Diggable] public class SandBlock : Block
+T:Eco.World.Blocks.SewageBlock	public class SewageBlock : Block
+T:Eco.World.Blocks.SnowBlock	[Fertile(Unset = true)] [Tillable(Unset = true)] [BiomeBlock("Snow")] public class SnowBlock : DirtBlock
+T:Eco.World.Blocks.Solid	public sealed class Solid : BlockAttribute
+T:Eco.World.Blocks.TaigaSoilBlock	[BiomeBlock("Taiga")] public class TaigaSoilBlock : DirtBlock
+T:Eco.World.Blocks.Tillable	public sealed class Tillable : BlockAttribute
+T:Eco.World.Blocks.Tilled	public sealed class Tilled : BlockAttribute
+T:Eco.World.Blocks.TilledDirtBlock	[MoveEfficiency(0.8F)] [LookAtTooltip("Tilled Dirt")] [Tilled] [BiomeBlock(null)] public class TilledDirtBlock : DirtBlock
+T:Eco.World.Blocks.Transient	public sealed class Transient : BlockAttribute
+T:Eco.World.Blocks.TreeBlock	[Occupied] [Transient] public class TreeBlock : Block
+T:Eco.World.Blocks.TreeDebris	public sealed class TreeDebris : BlockAttribute
+T:Eco.World.Blocks.TundraSoilBlock	[BiomeBlock("Tundra")] public class TundraSoilBlock : DirtBlock
+T:Eco.World.Blocks.UnderWater	public sealed class UnderWater : BlockAttribute
+T:Eco.World.Blocks.Wall	public sealed class Wall : BlockAttribute
+T:Eco.World.Blocks.WarmForestSoilBlock	[BiomeBlock("WarmForest")] public class WarmForestSoilBlock : DirtBlock
+T:Eco.World.Blocks.WaterBlock	[UnderWater] public class WaterBlock : Block, IWaterBlock, ITickableBlock, IExtraBlockData, IDestroyAwareBlock
+T:Eco.World.Blocks.Watertight	public sealed class Watertight : BlockAttribute
+T:Eco.World.Blocks.WetlandsSoilBlock	[BiomeBlock("Wetland")] public class WetlandsSoilBlock : DirtBlock
+T:Eco.World.Color.BlockColorManager	public sealed class BlockColorManager : AutoSingleton<BlockColorManager>
+T:Eco.World.Color.BlockColorManager.BlockColorData	public class BlockColorData : Object, IStorage, ISerializable
+T:Eco.World.Color.IColoredBlock	public interface IColoredBlock : IColorBlockData
+T:Eco.World.DefaultAtmosphere	public class DefaultAtmosphere : AtmosphereObject, INetObject, INetObjectPriority
+T:Eco.World.MaxYCache	public class MaxYCache : PersistentChunkObject, IStorage, ISerializable, ITimeDependentSerialization
+T:Eco.World.Migrations.BlocksMigration78to80	public class BlocksMigration78to80 : AggregateMigration
+T:Eco.World.Migrations.BlocksMigration78to80.ThawMigration	public class ThawMigration : DataMigration
+T:Eco.World.NonSharedBlockAttribute	public class NonSharedBlockAttribute : Attribute
+T:Eco.World.PersistentChunk	public class PersistentChunk : WorldChunk, IChunk
+T:Eco.World.PersistentChunkGrid	public class PersistentChunkGrid : WorldChunkGrid, INetObject, INetObjectPriority
+T:Eco.World.PersistentChunkObject	public abstract class PersistentChunkObject : Object, IStorage, ISerializable
+T:Eco.World.PersistentChunkPack	public class PersistentChunkPack : PersistentChunkObject, IStorage, ISerializable
+T:Eco.World.Pipes.PassThroughEntry	public sealed class PassThroughEntry : ValueType
+T:Eco.World.Pipes.PipePassThroughManager	public class PipePassThroughManager : AutoSingleton<PipePassThroughManager>	// Remembers that a pipe runs through a wall voxel without replacing the wall, so the wall keeps sealing the room while the fluid network and the client renderer treat the voxel as a pipe. Modeled on Eco.World.Water.WaterManager.
+T:Eco.World.Pipes.PipePassThroughManager.PassThroughCacheData	public class PassThroughCacheData : Object, IStorage, ISerializable
+T:Eco.World.PrimitiveRenderer	public class PrimitiveRenderer : Object, INetObject
+T:Eco.World.Serializers.BlockMigrationSerializer`1	public class BlockMigrationSerializer<T> : ClassMigrationSerializer<T> where T : Block
+T:Eco.World.Serializers.BlockSerializer`1	public class BlockSerializer<T> : ClassSerializer<T> where T : Block
+T:Eco.World.TopBlockCache	public class TopBlockCache : PersistentChunkObject, IStorage, ISerializable, ITimeDependentSerialization
+T:Eco.World.Utils.Flooding	public static class Flooding : Object
+T:Eco.World.Utils.MapIterators	public class MapIterators : Object
+T:Eco.World.Water.IWaterLoggedBlock	public interface IWaterLoggedBlock : IExtraBlockData
+T:Eco.World.Water.WaterManager	public class WaterManager : AutoSingleton<WaterManager>
+T:Eco.World.Water.WaterManager.WaterCacheData	public class WaterCacheData : Object, IStorage, ISerializable
+T:Eco.World.WaterHeightCache	public class WaterHeightCache : PersistentChunkObject, IStorage, ISerializable, ITimeDependentSerialization
+T:Eco.World.World	public abstract class World : World
+T:Eco.World.WorldChunk	public class WorldChunk : Object, IChunk
+T:Eco.World.WorldChunkGrid	public abstract class WorldChunkGrid : ChunkGrid<PersistentChunk>, INetObject, INetObjectPriority
+T:Eco.World.WorldChunkGridBuilder	public class WorldChunkGridBuilder : Object
+T:Eco.World.WorldCurve	public static class WorldCurve : Object
+T:Eco.World.WorldCurveMode	public sealed class WorldCurveMode : Enum
+T:Eco.World.WorldPlugin	public class WorldPlugin : Object, IThreadedPlugin, IShutdownablePlugin, IServerPlugin, IDisplayablePlugin, IGUIPlugin, IHasDisplayTabs, IDisplayTab, IConfigurablePlugin, IEditablePlugin, IInitializablePlugin
+T:Eco.World.WorldUtils	public static class WorldUtils : Object
+T:Eco.World.WorldUtils.PosDescription	public sealed class PosDescription : Enum

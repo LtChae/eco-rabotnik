@@ -1,0 +1,235 @@
+F:Eco.ModKit.Internal.Mod.Status.Accepted	public const Mod.Status Accepted
+F:Eco.ModKit.Internal.Mod.Status.Archived	public const Mod.Status Archived
+F:Eco.ModKit.Internal.Mod.Status.Deleted	public const Mod.Status Deleted
+F:Eco.ModKit.Internal.Mod.Status.NotAccepted	public const Mod.Status NotAccepted
+F:Eco.ModKit.Internal.Mod.Status.value__	public int value__
+F:Eco.ModKit.Internal.Modfile.VirusResult.FlaggedAsMalicious	public const Modfile.VirusResult FlaggedAsMalicious
+F:Eco.ModKit.Internal.Modfile.VirusResult.NoThreatsDetected	public const Modfile.VirusResult NoThreatsDetected
+F:Eco.ModKit.Internal.Modfile.VirusResult.value__	public int value__
+F:Eco.ModKit.Internal.Modfile.VirusStatus.ErrorScanning	public const Modfile.VirusStatus ErrorScanning
+F:Eco.ModKit.Internal.Modfile.VirusStatus.FileNotFound	public const Modfile.VirusStatus FileNotFound
+F:Eco.ModKit.Internal.Modfile.VirusStatus.NotScanned	public const Modfile.VirusStatus NotScanned
+F:Eco.ModKit.Internal.Modfile.VirusStatus.ScanComplete	public const Modfile.VirusStatus ScanComplete
+F:Eco.ModKit.Internal.Modfile.VirusStatus.ScanInProgress	public const Modfile.VirusStatus ScanInProgress
+F:Eco.ModKit.Internal.Modfile.VirusStatus.TooLargeToScan	public const Modfile.VirusStatus TooLargeToScan
+F:Eco.ModKit.Internal.Modfile.VirusStatus.value__	public int value__
+F:Eco.ModKit.ModContentSync.Manifest	public BSONCachedValue Manifest
+F:Eco.ModKit.ModKitPlugin.ModDirectory	public static readonly string ModDirectory
+M:Eco.ModKit.AssemblyTypesProvider.#ctor(System.Reflection.Assembly)	public AssemblyTypesProvider(Assembly assembly)
+M:Eco.ModKit.AssemblyTypesProvider.GetTypes	public IEnumerable<Type> GetTypes()
+M:Eco.ModKit.Internal.Avatar.#ctor	public Avatar()
+M:Eco.ModKit.Internal.Cecil.ModuleConverter.#ctor(System.Reflection.Metadata.MetadataReader)	public ModuleConverter(MetadataReader reader)
+M:Eco.ModKit.Internal.Cecil.ModuleConverter.Convert(System.Reflection.AssemblyName)	public ModuleDefinition Convert(AssemblyName assemblyName)	// Converts metadata obtained with Eco.ModKit.Internal.Cecil.ModuleConverter.reader (set in constructor) to Mono.Cecil.ModuleDefinition.
+M:Eco.ModKit.Internal.Download.#ctor	public Download()
+M:Eco.ModKit.Internal.Filehash.#ctor	public Filehash()
+M:Eco.ModKit.Internal.Image.#ctor	public Image()
+M:Eco.ModKit.Internal.Logo.#ctor	public Logo()
+M:Eco.ModKit.Internal.Mod.#ctor	public Mod()
+M:Eco.ModKit.Internal.ModDependencies.#ctor	public ModDependencies()
+M:Eco.ModKit.Internal.ModDependenciesData.#ctor	public ModDependenciesData()
+M:Eco.ModKit.Internal.Modfile.#ctor	public Modfile()
+M:Eco.ModKit.Internal.ModList.#ctor	public ModList()
+M:Eco.ModKit.Internal.ModMedia.#ctor	public ModMedia()
+M:Eco.ModKit.Internal.ModTag.#ctor	public ModTag()
+M:Eco.ModKit.Internal.RatingSummary.#ctor	public RatingSummary()
+M:Eco.ModKit.Internal.User.#ctor	public User()
+M:Eco.ModKit.Internal.Weaving.EcoLogger.#ctor	public EcoLogger()
+M:Eco.ModKit.Internal.Weaving.EcoLogger.ClearWeaverName	public void ClearWeaverName()
+M:Eco.ModKit.Internal.Weaving.EcoLogger.LogDebug(System.String)	public void LogDebug(string message)
+M:Eco.ModKit.Internal.Weaving.EcoLogger.LogError(System.String)	public void LogError(string message)
+M:Eco.ModKit.Internal.Weaving.EcoLogger.LogError(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)	public void LogError(string message, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber)
+M:Eco.ModKit.Internal.Weaving.EcoLogger.LogInfo(System.String)	public void LogInfo(string message)
+M:Eco.ModKit.Internal.Weaving.EcoLogger.LogMessage(System.String,System.Int32)	public void LogMessage(string message, int level)
+M:Eco.ModKit.Internal.Weaving.EcoLogger.LogWarning(System.String,System.String)	public void LogWarning(string message, string code = "")
+M:Eco.ModKit.Internal.Weaving.EcoLogger.LogWarning(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String)	public void LogWarning(string message, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string code = "")
+M:Eco.ModKit.Internal.Weaving.EcoLogger.SetCurrentWeaverName(System.String)	public void SetCurrentWeaverName(string weaverName)
+M:Eco.ModKit.Internal.Weaving.Extensions.LoggerExtensions.LogErrorPoint(ILogger,System.String,Mono.Cecil.Cil.SequencePoint)	public static void LogErrorPoint(this ILogger logger, string message, SequencePoint point)	// Logs error for optional code .
+M:Eco.ModKit.Internal.Weaving.Extensions.LoggerExtensions.LogWarningPoint(ILogger,System.String,Mono.Cecil.Cil.SequencePoint)	public static void LogWarningPoint(this ILogger logger, string message, SequencePoint point)	// Logs warning for optional code .
+M:Eco.ModKit.Internal.Weaving.RuntimeWeaver.Dispose	public void Dispose()
+M:Eco.ModKit.Internal.Weaving.RuntimeWeaver.Weave(System.IO.Stream,System.IO.Stream,System.String)	public static bool Weave(Stream assemblyStream, Stream symbolsStream, string configPath)	// Weaves assembly defined by and . It applies all weavers from provided config file.
+M:Eco.ModKit.ITypesProvider.GetTypes	IEnumerable<Type> GetTypes()
+M:Eco.ModKit.ModContentSync.#ctor(System.Int32)	public ModContentSync(int maxCount = 5)
+M:Eco.ModKit.ModContentSync.ConsumeRefreshRequest	public bool ConsumeRefreshRequest()
+M:Eco.ModKit.ModContentSync.RefreshContent	public void RefreshContent()
+M:Eco.ModKit.ModContentSync.SendContentFiles(System.Collections.Generic.List{System.String},Eco.Shared.Networking.INetClient)	public Task<bool> SendContentFiles(List<string> requestList, INetClient targetClient)
+M:Eco.ModKit.ModContentSync.StartWatching	public void StartWatching()
+M:Eco.ModKit.ModContentUploadController.#ctor(System.Int32)	public ModContentUploadController(int maxCount)
+M:Eco.ModKit.ModContentUploadController.SendRpcAndWaitUpload(System.Int32,Eco.Shared.Networking.RPCEvent)	public Task<bool> SendRpcAndWaitUpload(int bytesLength, RPCEvent rpcToSend)
+M:Eco.ModKit.ModContentUploadController.WaitForSemaphoreAsync	public Task WaitForSemaphoreAsync()
+M:Eco.ModKit.ModContentUploadController.WaitForTaskOrTimeOut(System.Int32,System.Threading.Tasks.Task)	public Task<bool> WaitForTaskOrTimeOut(int timeoutInSeconds, Task sendTask)
+M:Eco.ModKit.ModDataSync.#ctor	public ModDataSync()
+M:Eco.ModKit.ModDataSync.GetModData(Eco.Shared.Networking.INetClient)	public BSONObject GetModData(INetClient client)
+M:Eco.ModKit.ModDataSync.Initialize	public void Initialize()
+M:Eco.ModKit.ModEntryControl.#ctor(Eco.ModKit.Internal.Mod)	public ModEntryControl(Mod mod)
+M:Eco.ModKit.ModEntryControl.Dispose(System.Boolean)	protected override void Dispose(bool disposing)
+M:Eco.ModKit.ModEntryControl.DownloadAsync	public Task DownloadAsync()
+M:Eco.ModKit.ModEntryControl.DownloadOrInstallAsync	public Task DownloadOrInstallAsync()
+M:Eco.ModKit.ModEntryControl.InstallAsync	public Task InstallAsync()
+M:Eco.ModKit.ModEntryControl.ToggleSubscribe	public void ToggleSubscribe()
+M:Eco.ModKit.ModEntryControl.Uninstall	public void Uninstall()
+M:Eco.ModKit.ModKitConfig.#ctor	public ModKitConfig()
+M:Eco.ModKit.ModKitPlugin.#ctor	public ModKitPlugin()
+M:Eco.ModKit.ModKitPlugin.#ctor(Eco.ModKit.ITypesProvider)	public ModKitPlugin(ITypesProvider typesProvider)
+M:Eco.ModKit.ModKitPlugin.CacheRPC	public void CacheRPC()
+M:Eco.ModKit.ModKitPlugin.Finalize	protected override void Finalize()
+M:Eco.ModKit.ModKitPlugin.GetCategory	public string GetCategory()
+M:Eco.ModKit.ModKitPlugin.GetCommands(System.Collections.Generic.Dictionary{System.String,System.Action})	public void GetCommands(Dictionary<string, Action> nameToFunction)
+M:Eco.ModKit.ModKitPlugin.GetCustomUIControl	public object GetCustomUIControl()
+M:Eco.ModKit.ModKitPlugin.GetCustomUIName	public string GetCustomUIName()
+M:Eco.ModKit.ModKitPlugin.GetDisplayText	public string GetDisplayText()
+M:Eco.ModKit.ModKitPlugin.GetEditObject	public object GetEditObject()
+M:Eco.ModKit.ModKitPlugin.GetStatus	public string GetStatus()
+M:Eco.ModKit.ModKitPlugin.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask timer)
+M:Eco.ModKit.ModKitPlugin.LoadModsDataAsync	public Task LoadModsDataAsync()
+M:Eco.ModKit.ModKitPlugin.OnEditObjectChanged(System.Object,System.String)	public void OnEditObjectChanged(object o, string param)
+M:Eco.ModKit.ModKitPlugin.OnEnter	public void OnEnter()
+M:Eco.ModKit.ModKitPlugin.OnLeave	public void OnLeave()
+M:Eco.ModKit.ModKitPlugin.ToString	public override string ToString()
+M:Eco.ModKit.ModsDownloadManager.DownloadModPackageAsync(Eco.ModKit.Internal.Mod,System.Threading.CancellationToken,System.IProgress{System.Int64})	public static Task DownloadModPackageAsync(Mod mod, CancellationToken token, IProgress<long> progress)
+M:Eco.ModKit.ModsDownloadManager.GetModDependenciesAsync(Eco.ModKit.Internal.Mod,System.Threading.CancellationToken)	public static Task<ModDependenciesData> GetModDependenciesAsync(Mod mod, CancellationToken token)
+M:Eco.ModKit.ModsDownloadManager.GetModInfoAsync(System.Int32,System.Threading.CancellationToken)	public static Task<Mod> GetModInfoAsync(int modID, CancellationToken token)
+M:Eco.ModKit.ModsDownloadManager.GetModInfosAsync(System.Collections.Generic.IEnumerable{System.Int32},System.Threading.CancellationToken)	public static Task<Dictionary<int, Mod>> GetModInfosAsync(IEnumerable<int> modIDs, CancellationToken token)
+M:Eco.ModKit.ModsDownloadManager.GetModInfosAsync(System.Threading.CancellationToken,System.Int32,System.Int32)	public static Task<ModList> GetModInfosAsync(CancellationToken token, int offset = 0, int pageSize = 100)
+M:Eco.ModKit.ModsDownloadManager.InstallModAsync(Eco.ModKit.Internal.Mod,System.Threading.CancellationToken)	public static Task InstallModAsync(Mod mod, CancellationToken token)
+M:Eco.ModKit.ModsDownloadManager.UninstallMod(Eco.ModKit.Internal.Mod)	public static void UninstallMod(Mod mod)
+M:Eco.ModKit.RoslynCompiler.#ctor(System.Runtime.Loader.AssemblyLoadContext,System.String,System.String)	public RoslynCompiler(AssemblyLoadContext assemblyContext, string modsDirectory, string modsAssemblyPath)
+M:Eco.ModKit.RoslynCompiler.#ctor(System.String,System.String)	public RoslynCompiler(string modsDirectory, string modsAssemblyPath)
+M:Eco.ModKit.RoslynCompiler.GetTypes	public IEnumerable<Type> GetTypes()
+M:Eco.ModKit.Statics.StaticModPlayer.AddDefaultSkills(Eco.Gameplay.Players.User)	public static void AddDefaultSkills(User user)
+M:Eco.ModKit.Statics.StaticModPlayer.AddPlayerDefaults(Eco.Gameplay.Players.User)	public static void AddPlayerDefaults(User user)
+M:Eco.ModKit.Statics.StaticModPlayer.BuildSMVsToSend	public static void BuildSMVsToSend()
+M:Eco.ModKit.Statics.StaticModPlayer.BuildUserStats(Eco.Gameplay.Players.User)	public static void BuildUserStats(User user)
+P:Eco.ModKit.AssemblyTypesProvider.Assembly	public Assembly Assembly { get; }
+P:Eco.ModKit.Internal.Avatar.filename	public string filename { get; set; }
+P:Eco.ModKit.Internal.Avatar.original	public string original { get; set; }
+P:Eco.ModKit.Internal.Avatar.thumb_100x100	public string thumb_100x100 { get; set; }
+P:Eco.ModKit.Internal.Avatar.thumb_50x50	public string thumb_50x50 { get; set; }
+P:Eco.ModKit.Internal.Download.binary_url	public string binary_url { get; set; }
+P:Eco.ModKit.Internal.Download.date_expires	public int date_expires { get; set; }
+P:Eco.ModKit.Internal.Filehash.md5	public string md5 { get; set; }
+P:Eco.ModKit.Internal.Image.filename	public string filename { get; set; }
+P:Eco.ModKit.Internal.Image.original	public string original { get; set; }
+P:Eco.ModKit.Internal.Image.thumb_320x180	public string thumb_320x180 { get; set; }
+P:Eco.ModKit.Internal.Logo.filename	public string filename { get; set; }
+P:Eco.ModKit.Internal.Logo.original	public string original { get; set; }
+P:Eco.ModKit.Internal.Logo.thumb_1280x720	public string thumb_1280x720 { get; set; }
+P:Eco.ModKit.Internal.Logo.thumb_320x180	public string thumb_320x180 { get; set; }
+P:Eco.ModKit.Internal.Logo.thumb_640x360	public string thumb_640x360 { get; set; }
+P:Eco.ModKit.Internal.Mod.date_added	public int date_added { get; set; }
+P:Eco.ModKit.Internal.Mod.date_live	public int date_live { get; set; }
+P:Eco.ModKit.Internal.Mod.date_updated	public int date_updated { get; set; }
+P:Eco.ModKit.Internal.Mod.description	public string description { get; set; }
+P:Eco.ModKit.Internal.Mod.Downloaded	public bool Downloaded { get; }
+P:Eco.ModKit.Internal.Mod.ExtractPath	public string ExtractPath { get; }
+P:Eco.ModKit.Internal.Mod.Filename	public string Filename { get; }
+P:Eco.ModKit.Internal.Mod.Fullpath	public string Fullpath { get; }
+P:Eco.ModKit.Internal.Mod.game_id	public int game_id { get; set; }
+P:Eco.ModKit.Internal.Mod.id	public int id { get; set; }
+P:Eco.ModKit.Internal.Mod.Installed	public bool Installed { get; }
+P:Eco.ModKit.Internal.Mod.logo	public Logo logo { get; set; }
+P:Eco.ModKit.Internal.Mod.ManifestPath	public string ManifestPath { get; }
+P:Eco.ModKit.Internal.Mod.media	public ModMedia media { get; set; }
+P:Eco.ModKit.Internal.Mod.metadata_blob	public string metadata_blob { get; set; }
+P:Eco.ModKit.Internal.Mod.modfile	public Modfile modfile { get; set; }
+P:Eco.ModKit.Internal.Mod.name	public string name { get; set; }
+P:Eco.ModKit.Internal.Mod.name_id	public string name_id { get; set; }
+P:Eco.ModKit.Internal.Mod.Pathname	public string Pathname { get; }
+P:Eco.ModKit.Internal.Mod.profile_url	public string profile_url { get; set; }
+P:Eco.ModKit.Internal.Mod.rating_summary	public RatingSummary rating_summary { get; set; }
+P:Eco.ModKit.Internal.Mod.status	public int status { get; set; }
+P:Eco.ModKit.Internal.Mod.submitted_by	public User submitted_by { get; set; }
+P:Eco.ModKit.Internal.Mod.Subscribed	public bool Subscribed { get; }
+P:Eco.ModKit.Internal.Mod.summary	public string summary { get; set; }
+P:Eco.ModKit.Internal.Mod.tags	public ModTag[] tags { get; set; }
+P:Eco.ModKit.Internal.Mod.UserCode	public string UserCode { get; }
+P:Eco.ModKit.Internal.Mod.visible	public int visible { get; set; }
+P:Eco.ModKit.Internal.ModDependencies.date_added	public int date_added { get; set; }
+P:Eco.ModKit.Internal.ModDependencies.mod_id	public int mod_id { get; set; }
+P:Eco.ModKit.Internal.ModDependenciesData.data	public ModDependencies[] data { get; set; }
+P:Eco.ModKit.Internal.Modfile.changelog	public string changelog { get; set; }
+P:Eco.ModKit.Internal.Modfile.date_added	public int date_added { get; set; }
+P:Eco.ModKit.Internal.Modfile.date_scanned	public int date_scanned { get; set; }
+P:Eco.ModKit.Internal.Modfile.download	public Download download { get; set; }
+P:Eco.ModKit.Internal.Modfile.filehash	public Filehash filehash { get; set; }
+P:Eco.ModKit.Internal.Modfile.filename	public string filename { get; set; }
+P:Eco.ModKit.Internal.Modfile.filesize	public int filesize { get; set; }
+P:Eco.ModKit.Internal.Modfile.id	public int id { get; set; }
+P:Eco.ModKit.Internal.Modfile.metadata_blob	public string metadata_blob { get; set; }
+P:Eco.ModKit.Internal.Modfile.mod_id	public int mod_id { get; set; }
+P:Eco.ModKit.Internal.Modfile.version	public string version { get; set; }
+P:Eco.ModKit.Internal.Modfile.virus_positive	public Modfile.VirusResult virus_positive { get; set; }
+P:Eco.ModKit.Internal.Modfile.virus_status	public Modfile.VirusStatus virus_status { get; set; }
+P:Eco.ModKit.Internal.Modfile.virustotal_hash	public string virustotal_hash { get; set; }
+P:Eco.ModKit.Internal.ModList.data	public Mod[] data { get; set; }
+P:Eco.ModKit.Internal.ModList.result_count	public int result_count { get; set; }
+P:Eco.ModKit.Internal.ModList.result_limit	public int result_limit { get; set; }
+P:Eco.ModKit.Internal.ModList.result_offset	public int result_offset { get; set; }
+P:Eco.ModKit.Internal.ModList.result_total	public int result_total { get; set; }
+P:Eco.ModKit.Internal.ModMedia.images	public Image[] images { get; set; }
+P:Eco.ModKit.Internal.ModMedia.sketchfab	public string[] sketchfab { get; set; }
+P:Eco.ModKit.Internal.ModMedia.youtube	public string[] youtube { get; set; }
+P:Eco.ModKit.Internal.ModTag.date_added	public int date_added { get; set; }
+P:Eco.ModKit.Internal.ModTag.name	public string name { get; set; }
+P:Eco.ModKit.Internal.RatingSummary.display_text	public string display_text { get; set; }
+P:Eco.ModKit.Internal.RatingSummary.negative_ratings	public int negative_ratings { get; set; }
+P:Eco.ModKit.Internal.RatingSummary.percentage_positive	public int percentage_positive { get; set; }
+P:Eco.ModKit.Internal.RatingSummary.positive_ratings	public int positive_ratings { get; set; }
+P:Eco.ModKit.Internal.RatingSummary.total_rating	public int total_rating { get; set; }
+P:Eco.ModKit.Internal.RatingSummary.weighted_aggregate	public float weighted_aggregate { get; set; }
+P:Eco.ModKit.Internal.User.avatar	public Avatar avatar { get; set; }
+P:Eco.ModKit.Internal.User.date_online	public int date_online { get; set; }
+P:Eco.ModKit.Internal.User.id	public int id { get; set; }
+P:Eco.ModKit.Internal.User.language	public string language { get; set; }
+P:Eco.ModKit.Internal.User.name_id	public string name_id { get; set; }
+P:Eco.ModKit.Internal.User.profile_url	public string profile_url { get; set; }
+P:Eco.ModKit.Internal.User.timezone	public string timezone { get; set; }
+P:Eco.ModKit.Internal.User.username	public string username { get; set; }
+P:Eco.ModKit.Internal.Weaving.EcoLogger.ErrorOccurred	public bool ErrorOccurred { get; }
+P:Eco.ModKit.ModKitConfig.LiveUpdateUnityFiles	public bool LiveUpdateUnityFiles { get; set; }
+P:Eco.ModKit.ModKitConfig.MaxNumberOfDownloadRequests	public int MaxNumberOfDownloadRequests { get; set; }
+P:Eco.ModKit.ModKitConfig.PreserveGeneratedModsAssembly	public bool PreserveGeneratedModsAssembly { get; set; }
+P:Eco.ModKit.ModKitConfig.SubscribedMods	public SerializedSynchronizedCollection<int> SubscribedMods { get; set; }
+P:Eco.ModKit.ModKitConfig.Whitelist	public SerializedSynchronizedCollection<string> Whitelist { get; set; }
+P:Eco.ModKit.ModKitConfig.WhitelistEnabled	public bool WhitelistEnabled { get; set; }
+P:Eco.ModKit.ModKitPlugin.Compiler	public static ITypesProvider Compiler { get; }
+P:Eco.ModKit.ModKitPlugin.Config	public static PluginConfig<ModKitConfig> Config { get; }
+P:Eco.ModKit.ModKitPlugin.ContentSync	public static ModContentSync ContentSync { get; }
+P:Eco.ModKit.ModKitPlugin.DataSync	public static ModDataSync DataSync { get; }
+P:Eco.ModKit.ModKitPlugin.LoadedManagedAssemblies	public ImmutableList<Assembly> LoadedManagedAssemblies { get; }
+P:Eco.ModKit.ModKitPlugin.LoadedManagedAssemblyPaths	public ImmutableDictionary<Assembly, string> LoadedManagedAssemblyPaths { get; }
+P:Eco.ModKit.ModKitPlugin.ParamChanged	public ThreadSafeAction<object, string> ParamChanged { get; set; }
+P:Eco.ModKit.ModKitPlugin.PluginConfig	public IPluginConfig PluginConfig { get; }
+P:Eco.ModKit.ModKitPlugin.TypesProvider	public static ITypesProvider TypesProvider { get; }
+P:Eco.ModKit.RoslynCompiler.HasError	public bool HasError { get; }
+T:Eco.ModKit.AssemblyTypesProvider	public class AssemblyTypesProvider : Object, ITypesProvider
+T:Eco.ModKit.Internal.Avatar	public class Avatar : Object
+T:Eco.ModKit.Internal.Cecil.ModuleConverter	public sealed class ModuleConverter : ValueType	// Converts metadata obtained wirth Eco.ModKit.Internal.Cecil.ModuleConverter.reader to Mono.Cecil.ModuleDefinition.
+T:Eco.ModKit.Internal.Download	public class Download : Object
+T:Eco.ModKit.Internal.Filehash	public class Filehash : Object
+T:Eco.ModKit.Internal.Image	public class Image : Object
+T:Eco.ModKit.Internal.Logo	public class Logo : Object
+T:Eco.ModKit.Internal.Mod	public class Mod : Object
+T:Eco.ModKit.Internal.Mod.Status	public sealed class Status : Enum
+T:Eco.ModKit.Internal.ModDependencies	public class ModDependencies : Object
+T:Eco.ModKit.Internal.ModDependenciesData	public class ModDependenciesData : Object
+T:Eco.ModKit.Internal.Modfile	public class Modfile : Object
+T:Eco.ModKit.Internal.Modfile.VirusResult	public sealed class VirusResult : Enum
+T:Eco.ModKit.Internal.Modfile.VirusStatus	public sealed class VirusStatus : Enum
+T:Eco.ModKit.Internal.ModList	public class ModList : Object
+T:Eco.ModKit.Internal.ModMedia	public class ModMedia : Object
+T:Eco.ModKit.Internal.ModTag	public class ModTag : Object
+T:Eco.ModKit.Internal.RatingSummary	public class RatingSummary : Object
+T:Eco.ModKit.Internal.User	public class User : Object
+T:Eco.ModKit.Internal.Weaving.EcoLogger	public class EcoLogger : Object, ILogger	// Eco.ModKit.Internal.Weaving.EcoLogger implements Fody ILogger interface for Eco standard logger.
+T:Eco.ModKit.Internal.Weaving.Extensions.LoggerExtensions	public static class LoggerExtensions : Object	// Extension methods for Fody ILogger.
+T:Eco.ModKit.Internal.Weaving.RuntimeWeaver	public sealed class RuntimeWeaver : Object, IDisposable	// Eco.ModKit.Internal.Weaving.RuntimeWeaver adds support for Fody weaving in runtime.
+T:Eco.ModKit.ITypesProvider	public interface ITypesProvider
+T:Eco.ModKit.ModContentSync	public sealed class ModContentSync : Object
+T:Eco.ModKit.ModContentUploadController	public sealed class ModContentUploadController : Object
+T:Eco.ModKit.ModDataSync	public class ModDataSync : Object
+T:Eco.ModKit.ModEntryControl	public class ModEntryControl : UserControl
+T:Eco.ModKit.ModKitConfig	public class ModKitConfig : Object
+T:Eco.ModKit.ModKitPlugin	public class ModKitPlugin : Object, IDisplayablePlugin, IGUIPlugin, IServerPlugin, IHasDisplayTabs, IDisplayTab, ICommandablePlugin, IConfigurablePlugin, IEditablePlugin, IInitializablePlugin, ICustomUIPlugin, ITabPage
+T:Eco.ModKit.ModsDownloadManager	public static class ModsDownloadManager : Object
+T:Eco.ModKit.RoslynCompiler	public class RoslynCompiler : Object, ITypesProvider
+T:Eco.ModKit.Statics.StaticModPlayer	public static class StaticModPlayer : Object

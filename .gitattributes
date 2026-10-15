@@ -1,0 +1,6 @@
+* text=auto
+
+*.png binary
+*.glb binary
+*.unity3d binary
+*.dll binary

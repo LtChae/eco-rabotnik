@@ -1,0 +1,346 @@
+F:Eco.Plugins.Networking.Client.ClientUpdateEvent	public readonly EventWaitHandle ClientUpdateEvent
+F:Eco.Plugins.Networking.NetworkManager.RemoteEndPoint	public static IPEndPoint RemoteEndPoint
+F:Eco.Plugins.Networking.NetworkServer.LengthOfDataToWarn	public const int LengthOfDataToWarn = 65536
+F:Eco.Plugins.Networking.NetworkServer.LoginQueue	public PriorityLoginQueue LoginQueue
+F:Eco.Plugins.Profiling.ProfilingPlugin.WebPath	public const string WebPath = "profiling-results"
+F:Eco.Plugins.Profiling.ProfilingScenario.CPU_dottrace	public const ProfilingScenario CPU_dottrace
+F:Eco.Plugins.Profiling.ProfilingScenario.CPU_nettrace	public const ProfilingScenario CPU_nettrace
+F:Eco.Plugins.Profiling.ProfilingScenario.Memory	public const ProfilingScenario Memory
+F:Eco.Plugins.Profiling.ProfilingScenario.value__	public int value__
+F:Eco.Plugins.Rcon.RconClient.Authenticated	public bool Authenticated
+F:Eco.Plugins.Rcon.RconPacket.BasePacketSize	public const int BasePacketSize = 10
+F:Eco.Plugins.Rcon.RconPacket.Id	public readonly int Id
+F:Eco.Plugins.Rcon.RconPacket.MaxPacketSize	public const int MaxPacketSize = 4096
+F:Eco.Plugins.Rcon.RconPacket.MinPacketSize	public const int MinPacketSize = 14
+F:Eco.Plugins.Rcon.RconPacket.Payload	public readonly string Payload
+F:Eco.Plugins.Rcon.RconPacket.Size	public readonly int Size
+F:Eco.Plugins.Rcon.RconPacket.Type	public readonly RconPacketType Type
+F:Eco.Plugins.Rcon.RconPacketType.Auth	public const RconPacketType Auth
+F:Eco.Plugins.Rcon.RconPacketType.AuthResponse	public const RconPacketType AuthResponse
+F:Eco.Plugins.Rcon.RconPacketType.ExecCommand	public const RconPacketType ExecCommand
+F:Eco.Plugins.Rcon.RconPacketType.ResponseValue	public const RconPacketType ResponseValue
+F:Eco.Plugins.Rcon.RconPacketType.value__	public int value__
+M:Eco.Plugins.Exceptions.NetworkServerException.#ctor	public NetworkServerException()
+M:Eco.Plugins.Exceptions.NetworkServerException.#ctor(System.String,System.Exception)	public NetworkServerException(string message, Exception innerException)
+M:Eco.Plugins.Networking.AddressTakenError.#ctor(Eco.Core.Plugins.Interfaces.IServerPlugin,System.Net.IPEndPoint)	public AddressTakenError(IServerPlugin plugin, IPEndPoint address)
+M:Eco.Plugins.Networking.Client.#ctor(Eco.Shared.Networking.Udp.IUdpServer,System.Object,System.Net.IPEndPoint)	public Client(IUdpServer serverPeer, object connection, IPEndPoint remoteEndPoint)
+M:Eco.Plugins.Networking.Client.AddAsyncException(System.Exception)	public void AddAsyncException(Exception exception)
+M:Eco.Plugins.Networking.Client.AuthenticateOffline(System.Byte[],System.UInt64,System.String,System.String)	public void AuthenticateOffline(byte[] ticket, ulong steamId, string username, string version)
+M:Eco.Plugins.Networking.Client.AuthenticateOnline(System.String,System.String,System.String)	public Task AuthenticateOnline(string worldTicket, string username, string version)
+M:Eco.Plugins.Networking.Client.BoundView(Eco.Shared.Networking.INetClient,System.Int32)	public void BoundView(INetClient client, int viewId)
+M:Eco.Plugins.Networking.Client.Disconnect(PlayFab.PlayFabErrorCode,System.String,System.String)	public void Disconnect(PlayFabErrorCode errorCode, string title, string reason = null)
+M:Eco.Plugins.Networking.Client.Disconnect(StrangeCloud.Service.Client.Contracts.StrangeApiError)	public void Disconnect(StrangeApiError strangeApiError)
+M:Eco.Plugins.Networking.Client.Disconnect(System.Int32,System.String,System.String)	public void Disconnect(int errorCode, string title, string reason = null)
+M:Eco.Plugins.Networking.Client.Disconnect(System.String,System.String,System.Boolean)	public void Disconnect(string title, string reason = null, bool endSteamAuthSession = true)
+M:Eco.Plugins.Networking.Client.EnqueuePacket(Eco.Shared.Networking.ReceivedNetworkPacket)	public void EnqueuePacket(ReceivedNetworkPacket packet)
+M:Eco.Plugins.Networking.Client.Get(System.Int32)	public static Client Get(int id)
+M:Eco.Plugins.Networking.Client.IsNotRelevant(Eco.Shared.Networking.INetObjectViewer)	public bool IsNotRelevant(INetObjectViewer viewer)
+M:Eco.Plugins.Networking.Client.IsRelevant(Eco.Shared.Networking.INetObjectViewer)	public bool IsRelevant(INetObjectViewer viewer)
+M:Eco.Plugins.Networking.Client.IsUpdated(Eco.Shared.Networking.INetObjectViewer)	public bool IsUpdated(INetObjectViewer viewer)
+M:Eco.Plugins.Networking.Client.Login(System.UInt32)	public void Login(uint protocolVersion)
+M:Eco.Plugins.Networking.Client.OpenServerUI(Eco.Gameplay.Players.User)	public static void OpenServerUI(User user)
+M:Eco.Plugins.Networking.Client.ReceiveInitialState(Eco.Shared.Serialization.BSONObject)	public void ReceiveInitialState(BSONObject bsonObj)
+M:Eco.Plugins.Networking.Client.ReceiveUpdate(Eco.Shared.Serialization.BSONObject)	public void ReceiveUpdate(BSONObject bsonObj)
+M:Eco.Plugins.Networking.Client.ReleaseViews(Eco.Shared.Networking.INetClient,Eco.Shared.Serialization.BSONValue)	public void ReleaseViews(INetClient client, BSONValue viewIds)
+M:Eco.Plugins.Networking.Client.RequestContent(System.Collections.Generic.List{System.String})	public Task RequestContent(List<string> requestList)
+M:Eco.Plugins.Networking.Client.RequireLoginQueueIfNeeded	public void RequireLoginQueueIfNeeded()
+M:Eco.Plugins.Networking.Client.SendInitialState(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public void SendInitialState(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.Plugins.Networking.Client.SendUpdate(Eco.Shared.Serialization.BSONObject,Eco.Shared.Networking.INetObjectViewer)	public void SendUpdate(BSONObject bsonObj, INetObjectViewer viewer)
+M:Eco.Plugins.Networking.Client.ShouldNotify(Eco.Core.Controller.IController,System.String)	public bool ShouldNotify(IController controller, string name)
+M:Eco.Plugins.Networking.Client.Shutdown(System.Boolean)	public void Shutdown(bool waitThreads = false)
+M:Eco.Plugins.Networking.Client.ShutdownAsync	public Task ShutdownAsync()
+M:Eco.Plugins.Networking.Client.SpawnPlayer(System.Single,System.String)	public void SpawnPlayer(float viewDistance, string language)
+M:Eco.Plugins.Networking.Client.SubscribeToPropertyUpdates(Eco.Shared.Networking.INetClient,Eco.Core.Controller.IController,System.String)	public string SubscribeToPropertyUpdates(INetClient client, IController controller, string propertyName)
+M:Eco.Plugins.Networking.Client.SyncedViewRPC(Eco.Shared.Networking.INetClient,System.Int32,System.String,Eco.Shared.Serialization.BSONObject)	public Task<object> SyncedViewRPC(INetClient client, int id, string methodname, BSONObject bson)	// Makes async RPC call on view with . Ensures that after RPC method execution it will wait for next client update to ensure all changes initiated by RPC synced back to the client before RPC callback invoked.
+M:Eco.Plugins.Networking.Client.ToString	public override string ToString()
+M:Eco.Plugins.Networking.Client.UnsubscribeToPropertyUpdates(Eco.Shared.Networking.INetClient,Eco.Core.Controller.IController,System.String)	public string UnsubscribeToPropertyUpdates(INetClient client, IController controller, string propertyName)
+M:Eco.Plugins.Networking.Client.UpdateStrangeUser(System.String)	public Task UpdateStrangeUser(string worldTicket)
+M:Eco.Plugins.Networking.Client.ViewRPC(Eco.Shared.Networking.INetClient,System.Int32,System.String,Eco.Shared.Serialization.BSONObject)	public object ViewRPC(INetClient client, int id, string methodname, BSONObject bson)
+M:Eco.Plugins.Networking.EcoServerConfig.#ctor	public EcoServerConfig()
+M:Eco.Plugins.Networking.EcoServerConfig.CanJoin(Eco.Plugins.Networking.Client,System.Int32,System.Int32)	public bool CanJoin(Client client, int currentUsers, int loadingUsersCount)
+M:Eco.Plugins.Networking.Firewall.EnsureRule(System.String,System.Net.Sockets.ProtocolType,System.Int32)	public static void EnsureRule(string serviceName, ProtocolType protocolType, int port)	// Ensures has firewall port rule which allows internal access with specified protocol.
+M:Eco.Plugins.Networking.LoginQueue.#ctor(System.Func{System.Double})	public LoginQueue(Func<double> timeFunc)
+M:Eco.Plugins.Networking.LoginQueue.AdvanceQueueIfPossible	public void AdvanceQueueIfPossible()
+M:Eco.Plugins.Networking.LoginQueue.CleanExpiredClients	public int CleanExpiredClients()
+M:Eco.Plugins.Networking.LoginQueue.DescribeQueue	public string DescribeQueue()
+M:Eco.Plugins.Networking.LoginQueue.IsEmpty	public bool IsEmpty()
+M:Eco.Plugins.Networking.LoginQueue.JoinQueue(System.Net.IPEndPoint)	public int JoinQueue(IPEndPoint clientEndpoint)
+M:Eco.Plugins.Networking.LoginQueue.QueueCount	public int QueueCount()
+M:Eco.Plugins.Networking.MasterServerDebugUtils.StressMasterServer	public static void StressMasterServer()
+M:Eco.Plugins.Networking.NetworkCommands.Network(Eco.Gameplay.Systems.Chat.IChatClient)	public static void Network(IChatClient client)
+M:Eco.Plugins.Networking.NetworkCommands.SetPassword(Eco.Gameplay.Systems.Chat.IChatClient,System.String)	public static Task SetPassword(IChatClient client, string password = "")
+M:Eco.Plugins.Networking.NetworkJoinHandler`1.#ctor(System.Func{`0,System.Boolean},System.Func{`0,System.Boolean},System.Func{`0,System.Int32,System.Int32,System.Boolean},Eco.Plugins.Networking.PriorityLoginQueue)	public NetworkJoinHandler(Func<T, bool> isAdmin, Func<T, bool> isReservedSlot, Func<T, int, int, bool> canJoin, PriorityLoginQueue loginQueue)
+M:Eco.Plugins.Networking.NetworkJoinHandler`1.CleanExpired	public int CleanExpired()
+M:Eco.Plugins.Networking.NetworkJoinHandler`1.RemoveOccupation(`0)	public void RemoveOccupation(T target)
+M:Eco.Plugins.Networking.NetworkJoinHandler`1.TryBypassQueue(`0)	public bool TryBypassQueue(T client)
+M:Eco.Plugins.Networking.NetworkJoinHandler`1.TryJoinWithQueue(`0,System.Net.IPEndPoint,System.Int32,Eco.Shared.Math.Vector2i@)	public bool TryJoinWithQueue(T client, IPEndPoint remoteEndPoint, int loginPriority, out Vector2i result)
+M:Eco.Plugins.Networking.NetworkManager.#ctor(Eco.Shared.Networking.Udp.IUdpLibrary,Eco.Core.Plugins.PluginConfig{Eco.Plugins.Networking.EcoServerConfig})	public NetworkManager(IUdpLibrary udpLibrary, PluginConfig<EcoServerConfig> config)
+M:Eco.Plugins.Networking.NetworkManager.DoWork(System.Threading.CancellationToken)	public Task DoWork(CancellationToken token)
+M:Eco.Plugins.Networking.NetworkManager.GetCategory	public string GetCategory()
+M:Eco.Plugins.Networking.NetworkManager.GetDisplayText	public string GetDisplayText()
+M:Eco.Plugins.Networking.NetworkManager.GetEditObject	public object GetEditObject()
+M:Eco.Plugins.Networking.NetworkManager.GetStatus	public string GetStatus()
+M:Eco.Plugins.Networking.NetworkManager.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask timer)
+M:Eco.Plugins.Networking.NetworkManager.OnDisplayTabVisibilityChange(System.Boolean)	public void OnDisplayTabVisibilityChange(bool show)
+M:Eco.Plugins.Networking.NetworkManager.OnEditObjectChanged(System.Object,System.String)	public void OnEditObjectChanged(object o, string param)
+M:Eco.Plugins.Networking.NetworkManager.ResetID(System.Boolean)	public void ResetID(bool showNotice)
+M:Eco.Plugins.Networking.NetworkManager.Run	public void Run()
+M:Eco.Plugins.Networking.NetworkManager.SetPublic(System.Boolean)	public void SetPublic(bool isPublic)
+M:Eco.Plugins.Networking.NetworkManager.ShutdownAsync	public Task ShutdownAsync()
+M:Eco.Plugins.Networking.NetworkManager.ToString	public override string ToString()
+M:Eco.Plugins.Networking.NetworkServer.#ctor(Eco.Shared.Networking.NetObjectManager)	public NetworkServer(NetObjectManager netObjectManager)
+M:Eco.Plugins.Networking.NetworkServer.ClientHaveFreeSpotForConnecion(Eco.Plugins.Networking.Client)	public bool ClientHaveFreeSpotForConnecion(Client client)
+M:Eco.Plugins.Networking.NetworkServer.DisconnectOlderClients(Eco.Plugins.Networking.Client)	public void DisconnectOlderClients(Client newClient)
+M:Eco.Plugins.Networking.NetworkServer.GetClient(System.Net.IPEndPoint)	public Client GetClient(IPEndPoint endPoint)
+M:Eco.Plugins.Networking.NetworkServer.GetClient(System.Object)	public Client GetClient(object connection)
+M:Eco.Plugins.Networking.NetworkServer.GetClient(System.String)	public Client GetClient(string displayName)
+M:Eco.Plugins.Networking.NetworkServer.GetLocalIPAddress	public IPAddress GetLocalIPAddress()
+M:Eco.Plugins.Networking.NetworkServer.GetStatus(System.Collections.Generic.Dictionary{Eco.Shared.Networking.INetObjectViewer,System.String})	public static string GetStatus(Dictionary<INetObjectViewer, string> data = null)	// Get Status report from Eco.Shared.Networking.Monitoring.NetTrafficTracker. Optionally pass data to use instead of Eco.Shared.Networking.Monitoring.NetTrafficTracker (used to dump existing status data to file)
+M:Eco.Plugins.Networking.NetworkServer.Initialize(Eco.Shared.Networking.Udp.IUdpLibrary)	public void Initialize(IUdpLibrary udpLib)
+M:Eco.Plugins.Networking.NetworkServer.NeedLoginQueue(Eco.Plugins.Networking.Client)	public bool NeedLoginQueue(Client client)
+M:Eco.Plugins.Networking.NetworkServer.RefreshMasterServerListing(System.Boolean)	public void RefreshMasterServerListing(bool publicServer = false)
+M:Eco.Plugins.Networking.NetworkServer.RefreshRelayServerListing	public void RefreshRelayServerListing()
+M:Eco.Plugins.Networking.NetworkServer.SetRelayAddress(System.String,System.Boolean)	public void SetRelayAddress(string relayAddress, bool allowAuto)
+M:Eco.Plugins.Networking.NetworkServer.SetRelayEndpoint(System.Net.IPEndPoint,System.Boolean)	public void SetRelayEndpoint(IPEndPoint relayEndpoint, bool allowAuto)
+M:Eco.Plugins.Networking.NetworkServer.Shutdown(System.String)	public void Shutdown(string byeMessage)
+M:Eco.Plugins.Networking.NetworkServer.TryBypassQueue(Eco.Plugins.Networking.Client)	public bool TryBypassQueue(Client client)
+M:Eco.Plugins.Networking.NetworkServer.TryJoinWithQueue(Eco.Plugins.Networking.Client,Eco.Shared.Math.Vector2i@)	public bool TryJoinWithQueue(Client client, out Vector2i result)
+M:Eco.Plugins.Networking.NetworkServer.Update	public void Update()
+M:Eco.Plugins.Networking.NetworkStats.#ctor	public NetworkStats()
+M:Eco.Plugins.Networking.NetworkStats.Collect(System.Int64,System.Int64)	public void Collect(long totalSentBytes, long totalReceivedBytes)
+M:Eco.Plugins.Networking.PriorityLoginQueue.#ctor(System.Func{System.Double})	public PriorityLoginQueue(Func<double> timeFunc = null)
+M:Eco.Plugins.Networking.PriorityLoginQueue.AdvanceQueueIfPossible	public void AdvanceQueueIfPossible()
+M:Eco.Plugins.Networking.PriorityLoginQueue.CleanExpired	public int CleanExpired()
+M:Eco.Plugins.Networking.PriorityLoginQueue.DescribeQueue	public string DescribeQueue()
+M:Eco.Plugins.Networking.PriorityLoginQueue.IsEmpty	public bool IsEmpty()
+M:Eco.Plugins.Networking.PriorityLoginQueue.JoinQueue(System.Net.IPEndPoint,System.Int32)	public int JoinQueue(IPEndPoint clientEndpoint, int priority)
+M:Eco.Plugins.Networking.PriorityLoginQueue.QueueLength	public int QueueLength()
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.#ctor(System.Boolean)	public QuadTreeNetObjectCollection(bool trackRecentObjects = true)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Add(Eco.Shared.Networking.INetObject,System.Int32,System.Double)	public void Add(INetObject netObject, int id, double time)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Clear	public void Clear()
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.CollectUpdatedObjects(Eco.Shared.Networking.INetObjectViewer,System.Collections.Generic.List{Eco.Shared.Networking.INetObject})	public void CollectUpdatedObjects(INetObjectViewer viewer, List<INetObject> buffer)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Contains(System.Int32)	public bool Contains(int id)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.GetNewRelevantObjects(Eco.Shared.Networking.INetObjectViewer,Eco.Shared.Networking.INetObjectContainer,System.Boolean)	public IEnumerable<INetObject> GetNewRelevantObjects(INetObjectViewer viewer, INetObjectContainer alreadyRelevant, bool fullSearch)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.GetObjectsOfType``1	public IEnumerable<T> GetObjectsOfType<T>()
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.GetObjectsWithin(Eco.Shared.Math.Vector2,System.Single)	public IEnumerable<INetObject> GetObjectsWithin(Vector2 position, float range)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.GetObjectsWithin``1(Eco.Shared.Math.Vector2,System.Single)	public IEnumerable<T> GetObjectsWithin<T>(Vector2 position, float range) where T : INetObjectPosition
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Initialize(Eco.Shared.Math.Vector2)	public void Initialize(Vector2 size)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.OnObjectMoved(Eco.Shared.Networking.INetObjectPosition)	public void OnObjectMoved(INetObjectPosition obj)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.PauseSendUpdates(Eco.Shared.Networking.INetObject)	public void PauseSendUpdates(INetObject obj)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Remove(Eco.Shared.Networking.INetObject)	public bool Remove(INetObject netObject)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.ResumeSendUpdates(Eco.Shared.Networking.INetObject)	public void ResumeSendUpdates(INetObject obj)
+M:Eco.Plugins.Networking.QuadTreeNetObjectCollection.TryGetValue(System.Int32,Eco.Shared.Networking.INetObject@)	public bool TryGetValue(int id, out INetObject value)
+M:Eco.Plugins.Networking.QuadTreePerType.#ctor(System.Type[])	public QuadTreePerType(params Type[] types)
+M:Eco.Plugins.Networking.QuadTreePerType.Add(Eco.Shared.Networking.INetObject,System.Int32,System.Double)	public void Add(INetObject netObject, int id, double time)
+M:Eco.Plugins.Networking.QuadTreePerType.Clear	public void Clear()
+M:Eco.Plugins.Networking.QuadTreePerType.CollectUpdatedObjects(Eco.Shared.Networking.INetObjectViewer,System.Collections.Generic.List{Eco.Shared.Networking.INetObject})	public void CollectUpdatedObjects(INetObjectViewer viewer, List<INetObject> buffer)
+M:Eco.Plugins.Networking.QuadTreePerType.Contains(System.Int32)	public bool Contains(int id)
+M:Eco.Plugins.Networking.QuadTreePerType.GetNewRelevantObjects(Eco.Shared.Networking.INetObjectViewer,Eco.Shared.Networking.INetObjectContainer,System.Boolean)	public IEnumerable<INetObject> GetNewRelevantObjects(INetObjectViewer viewer, INetObjectContainer alreadyRelevant, bool fullSearch)
+M:Eco.Plugins.Networking.QuadTreePerType.GetObjectsOfType``1	public IEnumerable<T> GetObjectsOfType<T>()
+M:Eco.Plugins.Networking.QuadTreePerType.GetObjectsWithin(Eco.Shared.Math.Vector2,System.Single)	public IEnumerable<INetObject> GetObjectsWithin(Vector2 position, float range)
+M:Eco.Plugins.Networking.QuadTreePerType.GetObjectsWithin``1(Eco.Shared.Math.Vector2,System.Single)	public IEnumerable<T> GetObjectsWithin<T>(Vector2 position, float range) where T : INetObjectPosition
+M:Eco.Plugins.Networking.QuadTreePerType.Initialize(Eco.Shared.Math.Vector2)	public void Initialize(Vector2 size)
+M:Eco.Plugins.Networking.QuadTreePerType.OnObjectMoved(Eco.Shared.Networking.INetObjectPosition)	public void OnObjectMoved(INetObjectPosition obj)
+M:Eco.Plugins.Networking.QuadTreePerType.PauseSendUpdates(Eco.Shared.Networking.INetObject)	public void PauseSendUpdates(INetObject obj)
+M:Eco.Plugins.Networking.QuadTreePerType.Remove(Eco.Shared.Networking.INetObject)	public bool Remove(INetObject netObject)
+M:Eco.Plugins.Networking.QuadTreePerType.ResumeSendUpdates(Eco.Shared.Networking.INetObject)	public void ResumeSendUpdates(INetObject obj)
+M:Eco.Plugins.Networking.QuadTreePerType.TryGetValue(System.Int32,Eco.Shared.Networking.INetObject@)	public bool TryGetValue(int id, out INetObject value)
+M:Eco.Plugins.Networking.StrangeCloudWorldRegistration.UpdateAndRegisterStrangeWorld	public static Task UpdateAndRegisterStrangeWorld()
+M:Eco.Plugins.Networking.ThreadSafeNetObjectViewerCollection.#ctor	public ThreadSafeNetObjectViewerCollection()
+M:Eco.Plugins.Networking.ThreadSafeNetObjectViewerCollection.Remove(Eco.Shared.Networking.INetObjectViewer)	public bool Remove(INetObjectViewer viewer)
+M:Eco.Plugins.Networking.UPnPMapper.#ctor	public UPnPMapper()
+M:Eco.Plugins.Networking.UPnPMapper.CreateAsync(System.Net.Sockets.ProtocolType,System.Int32)	public Task<IPEndPoint> CreateAsync(ProtocolType protocolType, int privatePort)
+M:Eco.Plugins.Networking.UPnPMapper.CreateAsync(System.Net.Sockets.ProtocolType,System.Int32,System.Threading.CancellationToken)	public Task<IPEndPoint> CreateAsync(ProtocolType protocolType, int privatePort, CancellationToken token)
+M:Eco.Plugins.Networking.UPnPMapper.DeleteAsync(System.Net.Sockets.ProtocolType,System.Int32,System.Int32)	public Task DeleteAsync(ProtocolType protocol, int privatePort, int publicPort)
+M:Eco.Plugins.Networking.UPnPMapping.#ctor(System.Net.Sockets.ProtocolType,System.Int32)	public UPnPMapping(ProtocolType protocolType, int privatePort)
+M:Eco.Plugins.Networking.UPnPMapping.CreateAsync	public Task<IPEndPoint> CreateAsync()
+M:Eco.Plugins.Networking.UPnPMapping.DeleteAsync	public Task DeleteAsync()
+M:Eco.Plugins.Networking.UPnPMapping.Dispose	public void Dispose()
+M:Eco.Plugins.Profiling.DotnetDumpScenario.#ctor	public DotnetDumpScenario()
+M:Eco.Plugins.Profiling.DotnetDumpScenario.Run(System.String,System.TimeSpan)	public void Run(string baseName, TimeSpan duration)
+M:Eco.Plugins.Profiling.DotnetTraceScenario.#ctor	public DotnetTraceScenario()
+M:Eco.Plugins.Profiling.DotnetTraceScenario.Run(System.String,System.TimeSpan)	public void Run(string baseName, TimeSpan duration)
+M:Eco.Plugins.Profiling.IProfilingScenario.Run(System.String,System.TimeSpan)	void Run(string baseName, TimeSpan duration)
+M:Eco.Plugins.Profiling.JetbrainsDotTraceTimelineScenario.#ctor	public JetbrainsDotTraceTimelineScenario()
+M:Eco.Plugins.Profiling.JetbrainsDotTraceTimelineScenario.Run(System.String,System.TimeSpan)	public void Run(string baseName, TimeSpan duration)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.CPU(Eco.Gameplay.Systems.Chat.IChatClient,System.Int32)	public static void CPU(IChatClient client, int seconds = 60)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.DumpPerformanceReports(Eco.Gameplay.Systems.Chat.IChatClient)	public static void DumpPerformanceReports(IChatClient client)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.Everything(Eco.Gameplay.Systems.Chat.IChatClient,System.Int32)	public static void Everything(IChatClient client, int seconds = 60)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.Memory(Eco.Gameplay.Systems.Chat.IChatClient)	public static void Memory(IChatClient client)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.NetTrace(Eco.Gameplay.Systems.Chat.IChatClient,System.Int32)	public static void NetTrace(IChatClient client, int seconds = 60)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.NotificationStats(Eco.Gameplay.Systems.Chat.IChatClient,System.Int32)	public static void NotificationStats(IChatClient client, int seconds = 180)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.Performance(Eco.Gameplay.Systems.Chat.IChatClient,System.Int32)	public static void Performance(IChatClient client, int seconds = 60)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.Profiler(Eco.Gameplay.Systems.Chat.IChatClient)	public static void Profiler(IChatClient client)
+M:Eco.Plugins.Profiling.ProfilingChatCommands.Results(Eco.Gameplay.Players.User)	public static void Results(User user)
+M:Eco.Plugins.Profiling.ProfilingPlugin.#ctor	public ProfilingPlugin()
+M:Eco.Plugins.Profiling.ProfilingPlugin.GetCategory	public string GetCategory()
+M:Eco.Plugins.Profiling.ProfilingPlugin.GetCommands(System.Collections.Generic.Dictionary{System.String,System.Action})	public void GetCommands(Dictionary<string, Action> nameToFunction)
+M:Eco.Plugins.Profiling.ProfilingPlugin.GetResultFilename(System.DateTime,System.String,System.String)	public static string GetResultFilename(DateTime startTime, string resultTypeName, string extension)
+M:Eco.Plugins.Profiling.ProfilingPlugin.GetStatus	public string GetStatus()
+M:Eco.Plugins.Profiling.ProfilingPlugin.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask timer)
+M:Eco.Plugins.Profiling.ProfilingPlugin.RunDotnetTool(System.String,System.String)	public static void RunDotnetTool(string tool, string args)	// This utility applies sane defaults for use with dotnet diagnostics tools and changes working directory to Eco.Plugins.Profiling.ProfilingPlugin.ResultsDirectory for simpler file saves.
+M:Eco.Plugins.Profiling.ProfilingPlugin.RunProfilers(Eco.Gameplay.Systems.Chat.IChatClient,Eco.Plugins.Profiling.ProfilingScenario,System.Int32)	public void RunProfilers(IChatClient client, ProfilingScenario scenario, int seconds = 60)
+M:Eco.Plugins.Profiling.ProfilingPlugin.ToString	public override string ToString()
+M:Eco.Plugins.Rcon.RconClient.#ctor(System.Net.Sockets.TcpClient)	public RconClient(TcpClient client)
+M:Eco.Plugins.Rcon.RconClient.Disconnect	public void Disconnect()
+M:Eco.Plugins.Rcon.RconClient.Dispose	public void Dispose()
+M:Eco.Plugins.Rcon.RconClient.Error(Eco.Shared.Localization.LocString)	public void Error(LocString msg)
+M:Eco.Plugins.Rcon.RconClient.ErrorLoc(System.FormattableString)	public void ErrorLoc(FormattableString msg)
+M:Eco.Plugins.Rcon.RconClient.ErrorLocStr(System.String)	public void ErrorLocStr(string msg)
+M:Eco.Plugins.Rcon.RconClient.GetChatAuthLevel	public ChatAuthorizationLevel GetChatAuthLevel()
+M:Eco.Plugins.Rcon.RconClient.Msg(Eco.Shared.Localization.LocString,Eco.Shared.Services.NotificationStyle)	public void Msg(LocString msg, NotificationStyle style)
+M:Eco.Plugins.Rcon.RconClient.MsgLoc(System.FormattableString,Eco.Shared.Services.NotificationStyle)	public void MsgLoc(FormattableString msg, NotificationStyle style)
+M:Eco.Plugins.Rcon.RconClient.MsgLocStr(System.String,Eco.Shared.Services.NotificationStyle)	public void MsgLocStr(string msg, NotificationStyle style)
+M:Eco.Plugins.Rcon.RconClient.OkBox(Eco.Shared.Localization.LocString)	public void OkBox(LocString msg)
+M:Eco.Plugins.Rcon.RconClient.OkBoxLoc(System.FormattableString)	public void OkBoxLoc(FormattableString msg)
+M:Eco.Plugins.Rcon.RconClient.OkBoxLocStr(System.String)	public void OkBoxLocStr(string msg)
+M:Eco.Plugins.Rcon.RconClient.PollConnection(System.Threading.CancellationToken)	public Task PollConnection(CancellationToken token)
+M:Eco.Plugins.Rcon.RconClient.ReadPacketAsync(System.Threading.CancellationToken)	public Task<RconPacket> ReadPacketAsync(CancellationToken token)	// Reads an incoming Eco.Plugins.Rcon.RconPacket from the network stream
+M:Eco.Plugins.Rcon.RconClient.TempServerMessage(Eco.Shared.Localization.LocString,Eco.Shared.Services.NotificationCategory,Eco.Shared.Services.NotificationStyle)	public void TempServerMessage(LocString message, NotificationCategory category, NotificationStyle style)
+M:Eco.Plugins.Rcon.RconClient.WritePacketAsync(Eco.Plugins.Rcon.RconPacket,System.Threading.CancellationToken)	public Task WritePacketAsync(RconPacket packet, CancellationToken token)	// Writes an Eco.Plugins.Rcon.RconPacket to the network stream
+M:Eco.Plugins.Rcon.RconPacket.#ctor(System.Int32,System.Int32,Eco.Plugins.Rcon.RconPacketType,System.String)	public RconPacket(int id, int size, RconPacketType type, string payload)
+M:Eco.Plugins.Rcon.RconPacket.FromBuffer(System.Byte[],System.Int32)	public static RconPacket FromBuffer(byte[] buffer, int packetLength)
+M:Eco.Plugins.Rcon.RconPacket.FromStream(System.IO.Stream)	public static RconPacket FromStream(Stream stream)	// Reads the RCON packet from a NetworkStream instance and returns the Eco.Plugins.Rcon.RconPacket instance.
+M:Eco.Plugins.Rcon.RconPacket.FromStreamAsync(System.IO.Stream,System.Threading.CancellationToken)	public static Task<RconPacket> FromStreamAsync(Stream stream, CancellationToken token)
+M:Eco.Plugins.Rcon.RconPacket.MakeAuthResponse(System.Int32)	public static RconPacket MakeAuthResponse(int id)
+M:Eco.Plugins.Rcon.RconPacket.MakeExecResponse(System.Int32,System.String)	public static RconPacket MakeExecResponse(int id, string payload = "")
+M:Eco.Plugins.Rcon.RconPacket.WriteToAsync(System.Net.Sockets.NetworkStream,System.Threading.CancellationToken)	public Task WriteToAsync(NetworkStream stream, CancellationToken token)
+M:Eco.Plugins.Rcon.RconPlugin.#ctor	public RconPlugin()
+M:Eco.Plugins.Rcon.RconPlugin.DoWork(System.Threading.CancellationToken)	public Task DoWork(CancellationToken token)
+M:Eco.Plugins.Rcon.RconPlugin.GetCategory	public string GetCategory()
+M:Eco.Plugins.Rcon.RconPlugin.GetStatus	public string GetStatus()
+M:Eco.Plugins.Rcon.RconPlugin.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask timer)
+M:Eco.Plugins.Rcon.RconPlugin.ShutdownAsync	public Task ShutdownAsync()
+M:Eco.Plugins.Rcon.RconPlugin.ToString	public override string ToString()
+M:Eco.Plugins.Rcon.RconProtocolError.#ctor(System.String)	public RconProtocolError(string message)
+P:Eco.Plugins.Networking.Client.Active	public bool Active { get; }
+P:Eco.Plugins.Networking.Client.Blobs	public SpinLockBuffer<byte[]> Blobs { get; }
+P:Eco.Plugins.Networking.Client.Connected	public bool Connected { get; }
+P:Eco.Plugins.Networking.Client.Connection	public object Connection { get; }
+P:Eco.Plugins.Networking.Client.HashesOfCachedData	public ConcurrentHashSet<string> HashesOfCachedData { get; }
+P:Eco.Plugins.Networking.Client.ID	public int ID { get; }
+P:Eco.Plugins.Networking.Client.IsAuthenticated	public bool IsAuthenticated { get; }
+P:Eco.Plugins.Networking.Client.IsLocal	public bool IsLocal { get; }
+P:Eco.Plugins.Networking.Client.KnownBlobs	public ConcurrentHashSet<int> KnownBlobs { get; }
+P:Eco.Plugins.Networking.Client.LoginPriority	public int LoginPriority { get; }
+P:Eco.Plugins.Networking.Client.Name	public string Name { get; }
+P:Eco.Plugins.Networking.Client.NetObjectCreationRealtime	public double NetObjectCreationRealtime { get; set; }
+P:Eco.Plugins.Networking.Client.Observer	public WorldObserver Observer { get; }
+P:Eco.Plugins.Networking.Client.RemoteEndPoint	public IPEndPoint RemoteEndPoint { get; }
+P:Eco.Plugins.Networking.Client.SteamId	public ulong SteamId { get; }
+P:Eco.Plugins.Networking.Client.StrangeUser	public StrangeUser StrangeUser { get; }
+P:Eco.Plugins.Networking.Client.UpdateEvent	public AutoResetEvent UpdateEvent { get; set; }
+P:Eco.Plugins.Networking.Client.Valid	public bool Valid { get; }
+P:Eco.Plugins.Networking.Client.Views	public SpinLockBuffer<byte[]> Views { get; }
+P:Eco.Plugins.Networking.Client.WorldTicket	public string WorldTicket { get; }
+P:Eco.Plugins.Networking.EcoServerConfig.DefaultSlots	public int DefaultSlots { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.DetailedDescription	public string DetailedDescription { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.DiscordAddress	public string DiscordAddress { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.FaithResetValue	public int FaithResetValue { get; }
+P:Eco.Plugins.Networking.EcoServerConfig.GameServerPort	public int GameServerPort { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.HashedPassword	public string HashedPassword { get; }
+P:Eco.Plugins.Networking.EcoServerConfig.ID	public Guid ID { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.IPAddress	public string IPAddress { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.MaxUsersLoadingAtSameTime	public int MaxUsersLoadingAtSameTime { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.Name	public string Name { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.Passport	public Guid Passport { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.Password	public string Password { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.Playtime	public string Playtime { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.PublicServer	public bool PublicServer { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.Rate	public int Rate { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.RconIPAddress	public string RconIPAddress { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.RconPassword	public string RconPassword { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.RconServerPort	public int RconServerPort { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.RelayServerAddress	public string RelayServerAddress { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.RemoteAddress	public string RemoteAddress { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.ReservedSlots	public int ReservedSlots { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.ServerCategory	public ServerCategory ServerCategory { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.SteamServerPort	public ushort SteamServerPort { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.UPnPEnabled	public bool UPnPEnabled { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.WebServerPort	public int WebServerPort { get; set; }
+P:Eco.Plugins.Networking.EcoServerConfig.WebServerUrl	public string WebServerUrl { get; set; }
+P:Eco.Plugins.Networking.NetworkJoinHandler`1.LoadingUsersCount	public int LoadingUsersCount { get; }
+P:Eco.Plugins.Networking.NetworkManager.Config	public static EcoServerConfig Config { get; }
+P:Eco.Plugins.Networking.NetworkManager.DiscordAddress	public static string DiscordAddress { get; }
+P:Eco.Plugins.Networking.NetworkManager.DiscordInviteCode	public static string DiscordInviteCode { get; }
+P:Eco.Plugins.Networking.NetworkManager.LocalEndPoint	public static IPEndPoint LocalEndPoint { get; }
+P:Eco.Plugins.Networking.NetworkManager.ParamChanged	public ThreadSafeAction<object, string> ParamChanged { get; set; }
+P:Eco.Plugins.Networking.NetworkManager.PluginConfig	public IPluginConfig PluginConfig { get; }
+P:Eco.Plugins.Networking.NetworkManager.RelayAddress	public string RelayAddress { get; }
+P:Eco.Plugins.Networking.NetworkManager.ServerID	public static Guid ServerID { get; }
+P:Eco.Plugins.Networking.NetworkManager.ServerPassport	public static Guid ServerPassport { get; }
+P:Eco.Plugins.Networking.NetworkServer.LocalAddress	public static IPAddress LocalAddress { get; }
+P:Eco.Plugins.Networking.NetworkServer.NumClients	public static int NumClients { get; }
+P:Eco.Plugins.Networking.NetworkServer.RelayEndpoint	public IPEndPoint RelayEndpoint { get; }
+P:Eco.Plugins.Networking.NetworkStats.ReceivedBytesAverage	public double ReceivedBytesAverage { get; }
+P:Eco.Plugins.Networking.NetworkStats.SentBytesAverage	public double SentBytesAverage { get; }
+P:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Count	public int Count { get; }
+P:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Item(System.Int32)	public INetObject this[int id] { get; }
+P:Eco.Plugins.Networking.QuadTreeNetObjectCollection.Objects	public IDictionary<int, INetObject> Objects { get; }
+P:Eco.Plugins.Networking.QuadTreePerType.Count	public int Count { get; }
+P:Eco.Plugins.Networking.QuadTreePerType.Item(System.Int32)	public INetObject this[int id] { get; }
+P:Eco.Plugins.Networking.QuadTreePerType.Objects	public IDictionary<int, INetObject> Objects { get; }
+P:Eco.Plugins.Networking.StrangeCloudWorldRegistration.StrangeWorld	public static StrangeWorld StrangeWorld { get; }
+P:Eco.Plugins.Networking.StrangeCloudWorldRegistration.StrangeWorldCloudDataJson	public static string StrangeWorldCloudDataJson { get; }
+P:Eco.Plugins.Networking.UPnPMapping.PrivatePort	public int PrivatePort { get; }
+P:Eco.Plugins.Networking.UPnPMapping.ProtocolType	public ProtocolType ProtocolType { get; }
+P:Eco.Plugins.Networking.UPnPMapping.PublicEndPoint	public IPEndPoint PublicEndPoint { get; }
+P:Eco.Plugins.Profiling.DotnetDumpScenario.Extention	public string Extention { get; }
+P:Eco.Plugins.Profiling.DotnetDumpScenario.InstallLink	public string InstallLink { get; }
+P:Eco.Plugins.Profiling.DotnetDumpScenario.ResultType	public string ResultType { get; }
+P:Eco.Plugins.Profiling.DotnetDumpScenario.ToolName	public string ToolName { get; }
+P:Eco.Plugins.Profiling.DotnetTraceScenario.Extention	public string Extention { get; }
+P:Eco.Plugins.Profiling.DotnetTraceScenario.InstallLink	public string InstallLink { get; }
+P:Eco.Plugins.Profiling.DotnetTraceScenario.ResultType	public string ResultType { get; }
+P:Eco.Plugins.Profiling.DotnetTraceScenario.ToolName	public string ToolName { get; }
+P:Eco.Plugins.Profiling.IProfilingScenario.Extention	string Extention { get; }
+P:Eco.Plugins.Profiling.IProfilingScenario.InstallLink	string InstallLink { get; }
+P:Eco.Plugins.Profiling.IProfilingScenario.ResultType	string ResultType { get; }
+P:Eco.Plugins.Profiling.IProfilingScenario.ToolName	string ToolName { get; }
+P:Eco.Plugins.Profiling.JetbrainsDotTraceTimelineScenario.Extention	public string Extention { get; }
+P:Eco.Plugins.Profiling.JetbrainsDotTraceTimelineScenario.InstallLink	public string InstallLink { get; }
+P:Eco.Plugins.Profiling.JetbrainsDotTraceTimelineScenario.ResultType	public string ResultType { get; }
+P:Eco.Plugins.Profiling.JetbrainsDotTraceTimelineScenario.ToolName	public string ToolName { get; }
+P:Eco.Plugins.Profiling.ProfilingPlugin.ExecutableDirectory	public static string ExecutableDirectory { get; }
+P:Eco.Plugins.Profiling.ProfilingPlugin.ResultsDirectory	public static DirectoryInfo ResultsDirectory { get; }
+P:Eco.Plugins.Rcon.RconClient.Available	public int Available { get; }
+P:Eco.Plugins.Rcon.RconClient.Connected	public bool Connected { get; }
+P:Eco.Plugins.Rcon.RconClient.ImplementationName	public string ImplementationName { get; }
+P:Eco.Plugins.Rcon.RconClient.LastRead	public DateTime LastRead { get; }
+P:Eco.Plugins.Rcon.RconClient.LastWrite	public DateTime LastWrite { get; }
+P:Eco.Plugins.Rcon.RconClient.MarkedUpName	public LocString MarkedUpName { get; }
+P:Eco.Plugins.Rcon.RconClient.Name	public string Name { get; }
+P:Eco.Plugins.Rcon.RconClient.ReportIpAddress	public string ReportIpAddress { get; }
+P:Eco.Plugins.Rcon.RconClient.ReportUserId	public string ReportUserId { get; }
+P:Eco.Plugins.Rcon.RconClient.ReportUsername	public string ReportUsername { get; }
+T:Eco.Plugins.Exceptions.NetworkServerException	public class NetworkServerException : Exception
+T:Eco.Plugins.Networking.AddressTakenError	public class AddressTakenError : PluginError
+T:Eco.Plugins.Networking.Client	public sealed class Client : Object, IMvcNetClient, INetClient, INetObject
+T:Eco.Plugins.Networking.EcoServerConfig	public class EcoServerConfig : Object
+T:Eco.Plugins.Networking.Firewall	public static class Firewall : Object
+T:Eco.Plugins.Networking.LoginQueue	public class LoginQueue : Object
+T:Eco.Plugins.Networking.MasterServerDebugUtils	public static class MasterServerDebugUtils : Object
+T:Eco.Plugins.Networking.NetworkCommands	public static class NetworkCommands : Object
+T:Eco.Plugins.Networking.NetworkJoinHandler`1	public class NetworkJoinHandler<T> : Object
+T:Eco.Plugins.Networking.NetworkManager	public class NetworkManager : Singleton<NetworkManager>, IConfigurablePlugin, IEditablePlugin, IGUIPlugin, IServerPlugin, IThreadedPlugin, IShutdownablePlugin, IDisplayablePlugin, IHasDisplayTabs, IDisplayTab, IInitializablePlugin
+T:Eco.Plugins.Networking.NetworkServer	public sealed class NetworkServer : Singleton<NetworkServer>, INetworkEventHandler	// A wrapper around IUdpServer, with threads to handle send/receive and serialization of messages. Network events can be send with SendEvent or via interface with INetworkEventHandler.SendEvent"/>. They added to Eco.Plugins.Networking.NetworkServer.messages queue and then processed in background wit...
+T:Eco.Plugins.Networking.NetworkStats	public class NetworkStats : Object
+T:Eco.Plugins.Networking.PriorityLoginQueue	public class PriorityLoginQueue : Object
+T:Eco.Plugins.Networking.QuadTreeNetObjectCollection	public class QuadTreeNetObjectCollection : Object, INetObjectCollection
+T:Eco.Plugins.Networking.QuadTreePerType	public class QuadTreePerType : Object, INetObjectCollection
+T:Eco.Plugins.Networking.StrangeCloudWorldRegistration	public static class StrangeCloudWorldRegistration : Object
+T:Eco.Plugins.Networking.ThreadSafeNetObjectViewerCollection	public class ThreadSafeNetObjectViewerCollection : ConcurrentHashSet<INetObjectViewer>, INetObjectViewerCollection, IEnumerable<INetObjectViewer>, IEnumerable
+T:Eco.Plugins.Networking.UPnPMapper	public class UPnPMapper : AutoSingleton<UPnPMapper>
+T:Eco.Plugins.Networking.UPnPMapping	public sealed class UPnPMapping : Object, IDisposable
+T:Eco.Plugins.Profiling.DotnetDumpScenario	public class DotnetDumpScenario : Object, IProfilingScenario
+T:Eco.Plugins.Profiling.DotnetTraceScenario	public class DotnetTraceScenario : Object, IProfilingScenario
+T:Eco.Plugins.Profiling.IProfilingScenario	public interface IProfilingScenario
+T:Eco.Plugins.Profiling.JetbrainsDotTraceTimelineScenario	public class JetbrainsDotTraceTimelineScenario : Object, IProfilingScenario
+T:Eco.Plugins.Profiling.ProfilingChatCommands	public static class ProfilingChatCommands : Object
+T:Eco.Plugins.Profiling.ProfilingPlugin	public class ProfilingPlugin : Object, ICommandablePlugin, IServerPlugin, IInitializablePlugin
+T:Eco.Plugins.Profiling.ProfilingScenario	public sealed class ProfilingScenario : Enum
+T:Eco.Plugins.Rcon.RconClient	public sealed class RconClient : Object, IDisposable, IChatClient, INotificationReceiver
+T:Eco.Plugins.Rcon.RconPacket	public sealed class RconPacket : ValueType
+T:Eco.Plugins.Rcon.RconPacketType	public sealed class RconPacketType : Enum	// Represents all possible transaction types within the RCON protocol. For a more complete breakdown of the individual packet types refer to the documentation found on the Wiki https://wiki.play.eco/en/RCON#Packet_Types
+T:Eco.Plugins.Rcon.RconPlugin	public sealed class RconPlugin : Singleton<RconPlugin>, IWorkerPlugin, IServerPlugin, IShutdownablePlugin, IInitializablePlugin	// This plugin adds Remote Console (RCON) support to the Eco Server. It follows the Source RCON standard used by majority of the industry. The plugin exposes a TCP socket (Default on port 3002) for allowing remote administrative command execution and automated command handling for tasks, tools, and ...
+T:Eco.Plugins.Rcon.RconProtocolError	public class RconProtocolError : Exception

@@ -1,0 +1,44 @@
+<ecopedia icon="RabotnikMaskItem" priority="10">
+  <summary>For server admins: Rabotnik settings and chat commands.</summary>
+  <section>
+Rabotnik's settings are saved in <b>Configs/Rabotnik.eco</b> and can be edited in the server UI. Each setting has a description there. The other Rabotnik pages describe the default behavior. The main settings are:
+  </section>
+  <section type="header">Updates</section>
+  <section>
+- <b>TickSeconds</b> (30): seconds between Rabotnik updates.
+- <b>MaxRabotniksPerTick</b> (50): how many Rabotniks one update handles. Larger populations take turns.
+  </section>
+  <section type="header">Housing and food</section>
+  <section>
+- <b>RentBudgetHours</b> (24): hours of rent a Rabotnik needs before it moves in, and keeps in reserve when it buys tools.
+- <b>LowFundsWarningHours</b> (12): when to warn the owner about rent money. 0 turns the warning off.
+- <b>EatBelowCalories</b> (2000): when a Rabotnik eats.
+- <b>BuyFoodFromShops</b> (on): Rabotniks buy food when their Logbook has none.
+- <b>NotifyOwners</b> (on): chat messages to Logbook owners.
+  </section>
+  <section type="header">Work</section>
+  <section>
+- <b>RequirePayCoversFood</b> (on) and <b>MinPayToFoodRatio</b> (1): skip work that pays less than its food costs.
+- <b>MaxLaborActionsPerTick</b> (50): a safety cap on labor per update.
+- <b>HaulContracts</b> and <b>HarvestContracts</b> (on): which contracts Rabotniks take. <b>HarvestTrees</b> (on) and <b>MaxTreeLogs</b> (200) control tree felling. <b>BuyHarvestTools</b> (on) lets Rabotniks buy their own tools.
+- <b>HaulItemsPerTick</b> (40), <b>HarvestPlantsPerTick</b> (20) and <b>ChopSwingsPerTick</b> (40): work per update. <b>CaloriesPerItemHauled</b> (5) and <b>CaloriesPerPlantHarvested</b> (10): calories per unit of work.
+- <b>ContractTimeSafety</b> (0.5): the largest share of a contract's time limit a Rabotnik's estimated work may take.
+  </section>
+  <section type="header">Reputation, culture and civics</section>
+  <section>
+- <b>GiveReputation</b> (on): master switch, with separate switches for contracts, work parties and food. <b>GenerousPayRatio</b> (2) and <b>GoodFoodWageRatio</b> (3) set what counts as generous pay and cheap food.
+- <b>NegativeReputation</b> (off): Rabotniks also take reputation away for stingy pay and overpriced food.
+- <b>MaxReputationPerPlayerPerDay</b> (5), <b>ReputationCooldownDays</b> (1), <b>RespectVanillaReputationLimits</b> (on), <b>AnnounceReputation</b> (on) and <b>ReputationFromOwnRabotniks</b> (off).
+- <b>CulturePerXpRate</b> (0.05): culture per point of experience rate, capped by <b>FoodXpCultureCap</b> and <b>HousingXpCultureCap</b>, and scaled by <b>ReputationCultureBonus</b>.
+- <b>MarkRabotniksAbandoned</b> (on): put Rabotniks in the Abandoned demographic.
+- <b>RabotniksVote</b> (on) and <b>VoteBeforeDeadlineMinutes</b> (60): voting.
+  </section>
+  <section type="header">Admin commands</section>
+  <section>
+- <b>/rabotnik list</b>: every Logbook, its Rabotnik and what it is doing.
+- <b>/rabotnik info NAME</b>: the full status of one Rabotnik. Part of the name is enough.
+- <b>/rabotnik tick</b>: update every Rabotnik now.
+- <b>/rabotnik perf</b>: time one update of every Rabotnik.
+- <b>/rabotnik perfspawn COUNT</b> and <b>/rabotnik perfclear</b>: place, then remove, test Logbooks for performance testing.
+  </section>
+</ecopedia>

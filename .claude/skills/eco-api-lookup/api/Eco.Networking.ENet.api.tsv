@@ -1,0 +1,13 @@
+F:Eco.Networking.ENet.ENetDelivery.Channel	public readonly byte Channel
+F:Eco.Networking.ENet.ENetDelivery.Packet	public readonly Packet Packet
+F:Eco.Networking.ENet.ENetDelivery.Target	public readonly object Target
+F:Eco.Networking.ENet.ENetUdpLibrary.MaxPacketSize	public const int MaxPacketSize = 65536
+M:Eco.Networking.ENet.ENetDelivery.#ctor(ENet.Packet,System.Object,System.Byte)	public ENetDelivery(Packet packet, object target, byte channel)
+M:Eco.Networking.ENet.ENetUdpLibrary.#ctor	public ENetUdpLibrary()
+M:Eco.Networking.ENet.ENetUdpLibrary.#ctor(System.Func{ENet.InterceptCallback,ENet.InterceptCallback},System.Func{ENet.ConnectRequestCallback,ENet.ConnectRequestCallback})	public ENetUdpLibrary(Func<InterceptCallback, InterceptCallback> interceptCallbackFactory, Func<ConnectRequestCallback, ConnectRequestCallback> connectRequestCallbackFactory)
+M:Eco.Networking.ENet.ENetUdpLibrary.CreateClient(System.String,System.UInt32,System.UInt32)	public IUdpClient CreateClient(string appIdentifier, uint protocolVersion, uint connectTimeout)
+M:Eco.Networking.ENet.ENetUdpLibrary.CreateServer(System.String,System.UInt32,System.Net.IPEndPoint,System.Int32)	public IUdpServer CreateServer(string appIdentifier, uint protocolVersion, IPEndPoint requestedEndPoint, int maxConnections)
+M:Eco.Networking.ENet.ENetUdpLibrary.Dispose	public void Dispose()
+M:Eco.Networking.ENet.ENetUdpLibrary.Dispose(System.Boolean)	protected virtual void Dispose(bool disposing)
+T:Eco.Networking.ENet.ENetDelivery	public sealed class ENetDelivery : ValueType
+T:Eco.Networking.ENet.ENetUdpLibrary	public class ENetUdpLibrary : Object, IUdpLibrary, IDisposable

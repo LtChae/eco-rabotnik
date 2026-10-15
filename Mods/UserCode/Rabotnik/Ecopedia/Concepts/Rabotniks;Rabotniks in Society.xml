@@ -1,0 +1,26 @@
+<ecopedia icon="EcopediaSettlementsCulture" priority="-4">
+  <summary>Rabotniks give reputation, create culture, fall under laws and vote.</summary>
+  <section type="header">Reputation</section>
+  <section>
+Rabotniks give [Reputation] to players who treat them well:
+- the <b>client</b> of a contract with generous pay, when the contract pays out,
+- the <b>creator</b> of a work party with generous pay, when the Rabotnik joins, and
+- the <b>owner</b> of a shop that sells cheap food, when the Rabotnik buys.
+
+By default, pay counts as generous when it is at least twice the food cost of the work. Rabotniks follow the same daily reputation limits as players. A single player gets at most 5 reputation a day from all Rabotniks combined. Rabotniks never give reputation to the owner of their own Logbook, so owners can't farm reputation by paying their own workers.
+  </section>
+  <section type="header">Culture</section>
+  <section>
+A [Rabotnik Logbook] is a <b>Cultural</b> furnishing, like a painting. Its value is the [Culture] its Rabotnik creates. This grows with the Rabotnik's [Experience] rate from food and housing, and with its reputation. In a property that counts as cultural, this raises the settlement's [Influence]. Rabotniks are meant to be a small source of culture next to players' art and architecture.
+  </section>
+  <section type="header">Laws</section>
+  <section>
+Rabotniks are citizens, so [Laws] and [Taxes] apply to them as they do to players. Every Rabotnik belongs to the <b>Rabotnik</b> demographic, so a law can single them out. See [Demographics].
+
+By default, Rabotniks are also in the <b>Abandoned</b> demographic, because they never log in. This stops them from generating land claims. To aim a law at abandoned players but not Rabotniks, combine the two demographics.
+  </section>
+  <section type="header">Elections</section>
+  <section>
+By default, Rabotniks vote in [Elections] they are eligible for, but they don't decide for themselves. They wait until every active player who can vote has voted. Then their votes are split across the players' ballots in proportion to each voter's reputation. If players are still missing an hour before the election ends, Rabotniks follow the players who have voted. A summary message reports how the Rabotniks voted.
+  </section>
+</ecopedia>

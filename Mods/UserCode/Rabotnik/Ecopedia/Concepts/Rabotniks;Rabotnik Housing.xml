@@ -1,0 +1,26 @@
+<ecopedia icon="Residency" priority="-8">
+  <summary>A Rabotnik must be a citizen with a home before it will work.</summary>
+  <section type="header">Citizenship</section>
+  <section>
+A Rabotnik always tries to become a citizen of the settlement its [Rabotnik Logbook] is in. It goes through the settlement's normal [Immigration Policy], so a settlement that doesn't accept new citizens won't accept Rabotniks either. Until it is accepted, the Rabotnik waits, and its Logbook says why.
+  </section>
+  <section type="header">Finding a home</section>
+  <section>
+A Rabotnik rents a home exactly as a player accepts a [Residency] invitation. It tries these in order:
+1. The deed the Logbook stands on.
+2. Otherwise, the cheapest residence in the settlement that has invited it and that it can afford.
+
+The deed's owner must <b>invite</b> the Rabotnik, either by name or by inviting Everyone or a group that includes it. A Rabotnik never rents a residence whose rent only covers online hours, because a Rabotnik is never online and would live there for free.
+  </section>
+  <section type="header">Rent and money</section>
+  <section>
+A Rabotnik only moves in if it can pay the move-in fee plus 24 hours of rent, by default. Fund it from the Logbook's Home and Money tab.
+
+After that, rent is charged every hour by the normal rent system. If the Rabotnik can't pay, it is evicted like any tenant and stops working until it finds a new home. The Logbook's owner is warned when the Rabotnik has less than 12 hours of rent left.
+
+Once a Rabotnik is working, its wages normally cover its rent. Money you give a Rabotnik is its own and can't be taken back. See [Rabotniks Overview].
+  </section>
+  <section>
+Like a player, a Rabotnik's home adds to its [Experience] rate, which affects how fast it levels up its skill. See [Rabotnik Food and Skills].
+  </section>
+</ecopedia>

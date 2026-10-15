@@ -1,0 +1,23 @@
+<ecopedia icon="Skill Book" priority="-7">
+  <summary>Rabotniks eat to stay able to work, and know exactly one skill.</summary>
+  <section type="header">Eating</section>
+  <section>
+Labor burns calories, just as it does for players. When a Rabotnik drops below 2000 calories, by default, it eats food from its [Rabotnik Logbook]. It prefers variety, so a Logbook stocked with several kinds of food gives better [Nutrition].
+
+If the Logbook has no food, the Rabotnik buys food from shops in its settlement, by default. It uses its own money and normal store trades, so prices and taxes apply. It picks the food with the most nutrition per coin, with a bonus for food it hasn't eaten lately.
+
+A Rabotnik with no food stops laboring when its calories run out, and its level drops as its nutrition falls.
+  </section>
+  <section type="header">One skill</section>
+  <section>
+A Rabotnik knows exactly <b>one</b> skill and keeps it for good. There are two ways to give it one:
+- Press a <b>base skill button</b> on the Logbook's Rabotnik tab: Logging, Mining, Gathering, Campfire Cooking or Hunting. These are the [Specialties] every player can pick without a scroll.
+- Put a <b>skill scroll</b> in the Logbook. The Rabotnik reads the first scroll stocked and learns that skill.
+
+Once it has a skill, a Rabotnik won't learn another. To get a different skill, pick the Logbook up and place a new one. This brings in a different Rabotnik.
+  </section>
+  <section type="header">Levels</section>
+  <section>
+A Rabotnik starts its skill at level 1. Like a player, it gains skill [Experience] from the labor it does, and its experience rate comes from its nutrition and its home. A well-fed Rabotnik in a good house levels up faster, so it can take on recipes that need a higher level.
+  </section>
+</ecopedia>

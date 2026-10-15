@@ -1,0 +1,561 @@
+F:Eco.WebServer.Controllers.MapJSON.DistrictSuffix	public string DistrictSuffix
+F:Eco.WebServer.Controllers.MapJSON.LayerNames	public List<string[]> LayerNames
+F:Eco.WebServer.Controllers.MapJSON.Plots	public Dictionary<string, List<Vector2i>> Plots
+F:Eco.WebServer.DataTransferObjects.V1.CommandResultV1.CommandMessages	public List<CommandMessageV1> CommandMessages
+F:Eco.WebServer.DataTransferObjects.V1.ElectedTitleV1.Table	public LocString[, ] Table
+F:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1.Table	public LocString[, ] Table
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerInputV1.Color	public Color Color
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerInputV1.DoubleEnded	public bool DoubleEnded
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerInputV1.Name	public string Name
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.HiddenInputs	public List<string> HiddenInputs
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.Inputs	public List<LayerInputV1> Inputs
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.Name	public string Name
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.Output	public string Output
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.RelationshipType	public string RelationshipType
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.Tooltip	public string Tooltip
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerGroupV1.Category	public string Category
+F:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerGroupV1.List	public List<WorldLayerV1> List
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsAdmin	public const string IsAdmin = "IsAdmin"
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsApiUser	public const string IsApiUser = "IsApiUser"
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsDev	public const string IsDev = "IsDev"
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsSlgDev	public const string IsSlgDev = "IsSlgDev"
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.Name	public const string Name = "Name"
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.SelectedIcon	public const string SelectedIcon = "SelectedIcon"
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.SteamId	public const string SteamId = "SteamId"
+F:Eco.WebServer.Web.Authentication.SlgClaimTypes.StrangeId	public const string StrangeId = "StrangeId"
+F:Eco.WebServer.Web.Authorization.PolicyNames.RequireAdmin	public const string RequireAdmin = "RequireAdmin"
+F:Eco.WebServer.Web.Authorization.PolicyNames.RequireDev	public const string RequireDev = "RequireDev"
+F:Eco.WebServer.Web.Authorization.PolicyNames.RequiresEcoUser	public const string RequiresEcoUser = "RequiresEcoUser"
+F:Eco.WebServer.Web.Authorization.PolicyNames.RequireSlgDev	public const string RequireSlgDev = "RequireSlgDev"
+F:Eco.WebServer.Web.Controllers.StatReturn.Interval	public double Interval
+F:Eco.WebServer.Web.Controllers.StatReturn.Times	public int[] Times
+F:Eco.WebServer.Web.Controllers.StatReturn.Unit	public string Unit
+F:Eco.WebServer.Web.Controllers.StatReturn.Values	public float[] Values
+F:Eco.WebServer.Web.CustomSerializersSettings.Value	public static readonly JsonSerializerSettings Value
+F:Eco.WebServer.Web.EcoApiAuthentication.AuthenticationType	public static readonly string AuthenticationType
+F:Eco.WebServer.Web.EcoApiAuthentication.SchemeName	public static readonly string SchemeName
+F:Eco.WebServer.Web.EcoAuthentication.AuthenticationType	public static readonly string AuthenticationType
+F:Eco.WebServer.Web.EcoAuthentication.SchemeName	public static readonly string SchemeName
+F:Eco.WebServer.Web.Filters.DebugCallAttribute.Message	public static string Message
+F:Eco.WebServer.Web.Models.Action.Fail	public const Action Fail
+F:Eco.WebServer.Web.Models.Action.Success	public const Action Success
+F:Eco.WebServer.Web.Models.Action.value__	public int value__
+F:Eco.WebServer.Web.WebConstants.DefaultWebpage	public const string DefaultWebpage = "index.html"
+F:Eco.WebServer.Web.WebConstants.WebRoot	public static readonly string WebRoot
+M:Eco.WebServer.Controllers.MapController.#ctor	public MapController()
+M:Eco.WebServer.Controllers.MapController.Entities(System.String[],System.String[])	public IEnumerable<EntityV1> Entities(string[] entityTypes, string[] states)
+M:Eco.WebServer.Controllers.MapController.EntityTypes	public IEnumerable<string> EntityTypes()
+M:Eco.WebServer.Controllers.MapController.GetDimension	public Vector3i GetDimension()
+M:Eco.WebServer.Controllers.MapController.GetProperty	public IActionResult GetProperty()
+M:Eco.WebServer.Controllers.MapController.LayerList	public IEnumerable<string> LayerList()
+M:Eco.WebServer.Controllers.MapController.MakeMapJSON	public IActionResult MakeMapJSON()
+M:Eco.WebServer.Controllers.MapController.MapStats	public MapStatsV1 MapStats()
+M:Eco.WebServer.Controllers.MapController.WaterLevel	public float WaterLevel()
+M:Eco.WebServer.Controllers.MapJSON.#ctor	public MapJSON()
+M:Eco.WebServer.DataTransferObjects.DataTransferObject.#ctor	public DataTransferObject()
+M:Eco.WebServer.DataTransferObjects.DataTransferObject.FromJson``1(Newtonsoft.Json.Linq.JToken)	public static TDTO FromJson<TDTO>(JToken token)
+M:Eco.WebServer.DataTransferObjects.DataTransferObject.FromJson``1(System.String)	public static TDTO FromJson<TDTO>(string json)
+M:Eco.WebServer.DataTransferObjects.DataTransferObject.ToJson	public string ToJson()
+M:Eco.WebServer.DataTransferObjects.DataTransferObject.ToString	public override string ToString()	// Returns the Eco.WebServer.DataTransferObjects.DataTransferObject instance as a formatted Json string.
+M:Eco.WebServer.DataTransferObjects.V1.ActivityItemV1.#ctor(System.Int32,System.Collections.Generic.List{System.Guid},System.String)	public ActivityItemV1(int count, List<Guid> guids, string summary)
+M:Eco.WebServer.DataTransferObjects.V1.ChatMessageV1.#ctor	public ChatMessageV1()
+M:Eco.WebServer.DataTransferObjects.V1.ChatMessageV1.#ctor(Eco.Gameplay.Systems.Messaging.Chat.ChatMessage)	public ChatMessageV1(ChatMessage message)
+M:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.#ctor	public CivicActionV1()
+M:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.#ctor(Eco.Gameplay.Civics.CivicAction)	public CivicActionV1(CivicAction action)
+M:Eco.WebServer.DataTransferObjects.V1.CommandMessageV1.#ctor	public CommandMessageV1()
+M:Eco.WebServer.DataTransferObjects.V1.CommandResultV1.#ctor	public CommandResultV1()
+M:Eco.WebServer.DataTransferObjects.V1.DistrictExtension.ToDTO(Eco.Gameplay.Civics.Districts.DistrictMap)	public static DistrictMapV1 ToDTO(this DistrictMap districtMap)
+M:Eco.WebServer.DataTransferObjects.V1.DistrictMapV1.#ctor(Eco.Gameplay.Civics.Districts.DistrictMap)	public DistrictMapV1(DistrictMap districtMap)
+M:Eco.WebServer.DataTransferObjects.V1.DistrictV1.#ctor	public DistrictV1()
+M:Eco.WebServer.DataTransferObjects.V1.DistrictV1.#ctor(Eco.Gameplay.LegislationSystem.District)	public DistrictV1(District gameplayObj)
+M:Eco.WebServer.DataTransferObjects.V1.DistrictV1.Convert	public District Convert()
+M:Eco.WebServer.DataTransferObjects.V1.ElectedTitleDTOExtensions.ToDTO(Eco.Gameplay.Civics.Titles.ElectedTitle)	public static ElectedTitleV1 ToDTO(this ElectedTitle electedTitle)
+M:Eco.WebServer.DataTransferObjects.V1.ElectedTitleDTOExtensions.ToDTO(System.Collections.Generic.IEnumerable{Eco.Gameplay.Civics.Titles.ElectedTitle})	public static IEnumerable<ElectedTitleV1> ToDTO(this IEnumerable<ElectedTitle> electedTitles)
+M:Eco.WebServer.DataTransferObjects.V1.ElectedTitleV1.#ctor	public ElectedTitleV1()
+M:Eco.WebServer.DataTransferObjects.V1.ElectedTitleV1.#ctor(Eco.Gameplay.Civics.Titles.ElectedTitle)	public ElectedTitleV1(ElectedTitle title)
+M:Eco.WebServer.DataTransferObjects.V1.ElectionChoiceV1.#ctor	public ElectionChoiceV1()
+M:Eco.WebServer.DataTransferObjects.V1.ElectionChoiceV1.#ctor(Eco.Gameplay.Civics.ElectionChoice)	public ElectionChoiceV1(ElectionChoice choice)
+M:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.#ctor	public ElectionCommentV1()
+M:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.#ctor(Eco.Shared.Services.ElectionComment)	public ElectionCommentV1(ElectionComment comment)
+M:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.Convert	public ElectionComment Convert()
+M:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1.#ctor	public ElectionProcessV1()
+M:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1.#ctor(Eco.Gameplay.Civics.ElectionProcess)	public ElectionProcessV1(ElectionProcess process)
+M:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1Extensions.ToDTO(Eco.Gameplay.Civics.ElectionProcess)	public static ElectionProcessV1 ToDTO(this ElectionProcess electionProcess)
+M:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1Extensions.ToDTO(System.Collections.Generic.IEnumerable{Eco.Gameplay.Civics.ElectionProcess})	public static IEnumerable<ElectionProcessV1> ToDTO(this IEnumerable<ElectionProcess> electionProcesss)
+M:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1.#ctor	public ElectionResultsV1()
+M:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1.#ctor(Eco.Gameplay.Civics.Elections.ElectionResult)	public ElectionResultsV1(ElectionResult results)
+M:Eco.WebServer.DataTransferObjects.V1.EntityV1.#ctor(System.String,System.Numerics.Vector3)	public EntityV1(string entityType, Vector3 pos)
+M:Eco.WebServer.DataTransferObjects.V1.ExecuteCommandV1.#ctor	public ExecuteCommandV1()
+M:Eco.WebServer.DataTransferObjects.V1.FrontPageV1.#ctor	public FrontPageV1()
+M:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.#ctor	public GameServerElectionV1()
+M:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.#ctor(Eco.Gameplay.Civics.Elections.Election,Eco.Gameplay.Players.User)	public GameServerElectionV1(Election election, User userWhoAsks)
+M:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1Extensions.ToDTO(Eco.Gameplay.Civics.Elections.Election,Eco.Gameplay.Players.User)	public static GameServerElectionV1 ToDTO(this Election election, User user = null)
+M:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1Extensions.ToDTO(System.Collections.Generic.IEnumerable{Eco.Gameplay.Civics.Elections.Election},Eco.Gameplay.Players.User)	public static IEnumerable<GameServerElectionV1> ToDTO(this IEnumerable<Election> elections, User user)
+M:Eco.WebServer.DataTransferObjects.V1.GraphableV1.#ctor	public GraphableV1()
+M:Eco.WebServer.DataTransferObjects.V1.GraphV1.#ctor	public GraphV1()
+M:Eco.WebServer.DataTransferObjects.V1.ItemStackV1.#ctor	public ItemStackV1()
+M:Eco.WebServer.DataTransferObjects.V1.ItemStackV1.#ctor(Eco.WebServer.DataTransferObjects.V1.ItemV1,System.Int32)	public ItemStackV1(ItemV1 item, int quantity)
+M:Eco.WebServer.DataTransferObjects.V1.ItemV1.#ctor	public ItemV1()
+M:Eco.WebServer.DataTransferObjects.V1.ItemV1.#ctor(Eco.Gameplay.Items.Item)	public ItemV1(Item other)
+M:Eco.WebServer.DataTransferObjects.V1.ItemV1.#ctor(System.Type)	public ItemV1(Type itemType)
+M:Eco.WebServer.DataTransferObjects.V1.LawV1.#ctor	public LawV1()
+M:Eco.WebServer.DataTransferObjects.V1.LawV1.#ctor(Eco.Gameplay.Civics.Laws.Law)	public LawV1(Law law)
+M:Eco.WebServer.DataTransferObjects.V1.LawV1Extensions.ToDTO(Eco.Gameplay.Civics.Laws.Law)	public static LawV1 ToDTO(this Law law)
+M:Eco.WebServer.DataTransferObjects.V1.LawV1Extensions.ToDTO(System.Collections.Generic.IEnumerable{Eco.Gameplay.Civics.Laws.Law})	public static IEnumerable<LawV1> ToDTO(this IEnumerable<Law> laws)
+M:Eco.WebServer.DataTransferObjects.V1.MapStatsV1.#ctor	public MapStatsV1()
+M:Eco.WebServer.DataTransferObjects.V1.MapV1.#ctor	public MapV1()
+M:Eco.WebServer.DataTransferObjects.V1.MapV1.#ctor(Eco.Shared.Services.Map)	public MapV1(Map other)
+M:Eco.WebServer.DataTransferObjects.V1.MapV1.Convert	public Map Convert()
+M:Eco.WebServer.DataTransferObjects.V1.OptionalLawFieldsV1.#ctor	public OptionalLawFieldsV1()
+M:Eco.WebServer.DataTransferObjects.V1.OrganismV1.#ctor(Eco.Simulation.Agents.Organism,System.Numerics.Vector3)	public OrganismV1(Organism organism, Vector3 pos)
+M:Eco.WebServer.DataTransferObjects.V1.PlayerElectionActivityV1.#ctor(System.String,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.Guid},System.Int32,System.Collections.Generic.List{System.Guid})	public PlayerElectionActivityV1(string username, List<Guid> electionsJoined, List<Guid> electionsVotedOn, int electionCommentsSent, List<Guid> electionsCommentedOn)
+M:Eco.WebServer.DataTransferObjects.V1.PlayerLawActivityV1.#ctor(System.String,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.Guid},System.Int32,System.Collections.Generic.List{System.Guid})	public PlayerLawActivityV1(string username, List<Guid> lawsProposed, List<Guid> lawsVotedOn, int lawCommentsSent, List<Guid> lawsCommentedOn)
+M:Eco.WebServer.DataTransferObjects.V1.PlayerV1.#ctor(Eco.Gameplay.Players.Player)	public PlayerV1(Player player)
+M:Eco.WebServer.DataTransferObjects.V1.PluginInfoV1.#ctor	public PluginInfoV1()
+M:Eco.WebServer.DataTransferObjects.V1.ProfilingResultV1.#ctor	public ProfilingResultV1()
+M:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1.#ctor	public RunoffVoteV1()
+M:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1.#ctor(Eco.Gameplay.Civics.Elections.Election,Eco.Gameplay.Civics.Elections.UserRunoffVote,Eco.Gameplay.Players.User)	public RunoffVoteV1(Election election, UserRunoffVote vote, User requestMaker = null)
+M:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1Extensions.ToDTO(Eco.Gameplay.Civics.Elections.UserRunoffVote,Eco.Gameplay.Civics.Elections.Election)	public static RunoffVoteV1 ToDTO(this UserRunoffVote runoffVote, Election election)
+M:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1Extensions.ToDTO(System.Collections.Generic.IEnumerable{Eco.Gameplay.Civics.Elections.UserRunoffVote},Eco.Gameplay.Civics.Elections.Election)	public static IEnumerable<RunoffVoteV1> ToDTO(this IEnumerable<UserRunoffVote> runoffVotes, Election election)
+M:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1Extensions.ToRaw(Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1,Eco.Gameplay.Players.User)	public static UserRunoffVote ToRaw(this RunoffVoteV1 dto, User user)
+M:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1.#ctor	public SimpleEntryV1()
+M:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1.#ctor(Eco.Gameplay.Utils.SimpleEntry)	public SimpleEntryV1(SimpleEntry entry)	// Converts an Eco Eco.Gameplay.Utils.SimpleEntry object into a DTO friendly version.
+M:Eco.WebServer.DataTransferObjects.V1.StatInfoFlatV1.#ctor	public StatInfoFlatV1()
+M:Eco.WebServer.DataTransferObjects.V1.StatInfoTreeV1.#ctor	public StatInfoTreeV1()
+M:Eco.WebServer.DataTransferObjects.V1.UserV1Extensions.ToDTO(System.Collections.Generic.IEnumerable{Eco.Gameplay.Players.User})	public static IEnumerable<UserV1> ToDTO(this IEnumerable<User> users)
+M:Eco.WebServer.DataTransferObjects.V1.Vector3V1.#ctor	public Vector3V1()
+M:Eco.WebServer.DataTransferObjects.V1.Vector3V1.#ctor(System.Numerics.Vector3)	public Vector3V1(Vector3 other)
+M:Eco.WebServer.DataTransferObjects.V1.Vector3V1.Convert	public Vector3 Convert()
+M:Eco.WebServer.DataTransferObjects.V1.WebPluginInfoV1.#ctor	public WebPluginInfoV1()
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerInputV1.#ctor	public LayerInputV1()
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerInputV1.ToString	public override string ToString()
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipDTOUtil.AllLayers(Eco.Simulation.WorldLayers.IWorldLayerRelationship)	public static IEnumerable<string> AllLayers(this IWorldLayerRelationship relationship)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipDTOUtil.GetDTO(Eco.Simulation.WorldLayers.IWorldLayerRelationship,Eco.Shared.Math.WorldArea)	public static LayerRelationshipV1 GetDTO(this IWorldLayerRelationship relationship, WorldArea area = null)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipDTOUtil.RelevantLayersForFocus(Eco.Simulation.WorldLayers.IWorldLayerRelationship,System.String)	public static IEnumerable<string> RelevantLayersForFocus(this IWorldLayerRelationship relationship, string focusedLayer)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.#ctor(Eco.Simulation.WorldLayers.IWorldLayerInteraction,Eco.Shared.Math.WorldArea)	public LayerRelationshipV1(IWorldLayerInteraction interaction, WorldArea area)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.#ctor(Eco.Simulation.WorldLayers.IWorldLayerPuller,Eco.Shared.Math.WorldArea)	public LayerRelationshipV1(IWorldLayerPuller puller, WorldArea area)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.#ctor(Eco.Simulation.WorldLayers.IWorldLayerPusher,Eco.Shared.Math.WorldArea)	public LayerRelationshipV1(IWorldLayerPusher pusher, WorldArea area)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.Combine(System.Collections.Generic.IEnumerable{Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1})	public void Combine(IEnumerable<LayerRelationshipV1> outputsToInLayer)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.CullToRelevantLayers(System.Collections.Generic.HashSet{System.String})	public void CullToRelevantLayers(HashSet<string> relevantLayers)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.ToString	public override string ToString()
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerGroupV1.#ctor	public WorldLayerGroupV1()
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.#ctor(Eco.Simulation.WorldLayers.Layers.WorldLayer,Eco.Shared.Math.WorldArea)	public WorldLayerV1(WorldLayer layer, WorldArea area = null)
+M:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.ToString	public override string ToString()
+M:Eco.WebServer.Results.JsonStreamResult.#ctor(System.Collections.IEnumerable)	public JsonStreamResult(IEnumerable enumerable)
+M:Eco.WebServer.Results.JsonStreamResult.ExecuteResultAsync(Microsoft.AspNetCore.Mvc.ActionContext)	public override Task ExecuteResultAsync(ActionContext context)
+M:Eco.WebServer.Utils.JsonSerializerSettingsExtensions.ConfigureEcoJsonOptions(Newtonsoft.Json.JsonSerializerSettings)	public static void ConfigureEcoJsonOptions(this JsonSerializerSettings settings)
+M:Eco.WebServer.Utils.StatUtils.GetGraphValuesFromDayRange(Eco.Stats.StatInfo,System.Double,System.Double)	public static (StatInfo, List<TimeValue>, int) GetGraphValuesFromDayRange(StatInfo info, double startingDay, double endingDay)
+M:Eco.WebServer.Utils.StatUtils.GetGraphValuesFromDayRange(System.String,System.Double,System.Double)	public static (StatInfo, List<TimeValue>, int) GetGraphValuesFromDayRange(string key, double startingDay, double endingDay)
+M:Eco.WebServer.Utils.StatUtils.GetGraphValuesFromDayRange(System.String,System.Double,System.Double,System.Single)	public static (StatInfo, List<TimeValue>, int) GetGraphValuesFromDayRange(string key, double startingDay, double endingDay, float maxSeconds)
+M:Eco.WebServer.Utils.TimeUtils.InputDaysToQuerySeconds(System.Double,System.Single)	public static float InputDaysToQuerySeconds(double days, float maxSeconds)
+M:Eco.WebServer.Utils.TimeUtils.InputDaysToRangeSeconds(System.Double,System.Double,System.Single)	public static Range InputDaysToRangeSeconds(double startDays, double endDays, float maxSeconds)
+M:Eco.WebServer.VectorConverter.#ctor	public VectorConverter()
+M:Eco.WebServer.VectorConverter.CanConvert(System.Type)	public override bool CanConvert(Type objectType)
+M:Eco.WebServer.VectorConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+M:Eco.WebServer.VectorConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)	public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+M:Eco.WebServer.Web.Authentication.ClaimExtensions.ToStringLower(System.Boolean)	public static string ToStringLower(this bool value)
+M:Eco.WebServer.Web.Authentication.EcoUserIdentity.#ctor(Eco.Gameplay.Players.User,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)	public EcoUserIdentity(User user, IEnumerable<Claim> claims, string authenticationType)
+M:Eco.WebServer.Web.Authentication.SlgClaimTypes.#ctor	public SlgClaimTypes()
+M:Eco.WebServer.Web.Authorization.AdministratorRequirementHandler.#ctor	public AdministratorRequirementHandler()
+M:Eco.WebServer.Web.Authorization.AdministratorRequirementHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,Eco.WebServer.Web.Authorization.AdministratorRoleRequirement)	protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, AdministratorRoleRequirement requirement)
+M:Eco.WebServer.Web.Authorization.AdministratorRoleRequirement.#ctor	public AdministratorRoleRequirement()
+M:Eco.WebServer.Web.Authorization.PolicyNames.#ctor	public PolicyNames()
+M:Eco.WebServer.Web.Controllers.AdminController.#ctor	public AdminController()
+M:Eco.WebServer.Web.Controllers.AdminController.GetGetAccess	public string GetGetAccess()
+M:Eco.WebServer.Web.Controllers.AdminController.GetGetServerName	public string GetGetServerName()
+M:Eco.WebServer.Web.Controllers.AdminController.PostGameExport(Eco.WebServer.Web.Models.ExportGameModel)	public Task<AdminReturnModel> PostGameExport(ExportGameModel request)
+M:Eco.WebServer.Web.Controllers.AdminController.PostSetAccess(System.String,System.String)	public void PostSetAccess(string value, string password)
+M:Eco.WebServer.Web.Controllers.AdminController.PostSetServerName(System.String)	public void PostSetServerName(string name)
+M:Eco.WebServer.Web.Controllers.ChatController.#ctor	public ChatController()
+M:Eco.WebServer.Web.Controllers.ChatController.GetChat(System.Double,System.Double)	public JsonStreamResult GetChat(double startDay = 0, double endDay = -1)
+M:Eco.WebServer.Web.Controllers.ChatController.GetChatByTag(System.String,System.Double,System.Double)	public JsonStreamResult GetChatByTag(string tag, double startDay = 0, double endDay = -1)
+M:Eco.WebServer.Web.Controllers.ChatController.GetChatMessagesSentBy(System.String,System.Double,System.Double)	public JsonStreamResult GetChatMessagesSentBy(string username, double startDay = 0, double endDay = -1)
+M:Eco.WebServer.Web.Controllers.ChatController.GetNext(Eco.WebServer.DataTransferObjects.V1.ChatMessageV1,System.Int32)	public JsonStreamResult GetNext(ChatMessageV1 message, int numNextMessages)	// Gets the. numNextMessages chat messages sent after the given message on the same tag.
+M:Eco.WebServer.Web.Controllers.ChatController.GetPrevious(Eco.WebServer.DataTransferObjects.V1.ChatMessageV1,System.Int32)	public JsonStreamResult GetPrevious(ChatMessageV1 message, int numPreviousMessages)	// Gets the. numPreviousMessages chat messages sent before the given message on the same tag.
+M:Eco.WebServer.Web.Controllers.ChatController.SendChat(System.String,System.String)	[DebugCall] public IActionResult SendChat(string username, string message)	// Sends a chat message attributed to the named user. Requires admin auth (inherited from the controller-level policy). If the message is a command (starts with '/'), it executes at the impersonated user's actual auth level â€” no privilege elevation happens here. To run admin commands remotely, use...
+M:Eco.WebServer.Web.Controllers.CommandController.#ctor	public CommandController()
+M:Eco.WebServer.Web.Controllers.CommandController.ExecCommand(Eco.WebServer.DataTransferObjects.V1.ExecuteCommandV1)	public Task<CommandResultV1> ExecCommand(ExecuteCommandV1 dto)
+M:Eco.Webserver.Web.Controllers.DataExportController.#ctor	public DataExportController()
+M:Eco.Webserver.Web.Controllers.DataExportController.GetActionList	public string GetActionList()
+M:Eco.Webserver.Web.Controllers.DataExportController.GetEnvironmentList	public string GetEnvironmentList()
+M:Eco.Webserver.Web.Controllers.DataExportController.GetExportAction(System.String)	public string GetExportAction(string actionName)
+M:Eco.Webserver.Web.Controllers.DataExportController.GetExportEnvironment(System.String,System.String,System.String)	public string GetExportEnvironment(string category, string units = "PPM", string column = "Climate")
+M:Eco.Webserver.Web.Controllers.DataExportController.GetExportSpecies(System.String)	public string GetExportSpecies(string speciesName)
+M:Eco.Webserver.Web.Controllers.DataExportController.GetSpeciesList	public string GetSpeciesList()
+M:Eco.Webserver.Web.Controllers.DataExportController.PostExportActions	public void PostExportActions()
+M:Eco.Webserver.Web.Controllers.DataExportController.PostExportAll	public void PostExportAll()
+M:Eco.Webserver.Web.Controllers.DataExportController.PostExportChat	public void PostExportChat()
+M:Eco.Webserver.Web.Controllers.DataExportController.PostExportEnvironment	public void PostExportEnvironment()
+M:Eco.Webserver.Web.Controllers.DataExportController.PostExportSpecies	public void PostExportSpecies()
+M:Eco.WebServer.Web.Controllers.EcoWebServerError.#ctor(System.String,System.Int32)	public EcoWebServerError(string message, int statusCode)
+M:Eco.WebServer.Web.Controllers.ElectionController.#ctor	public ElectionController()
+M:Eco.WebServer.Web.Controllers.ElectionController.AddComment(Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1,System.Int32)	public void AddComment(ElectionCommentV1 comment, int electionId)
+M:Eco.WebServer.Web.Controllers.ElectionController.FinishElection	[DebugCall] public IActionResult FinishElection()
+M:Eco.WebServer.Web.Controllers.ElectionController.ForceElectionEnd(System.Int32)	public void ForceElectionEnd(int electionId)
+M:Eco.WebServer.Web.Controllers.ElectionController.GenerateTestElections(System.Int32,System.Int32)	[DebugCall] public IActionResult GenerateTestElections(int addUserVotes = 2, int addTwitchVotes = 5)
+M:Eco.WebServer.Web.Controllers.ElectionController.GenerateTestGovernment	[DebugCall] public IActionResult GenerateTestGovernment()
+M:Eco.WebServer.Web.Controllers.ElectionController.GetComments(System.Int32)	public IEnumerable<ElectionCommentV1> GetComments(int electionId)
+M:Eco.WebServer.Web.Controllers.ElectionController.GetElectedTitleById(System.Int32)	public ActionResult<ElectedTitleV1> GetElectedTitleById(int id)
+M:Eco.WebServer.Web.Controllers.ElectionController.GetElectionById(System.Int32)	public ActionResult<GameServerElectionV1> GetElectionById(int id)
+M:Eco.WebServer.Web.Controllers.ElectionController.ListElectedTitles(Eco.Shared.Items.ProposableState)	public IEnumerable<ElectedTitleV1> ListElectedTitles(ProposableState state)
+M:Eco.WebServer.Web.Controllers.ElectionController.ListElections(System.Boolean)	public IEnumerable<GameServerElectionV1> ListElections(bool returnActive = true)
+M:Eco.WebServer.Web.Controllers.ElectionController.Vote(Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1,System.Boolean)	public void Vote(RunoffVoteV1 vote, bool forceVote)
+M:Eco.WebServer.Web.Controllers.ElectionController.Votes(System.Int32)	public List<RunoffVoteV1> Votes(int id)
+M:Eco.WebServer.Web.Controllers.LawController.#ctor	public LawController()
+M:Eco.WebServer.Web.Controllers.LawController.GenerateTestData	public void GenerateTestData()
+M:Eco.WebServer.Web.Controllers.LawController.GetDistrictMap(System.String)	public DistrictMapV1 GetDistrictMap(string name)
+M:Eco.WebServer.Web.Controllers.LawController.GetLaw(System.Int32)	public LawV1 GetLaw(int id)
+M:Eco.WebServer.Web.Controllers.LawController.List(System.String)	public IEnumerable<LawV1> List(string states)
+M:Eco.WebServer.Web.Controllers.LawController.ListAll	public IEnumerable<LawV1> ListAll()
+M:Eco.WebServer.Web.Controllers.LogController.#ctor(Eco.Core.Utils.Logging.LogFileManager)	public LogController(LogFileManager logManager)
+M:Eco.WebServer.Web.Controllers.LogController.GetAllLogs	public List<string> GetAllLogs()
+M:Eco.WebServer.Web.Controllers.LogController.GetCategoryLogs(System.String)	public List<string> GetCategoryLogs(string category)
+M:Eco.WebServer.Web.Controllers.LogController.GetLogFile(System.String)	public PhysicalFileResult GetLogFile(string filepath)
+M:Eco.WebServer.Web.Controllers.PerformanceController.#ctor	public PerformanceController()
+M:Eco.WebServer.Web.Controllers.PerformanceController.GetNetworkReport	public string GetNetworkReport()
+M:Eco.WebServer.Web.Controllers.PluginsController.#ctor	public PluginsController()
+M:Eco.WebServer.Web.Controllers.PluginsController.GetPluginConfig(System.String)	public IActionResult GetPluginConfig(string name)
+M:Eco.WebServer.Web.Controllers.PluginsController.GetPlugins	public IEnumerable<PluginInfoV1> GetPlugins()
+M:Eco.WebServer.Web.Controllers.PluginsController.GetWebPlugins	public IEnumerable<WebPluginInfoV1> GetWebPlugins()
+M:Eco.WebServer.Web.Controllers.PluginsController.PostPluginConfig(System.String,Newtonsoft.Json.Linq.JObject)	public void PostPluginConfig(string name, JObject body)
+M:Eco.WebServer.Web.Controllers.ProfilingResultsController.#ctor	public ProfilingResultsController()
+M:Eco.WebServer.Web.Controllers.ProfilingResultsController.Download(System.String)	public PhysicalFileResult Download(string filename)
+M:Eco.WebServer.Web.Controllers.ProfilingResultsController.List	public IEnumerable<ProfilingResultV1> List()
+M:Eco.WebServer.Web.Controllers.RootController.#ctor	public RootController()
+M:Eco.WebServer.Web.Controllers.RootController.FrontPage	public FrontPageV1 FrontPage()
+M:Eco.WebServer.Web.Controllers.RootController.GetAdmins	public IEnumerable<string> GetAdmins()
+M:Eco.WebServer.Web.Controllers.RootController.GetInfo	public ServerInfo GetInfo()
+M:Eco.WebServer.Web.Controllers.RootController.IsAdmin	public bool IsAdmin()
+M:Eco.WebServer.Web.Controllers.StatsController.#ctor	public StatsController()
+M:Eco.WebServer.Web.Controllers.StatsController.GenerateTestData(System.Single,System.Int32,System.Boolean,System.Single)	[DebugCall] public IActionResult GenerateTestData(float days, int users, bool generateClimateData = false, float pollutionMultiplier = 1F)
+M:Eco.WebServer.Web.Controllers.StatsController.Get(System.String,System.Double,System.Double)	public ActionResult<StatReturn> Get(string dataset, double dayStart = 0, double dayEnd = -1)	// /// Returns Eco.WebServer.Web.Controllers.StatsController.MaximumSamples data points between and of the selected data. If there are more than Eco.WebServer.Web.Controllers.StatsController.MaximumSamples samples, it will be averaged out to contain exactly Eco.WebServer.Web.Controllers.StatsControl...
+M:Eco.WebServer.Web.Controllers.StatsController.GetFlatList	public IEnumerable<StatInfo> GetFlatList()
+M:Eco.WebServer.Web.Controllers.StatsController.GetList(System.Collections.Generic.List{System.String},System.Double,System.Double)	public IEnumerable<StatReturn> GetList(List<string> requestedSets, double dayStart = 0, double dayEnd = -1)
+M:Eco.WebServer.Web.Controllers.StatsController.GetTimeRange	public IEnumerable<float> GetTimeRange()
+M:Eco.WebServer.Web.Controllers.StatsController.GetTreeList	public StatCategory GetTreeList()
+M:Eco.WebServer.Web.Controllers.StatsController.Graphs	public List<NamedGraph> Graphs()
+M:Eco.WebServer.Web.Controllers.UsersController.#ctor	public UsersController()
+M:Eco.WebServer.Web.Controllers.UsersController.GetUsers(System.Int32)	public List<UserV1> GetUsers(int hoursPlayedGte)
+M:Eco.WebServer.Web.Controllers.WorldLayerController.#ctor	public WorldLayerController()
+M:Eco.WebServer.Web.Controllers.WorldLayerController.AreaDescription(System.Single,System.Single,System.Single,System.Single)	public string AreaDescription(float minX = -1F, float minY = -1F, float maxX = -1F, float maxY = -1F)
+M:Eco.WebServer.Web.Controllers.WorldLayerController.ListLayers	public IEnumerable<WorldLayerGroupV1> ListLayers()
+M:Eco.WebServer.Web.Controllers.WorldLayerController.ListRelevantLayers(System.String,System.Single,System.Single,System.Single,System.Single)	public IEnumerable<WorldLayerV1> ListRelevantLayers(string focusLayer, float minX = -1F, float minY = -1F, float maxX = -1F, float maxY = -1F)
+M:Eco.WebServer.Web.Controllers.WorldLayerController.ListRelevantRelationships(System.String,System.Single,System.Single,System.Single,System.Single)	public IEnumerable<LayerRelationshipV1> ListRelevantRelationships(string focusLayer, float minX = -1F, float minY = -1F, float maxX = -1F, float maxY = -1F)
+M:Eco.WebServer.Web.CustomSerializersAttribute.#ctor	public CustomSerializersAttribute()
+M:Eco.WebServer.Web.CustomSerializersAttribute.OnResourceExecuted(Microsoft.AspNetCore.Mvc.Filters.ResourceExecutedContext)	public void OnResourceExecuted(ResourceExecutedContext context)
+M:Eco.WebServer.Web.CustomSerializersAttribute.OnResourceExecuting(Microsoft.AspNetCore.Mvc.Filters.ResourceExecutingContext)	public void OnResourceExecuting(ResourceExecutingContext context)
+M:Eco.WebServer.Web.CustomSerializersSettings.CustomSerializersJson(Microsoft.AspNetCore.Mvc.Controller,System.Object)	public static JsonResult CustomSerializersJson(this Controller controller, object data)
+M:Eco.WebServer.Web.EcoApiAuthentication.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock)	public EcoApiAuthentication(IOptionsMonitor<AuthenticationSchemeOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock)
+M:Eco.WebServer.Web.EcoApiAuthentication.HandleAuthenticateAsync	protected override Task<AuthenticateResult> HandleAuthenticateAsync()
+M:Eco.WebServer.Web.EcoAuthentication.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock)	public EcoAuthentication(IOptionsMonitor<AuthenticationSchemeOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock)
+M:Eco.WebServer.Web.EcoAuthentication.HandleAuthenticateAsync	protected override Task<AuthenticateResult> HandleAuthenticateAsync()
+M:Eco.WebServer.Web.Filters.DebugCallAttribute.#ctor	public DebugCallAttribute()
+M:Eco.WebServer.Web.Filters.DebugCallAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)	public override void OnActionExecuting(ActionExecutingContext context)
+M:Eco.WebServer.Web.Filters.ExceptionFilter.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)	public ExceptionFilter(ILoggerFactory loggerFactory)
+M:Eco.WebServer.Web.Filters.ExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)	public void OnException(ExceptionContext context)
+M:Eco.WebServer.Web.Middleware.ContentLanguageMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)	public ContentLanguageMiddleware(RequestDelegate next)
+M:Eco.WebServer.Web.Middleware.ContentLanguageMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)	public Task Invoke(HttpContext context)
+M:Eco.WebServer.Web.Models.AdminReturnModel.#ctor	public AdminReturnModel()
+M:Eco.WebServer.Web.Models.ChatCommandRequest.#ctor(Eco.Gameplay.Systems.Messaging.Chat.Commands.ChatAuthorizationLevel)	public ChatCommandRequest(ChatAuthorizationLevel authLevel)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.Error(Eco.Shared.Localization.LocString)	public void Error(LocString msg)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.ErrorLoc(System.FormattableString)	public void ErrorLoc(FormattableString msg)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.ErrorLocStr(System.String)	public void ErrorLocStr(string msg)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.ExecuteCommand(System.String)	public Task ExecuteCommand(string command)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.GetChatAuthLevel	public ChatAuthorizationLevel GetChatAuthLevel()
+M:Eco.WebServer.Web.Models.ChatCommandRequest.GetResponseDTO	public CommandResultV1 GetResponseDTO()	// Returns the finalized Eco.WebServer.DataTransferObjects.V1.CommandResultV1 object
+M:Eco.WebServer.Web.Models.ChatCommandRequest.Msg(Eco.Shared.Localization.LocString,Eco.Shared.Services.NotificationStyle)	public void Msg(LocString msg, NotificationStyle style)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.MsgLoc(System.FormattableString,Eco.Shared.Services.NotificationStyle)	public void MsgLoc(FormattableString msg, NotificationStyle style)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.MsgLocStr(System.String,Eco.Shared.Services.NotificationStyle)	public void MsgLocStr(string msg, NotificationStyle style)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.OkBox(Eco.Shared.Localization.LocString)	public void OkBox(LocString msg)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.OkBoxLoc(System.FormattableString)	public void OkBoxLoc(FormattableString msg)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.OkBoxLocStr(System.String)	public void OkBoxLocStr(string msg)
+M:Eco.WebServer.Web.Models.ChatCommandRequest.TempServerMessage(Eco.Shared.Localization.LocString,Eco.Shared.Services.NotificationCategory,Eco.Shared.Services.NotificationStyle)	public void TempServerMessage(LocString message, NotificationCategory category, NotificationStyle style)
+M:Eco.WebServer.Web.Models.ExportGameModel.#ctor	public ExportGameModel()
+M:Eco.WebServer.Web.Models.ServerConfigModel.#ctor	public ServerConfigModel()
+M:Eco.WebServer.Web.Startup.#ctor	public Startup()
+M:Eco.WebServer.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)	public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+M:Eco.WebServer.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)	public void ConfigureServices(IServiceCollection services)
+M:Eco.WebServer.Web.Swagger.AuthPolicyOperationFilter.#ctor	public AuthPolicyOperationFilter()
+M:Eco.WebServer.Web.Swagger.AuthPolicyOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)	public void Apply(OpenApiOperation operation, OperationFilterContext context)
+M:Eco.WebServer.Web.Swagger.DebugCallPolicyOperationFilter.#ctor	public DebugCallPolicyOperationFilter()
+M:Eco.WebServer.Web.Swagger.DebugCallPolicyOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)	public void Apply(OpenApiOperation operation, OperationFilterContext context)
+M:Eco.WebServer.Web.Utils.ApplicationBuilderExtensions.UseEcoWebBin(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.FileProviders.IFileProvider)	public static void UseEcoWebBin(this IApplicationBuilder appBuilder, IFileProvider fileProvider)
+M:Eco.WebServer.Web.Utils.EcoPluginUtils.GetConfigPlugin(System.String)	public static IConfigurablePlugin GetConfigPlugin(string name)	// Retrieves a Eco.Core.Plugins.Interfaces.IConfigurablePlugin plugin instance by its name.
+M:Eco.WebServer.Web.Utils.EcoPluginUtils.GetEcoWebPlugins	public static IEnumerable<IWebPlugin> GetEcoWebPlugins()	// Returns an System.Collections.Generic.IEnumerable`1 containing all our loaded web plugins.
+M:Eco.WebServer.Web.Utils.EcoPluginUtils.GetPlugin(System.String)	public static IServerPlugin GetPlugin(string name)	// Retrieves a Eco.Core.Plugins.Interfaces.IServerPlugin plugin instance by its name.
+M:Eco.WebServer.Web.Utils.EcoPluginUtils.GetWebPlugin(System.String)	public static IWebPlugin GetWebPlugin(string name)	// Retrieves a Eco.Core.Plugins.Interfaces.IWebPlugin plugin instance by its name.
+M:Eco.WebServer.Web.Utils.EcoPluginUtils.UseEcoWebPluginStaticContent(Microsoft.AspNetCore.Builder.IApplicationBuilder)	public static void UseEcoWebPluginStaticContent(this IApplicationBuilder app)
+M:Eco.WebServer.Web.Utils.MapLayerAwareFileProvider.#ctor(System.String)	public MapLayerAwareFileProvider(string webrootPath)
+M:Eco.WebServer.Web.Utils.MapLayerAwareFileProvider.Dispose	public void Dispose()
+M:Eco.WebServer.Web.Utils.MapLayerAwareFileProvider.Dispose(System.Boolean)	protected virtual void Dispose(bool disposing)
+M:Eco.WebServer.Web.Utils.MapLayerAwareFileProvider.GetDirectoryContents(System.String)	public IDirectoryContents GetDirectoryContents(string subpath)
+M:Eco.WebServer.Web.Utils.MapLayerAwareFileProvider.GetFileInfo(System.String)	public IFileInfo GetFileInfo(string subpath)
+M:Eco.WebServer.Web.Utils.MapLayerAwareFileProvider.Watch(System.String)	public IChangeToken Watch(string filter)
+M:Eco.WebServer.Web.Utils.NewtonsoftUtils.ConfigureEcoOptions(Microsoft.AspNetCore.Mvc.MvcNewtonsoftJsonOptions)	public static void ConfigureEcoOptions(this MvcNewtonsoftJsonOptions options)	// Configures a Microsoft.AspNetCore.Mvc.MvcNewtonsoftJsonOptions instance for serializing Eco types.
+M:Eco.WebServer.Web.Utils.ServiceCollectionExtensions.AddEcoAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)	public static void AddEcoAuthentication(this IServiceCollection services)
+M:Eco.WebServer.Web.Utils.ServiceCollectionExtensions.AddEcoMvcMods(Microsoft.Extensions.DependencyInjection.IServiceCollection)	public static void AddEcoMvcMods(this IServiceCollection services)
+M:Eco.WebServer.Web.Utils.ServiceCollectionExtensions.ConfigureApiVersioning(Microsoft.Extensions.DependencyInjection.IServiceCollection)	public static void ConfigureApiVersioning(this IServiceCollection services)
+M:Eco.WebServer.WebServer.#ctor	public WebServer()
+M:Eco.WebServer.WebServer.Close	public void Close()
+M:Eco.WebServer.WebServer.Init(System.Net.IPAddress,System.Int32)	public bool Init(IPAddress address, int port)
+M:Eco.WebServer.WebServer.NetAclChecker.AddAddress(System.String)	public static bool AddAddress(string address)
+M:Eco.WebServer.WebServer.NetAclChecker.AddAddress(System.String,System.String,System.String)	public static bool AddAddress(string address, string domain, string user)
+M:Eco.WebServer.WebServer.Start	public void Start()
+M:Eco.WebServer.WebServerPlugin.#ctor	public WebServerPlugin()
+M:Eco.WebServer.WebServerPlugin.GetCategory	public string GetCategory()
+M:Eco.WebServer.WebServerPlugin.GetStatus	public string GetStatus()
+M:Eco.WebServer.WebServerPlugin.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask task)
+M:Eco.WebServer.WebServerPlugin.PreInit	public static void PreInit()
+M:Eco.WebServer.WebServerPlugin.ToString	public override string ToString()
+P:Eco.WebServer.Controllers.MapController.AllSpecies	public static IEnumerable<Species> AllSpecies { get; }
+P:Eco.WebServer.Controllers.MapJSON.WaterLevel	public float WaterLevel { get; }
+P:Eco.WebServer.Controllers.MapJSON.WorldTime	public double WorldTime { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ActivityItemV1.Count	public int Count { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ActivityItemV1.Guids	public List<Guid> Guids { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ActivityItemV1.Summary	public string Summary { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ChatMessageV1.Receiver	public string Receiver { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ChatMessageV1.Sender	public string Sender { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ChatMessageV1.Text	public string Text { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ChatMessageV1.Timestamp	public double Timestamp { get; }
+P:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.ActionOnComplete	public string ActionOnComplete { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.ActionOnCompleteFullDescription	public string ActionOnCompleteFullDescription { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.ActionOnCompleteTable	public LocString[, ] ActionOnCompleteTable { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.ActionOnCompleteTableHeader	public string ActionOnCompleteTableHeader { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.DistrictMapAfter	public MapV1 DistrictMapAfter { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CivicActionV1.DistrictMapBefore	public MapV1 DistrictMapBefore { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CommandMessageV1.Message	public string Message { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CommandMessageV1.Type	public string Type { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CommandResultV1.Errored	public bool Errored { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.CommandResultV1.OriginalCommand	public string OriginalCommand { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.DistrictMapV1.DistrictMap	public string DistrictMap { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.DistrictMapV1.DistrictMetadata	public List<DistrictV1> DistrictMetadata { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.DistrictV1.B	public int B { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.DistrictV1.G	public int G { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.DistrictV1.ID	public byte ID { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.DistrictV1.Name	public string Name { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.DistrictV1.R	public int R { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectedTitleV1.OccupantNames	public string[] OccupantNames { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionChoiceV1.Id	public int Id { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionChoiceV1.Name	public string Name { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionChoiceV1.Speech	public string Speech { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.Graph	public Graph Graph { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.Map	public MapV1 Map { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.Text	public string Text { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.Timestamp	public double Timestamp { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1.Username	public string Username { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1.OccupantNames	public string[] OccupantNames { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1.ChoiceRanks	public RoundsForChoice[] ChoiceRanks { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1.Finished	public bool Finished { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1.Result	public string Result { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1.TotalVotesForWinner	public float TotalVotesForWinner { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1.Winners	public string[] Winners { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.EntityV1.EntityType	public string EntityType { get; }
+P:Eco.WebServer.DataTransferObjects.V1.EntityV1.Position	public Vector3 Position { get; }
+P:Eco.WebServer.DataTransferObjects.V1.ExecuteCommandV1.Command	public string Command { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.FrontPageV1.Graphs	public List<NamedGraph> Graphs { get; }
+P:Eco.WebServer.DataTransferObjects.V1.FrontPageV1.Info	public ServerInfo Info { get; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.BooleanElection	public bool BooleanElection { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.Choices	public ElectionChoiceV1[] Choices { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.Comments	public ElectionCommentV1[] Comments { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.ElectionDescription	public string ElectionDescription { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.ElectionProcess	public ElectionProcessV1 ElectionProcess { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.Finished	public bool Finished { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.Passed	public bool Passed { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.PendingVote	public bool PendingVote { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.PollElection	public bool PollElection { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.PositionForWinner	public ElectedTitleV1 PositionForWinner { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.Provisions	public List<CivicActionV1> Provisions { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.Results	public ElectionResultsV1 Results { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.TimeEnd	public double TimeEnd { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.TimeEndAgo	public double TimeEndAgo { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.TimeStart	public double TimeStart { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.TimeStartAgo	public double TimeStartAgo { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1.TotalVotes	public int TotalVotes { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GraphableV1.Value	public float Value { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.GraphV1.Series	public List<float> Series { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ItemStackV1.Item	public ItemV1 Item { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ItemStackV1.Quantity	public int Quantity { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ItemV1.DisplayName	public string DisplayName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ItemV1.TypeName	public string TypeName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ItemV1.Weight	public float Weight { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.LawV1.Description	public string Description { get; }
+P:Eco.WebServer.DataTransferObjects.V1.MapStatsV1.Size	public Vector3i Size { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.camPos	public Vector3V1 camPos { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.currentTime	public double currentTime { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.flat	public bool flat { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.frame	public int frame { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.layerSelected	public string layerSelected { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.pause	public bool pause { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.playSpeed	public double playSpeed { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.timeEnd	public double timeEnd { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.MapV1.timeStart	public double timeStart { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.OptionalLawFieldsV1.Graph	public Graph Graph { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.OptionalLawFieldsV1.Map	public MapV1 Map { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.OptionalLawFieldsV1.Zone	public string Zone { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.OrganismV1.Age	public float Age { get; }
+P:Eco.WebServer.DataTransferObjects.V1.OrganismV1.Id	public int Id { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerElectionActivityV1.ElectionCommentsSent	public ActivityItemV1 ElectionCommentsSent { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerElectionActivityV1.ElectionsJoined	public ActivityItemV1 ElectionsJoined { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerElectionActivityV1.ElectionsVotedOn	public ActivityItemV1 ElectionsVotedOn { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerElectionActivityV1.Summary	public string Summary { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerLawActivityV1.LawCommentsSent	public ActivityItemV1 LawCommentsSent { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerLawActivityV1.LawsProposed	public ActivityItemV1 LawsProposed { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerLawActivityV1.LawsVotedOn	public ActivityItemV1 LawsVotedOn { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerLawActivityV1.Summary	public string Summary { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PlayerV1.Name	public string Name { get; }
+P:Eco.WebServer.DataTransferObjects.V1.PluginInfoV1.HasConfig	public bool HasConfig { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.PluginInfoV1.Status	public string Status { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.PluginInfoV1.TypeName	public string TypeName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ProfilingResultV1.CreatedAt	public string CreatedAt { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ProfilingResultV1.Name	public string Name { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.ProfilingResultV1.Size	public long Size { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1.ElectionID	public int ElectionID { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1.RankedVotes	public int[] RankedVotes { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1.Voter	public string Voter { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1.Creator	public string Creator { get; set; }	// Creator of this Eco Eco.Gameplay.Utils.SimpleEntry object.
+P:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1.Id	public int Id { get; set; }	// The unique identifier of this Eco Eco.Gameplay.Utils.SimpleEntry object.
+P:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1.Name	public string Name { get; set; }	// Name representing this Eco Eco.Gameplay.Utils.SimpleEntry object.
+P:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1.State	public string State { get; set; }	// State of this Eco Eco.Gameplay.Utils.SimpleEntry object.
+P:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1.UserDescription	public string UserDescription { get; set; }	// User description of this Eco Eco.Gameplay.Utils.SimpleEntry object.
+P:Eco.WebServer.DataTransferObjects.V1.StatInfoFlatV1.DisplayName	public LocString DisplayName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.StatInfoFlatV1.Key	public string[] Key { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.StatInfoFlatV1.Unit	public string Unit { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.StatInfoTreeV1.Children	public List<StatInfoTreeV1> Children { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.StatInfoTreeV1.DisplayName	public LocString DisplayName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.StatInfoTreeV1.KeyFragment	public string KeyFragment { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.StatInfoTreeV1.Unit	public string Unit { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.UserV1.Name	public string Name { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.UserV1.PlayFabId	public string PlayFabId { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.UserV1.SteamId	public string SteamId { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.Vector3V1.x	public float x { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.Vector3V1.y	public float y { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.Vector3V1.z	public float z { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WebPluginInfoV1.FontAwesomeIcon	public string FontAwesomeIcon { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WebPluginInfoV1.MenuTitle	public LocString MenuTitle { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WebPluginInfoV1.PluginIndexUrl	public string PluginIndexUrl { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WebPluginInfoV1.TypeName	public string TypeName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1.Guid	public string Guid { get; }
+P:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.Category	public string Category { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.DisplayRow	public int DisplayRow { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.LayerDisplayName	public string LayerDisplayName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.LayerName	public string LayerName { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.Summary	public string Summary { get; set; }
+P:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1.Tooltip	public string Tooltip { get; set; }
+P:Eco.WebServer.Results.JsonStreamResult.Enumerable	public IEnumerable Enumerable { get; }	// System.Collections.IEnumerable instance to stream over HTTP/HTTPS to the client.
+P:Eco.WebServer.Web.Authentication.EcoUserIdentity.User	public User User { get; }
+P:Eco.WebServer.Web.Controllers.EcoWebServerError.StatusCode	public int StatusCode { get; }
+P:Eco.WebServer.Web.Models.AdminReturnModel.Action	public Action Action { get; set; }
+P:Eco.WebServer.Web.Models.AdminReturnModel.Message	public string Message { get; set; }
+P:Eco.WebServer.Web.Models.ChatCommandRequest.ImplementationName	public string ImplementationName { get; }
+P:Eco.WebServer.Web.Models.ChatCommandRequest.MarkedUpName	public LocString MarkedUpName { get; }
+P:Eco.WebServer.Web.Models.ChatCommandRequest.Name	public string Name { get; }
+P:Eco.WebServer.Web.Models.ChatCommandRequest.ReportIpAddress	public string ReportIpAddress { get; }
+P:Eco.WebServer.Web.Models.ChatCommandRequest.ReportUserId	public string ReportUserId { get; }
+P:Eco.WebServer.Web.Models.ChatCommandRequest.ReportUsername	public string ReportUsername { get; }
+P:Eco.WebServer.Web.Models.ExportGameModel.S3ExportUri	public string S3ExportUri { get; set; }
+P:Eco.WebServer.Web.Models.ServerConfigModel.IsPublic	public bool IsPublic { get; set; }
+P:Eco.WebServer.Web.Models.ServerConfigModel.Name	public string Name { get; set; }
+P:Eco.WebServer.Web.Models.ServerConfigModel.UserId	public string UserId { get; set; }
+T:Eco.WebServer.Controllers.MapController	public class MapController : Controller
+T:Eco.WebServer.Controllers.MapJSON	public class MapJSON : Object
+T:Eco.WebServer.DataTransferObjects.DataTransferObject	public class DataTransferObject : Object
+T:Eco.WebServer.DataTransferObjects.V1.ActivityItemV1	public class ActivityItemV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ChatMessageV1	public class ChatMessageV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.CivicActionV1	public class CivicActionV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.CommandMessageV1	public class CommandMessageV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.CommandResultV1	public class CommandResultV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.DistrictExtension	public static class DistrictExtension : Object
+T:Eco.WebServer.DataTransferObjects.V1.DistrictMapV1	public class DistrictMapV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.DistrictV1	public class DistrictV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ElectedTitleDTOExtensions	public static class ElectedTitleDTOExtensions : Object
+T:Eco.WebServer.DataTransferObjects.V1.ElectedTitleV1	public class ElectedTitleV1 : SimpleEntryV1
+T:Eco.WebServer.DataTransferObjects.V1.ElectionChoiceV1	public class ElectionChoiceV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ElectionCommentV1	public class ElectionCommentV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1	public class ElectionProcessV1 : SimpleEntryV1
+T:Eco.WebServer.DataTransferObjects.V1.ElectionProcessV1Extensions	public static class ElectionProcessV1Extensions : Object
+T:Eco.WebServer.DataTransferObjects.V1.ElectionResultsV1	public class ElectionResultsV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.EntityV1	public class EntityV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ExecuteCommandV1	public class ExecuteCommandV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.FrontPageV1	public class FrontPageV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1	public class GameServerElectionV1 : SimpleEntryV1
+T:Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1Extensions	public static class GameServerElectionV1Extensions : Object	// Static extension methods for the Eco.WebServer.DataTransferObjects.V1.GameServerElectionV1 DTO model.
+T:Eco.WebServer.DataTransferObjects.V1.GraphableV1	public class GraphableV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.GraphV1	public class GraphV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ItemStackV1	public class ItemStackV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ItemV1	public class ItemV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.LawV1	public class LawV1 : SimpleEntryV1
+T:Eco.WebServer.DataTransferObjects.V1.LawV1Extensions	public static class LawV1Extensions : Object
+T:Eco.WebServer.DataTransferObjects.V1.MapStatsV1	public class MapStatsV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.MapV1	public class MapV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.OptionalLawFieldsV1	public class OptionalLawFieldsV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.OrganismV1	public class OrganismV1 : EntityV1
+T:Eco.WebServer.DataTransferObjects.V1.PlayerElectionActivityV1	public class PlayerElectionActivityV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.PlayerLawActivityV1	public class PlayerLawActivityV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.PlayerV1	public class PlayerV1 : EntityV1
+T:Eco.WebServer.DataTransferObjects.V1.PluginInfoV1	public class PluginInfoV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.ProfilingResultV1	public class ProfilingResultV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1	public class RunoffVoteV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.RunoffVoteV1Extensions	public static class RunoffVoteV1Extensions : Object
+T:Eco.WebServer.DataTransferObjects.V1.SimpleEntryV1	public class SimpleEntryV1 : Object	// A data transfer object wrapper of the Eco Eco.Gameplay.Utils.SimpleEntry object.
+T:Eco.WebServer.DataTransferObjects.V1.StatInfoFlatV1	public class StatInfoFlatV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.StatInfoTreeV1	public class StatInfoTreeV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.UserV1	public class UserV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.UserV1Extensions	public static class UserV1Extensions : Object
+T:Eco.WebServer.DataTransferObjects.V1.Vector3V1	public class Vector3V1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.WebPluginInfoV1	public sealed class WebPluginInfoV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerInputV1	public class LayerInputV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipDTOUtil	public static class LayerRelationshipDTOUtil : Object
+T:Eco.WebServer.DataTransferObjects.V1.WorldLayers.LayerRelationshipV1	public class LayerRelationshipV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerGroupV1	public class WorldLayerGroupV1 : Object
+T:Eco.WebServer.DataTransferObjects.V1.WorldLayers.WorldLayerV1	public class WorldLayerV1 : Object
+T:Eco.WebServer.Results.JsonStreamResult	public class JsonStreamResult : ActionResult	// Custom implementation of Microsoft.AspNetCore.Mvc.ActionResult for streaming large amounts of JSON data using async methods from an System.Collections.IEnumerable
+T:Eco.WebServer.Utils.JsonSerializerSettingsExtensions	public static class JsonSerializerSettingsExtensions : Object	// Static extension methods for the Newtonsoft Newtonsoft.Json.JsonSerializerSettings object.
+T:Eco.WebServer.Utils.StatUtils	public static class StatUtils : Object
+T:Eco.WebServer.Utils.TimeUtils	public static class TimeUtils : Object
+T:Eco.WebServer.VectorConverter	public class VectorConverter : JsonConverter
+T:Eco.WebServer.Web.Authentication.ClaimExtensions	public static class ClaimExtensions : Object
+T:Eco.WebServer.Web.Authentication.EcoUserIdentity	public class EcoUserIdentity : ClaimsIdentity
+T:Eco.WebServer.Web.Authentication.SlgClaimTypes	public class SlgClaimTypes : Object
+T:Eco.WebServer.Web.Authorization.AdministratorRequirementHandler	public class AdministratorRequirementHandler : AuthorizationHandler<AdministratorRoleRequirement>
+T:Eco.WebServer.Web.Authorization.AdministratorRoleRequirement	public class AdministratorRoleRequirement : Object, IAuthorizationRequirement
+T:Eco.WebServer.Web.Authorization.PolicyNames	public class PolicyNames : Object
+T:Eco.WebServer.Web.Controllers.AdminController	public class AdminController : Controller
+T:Eco.WebServer.Web.Controllers.ChatController	public class ChatController : Controller	// MVC Microsoft.AspNetCore.Mvc.Controller instance for accessing and interacting with the Eco server Chat system.
+T:Eco.WebServer.Web.Controllers.CommandController	public class CommandController : Controller	// MVC Microsoft.AspNetCore.Mvc.Controller instance for accessing and interacting with the Eco server chat commands.
+T:Eco.Webserver.Web.Controllers.DataExportController	public class DataExportController : Controller
+T:Eco.WebServer.Web.Controllers.EcoWebServerError	public class EcoWebServerError : Exception
+T:Eco.WebServer.Web.Controllers.ElectionController	public class ElectionController : Controller
+T:Eco.WebServer.Web.Controllers.LawController	[CustomSerializers] public class LawController : Controller
+T:Eco.WebServer.Web.Controllers.LogController	public class LogController : Controller	// MVC Microsoft.AspNetCore.Mvc.Controller instance that provides API access to the logs generated by the Eco game server.
+T:Eco.WebServer.Web.Controllers.PerformanceController	public class PerformanceController : Controller
+T:Eco.WebServer.Web.Controllers.PluginsController	public class PluginsController : Controller
+T:Eco.WebServer.Web.Controllers.ProfilingResultsController	public class ProfilingResultsController : Controller	// Provides endpoints to list and download profiling results generated by Eco.Plugins.Profiling.ProfilingPlugin.
+T:Eco.WebServer.Web.Controllers.RootController	public class RootController : Controller
+T:Eco.WebServer.Web.Controllers.StatReturn	public sealed class StatReturn : ValueType
+T:Eco.WebServer.Web.Controllers.StatsController	[CustomSerializers] public class StatsController : Controller
+T:Eco.WebServer.Web.Controllers.UsersController	public class UsersController : Controller
+T:Eco.WebServer.Web.Controllers.WorldLayerController	public class WorldLayerController : Controller
+T:Eco.WebServer.Web.CustomSerializersAttribute	public class CustomSerializersAttribute : Attribute, IResourceFilter, IFilterMetadata
+T:Eco.WebServer.Web.CustomSerializersSettings	public static class CustomSerializersSettings : Object
+T:Eco.WebServer.Web.EcoApiAuthentication	public class EcoApiAuthentication : AuthenticationHandler<AuthenticationSchemeOptions>
+T:Eco.WebServer.Web.EcoAuthentication	public class EcoAuthentication : AuthenticationHandler<AuthenticationSchemeOptions>
+T:Eco.WebServer.Web.Filters.DebugCallAttribute	public class DebugCallAttribute : ActionFilterAttribute
+T:Eco.WebServer.Web.Filters.ExceptionFilter	public class ExceptionFilter : Object, IExceptionFilter, IFilterMetadata
+T:Eco.WebServer.Web.Middleware.ContentLanguageMiddleware	public class ContentLanguageMiddleware : Object
+T:Eco.WebServer.Web.Models.Action	public sealed class Action : Enum
+T:Eco.WebServer.Web.Models.AdminReturnModel	public class AdminReturnModel : Object
+T:Eco.WebServer.Web.Models.ChatCommandRequest	public class ChatCommandRequest : Object, IChatClient, INotificationReceiver	// Defines an Eco.Gameplay.Systems.Chat.IChatClient instance for making web based command requests.
+T:Eco.WebServer.Web.Models.ExportGameModel	public class ExportGameModel : Object
+T:Eco.WebServer.Web.Models.ServerConfigModel	public class ServerConfigModel : Object
+T:Eco.WebServer.Web.Startup	public class Startup : Object
+T:Eco.WebServer.Web.Swagger.AuthPolicyOperationFilter	public class AuthPolicyOperationFilter : Object, IOperationFilter	// Custom Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter for populating Eco authentication information into the server's Swagger documentation.
+T:Eco.WebServer.Web.Swagger.DebugCallPolicyOperationFilter	public class DebugCallPolicyOperationFilter : Object, IOperationFilter	// Custom Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter for added information into the server's Swagger documentation about debug calls.
+T:Eco.WebServer.Web.Utils.ApplicationBuilderExtensions	public static class ApplicationBuilderExtensions : Object
+T:Eco.WebServer.Web.Utils.EcoPluginUtils	public static class EcoPluginUtils : Object
+T:Eco.WebServer.Web.Utils.MapLayerAwareFileProvider	public class MapLayerAwareFileProvider : Object, IFileProvider, IDisposable
+T:Eco.WebServer.Web.Utils.NewtonsoftUtils	public static class NewtonsoftUtils : Object
+T:Eco.WebServer.Web.Utils.ServiceCollectionExtensions	public static class ServiceCollectionExtensions : Object	// Extension methods for Microsoft.Extensions.DependencyInjection.IServiceCollection.
+T:Eco.WebServer.Web.WebConstants	public static class WebConstants : Object
+T:Eco.WebServer.WebServer	public class WebServer : Object
+T:Eco.WebServer.WebServer.NetAclChecker	public static class NetAclChecker : Object
+T:Eco.WebServer.WebServerPlugin	public class WebServerPlugin : Object, IServerPlugin, IInitializablePlugin

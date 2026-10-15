@@ -1,0 +1,65 @@
+﻿<!--
+  Local compile check for UserCode mods. The Eco server compiles Mods/UserCode itself with Roslyn,
+  so this output is never deployed; it only catches compile errors before a server restart.
+  Usage: dotnet build tools/BuildCheck
+
+  The references mirror the server's Eco.ModKit.RoslynCompiler (v0.14.1.1, decompiled), so anything the
+  server can't resolve also fails here:
+    - system: only the 12 DependentSystemAssemblies below (no System.Text.RegularExpressions, System.Net.*, ...)
+    - game:   DependentAssemblies (Eco.Core/Gameplay/ModKit/Shared/Simulation/World/Stats/WorldGenerator,
+              LiteDB, Priority Queue, PropertyChanged, NetFabric.Hyperlinq.Abstractions)
+    - Eco.Mods.dll stands in for the __core__ source the server compiles alongside UserCode.
+  refs/ holds the ModKit ReferenceAssemblies (EcoModKit_v0.14.1.1-beta.zip) plus the four third-party DLLs,
+  extracted from EcoServer.exe with tools/BundleExtract.
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AssemblyName>UserCodeBuildCheck</AssemblyName>
+    <NoWarn>$(NoWarn);CS1998;CS0162;CA1416;CS1701;CS1702</NoWarn>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <SysRef>$(NetCoreRoot)shared/Microsoft.NETCore.App/$(BundledNETCoreAppPackageVersion)</SysRef>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../../Mods/UserCode/Rabotnik/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Like the server, these are the runtime's implementation assemblies, not the reference pack. -->
+    <Reference Include="$(SysRef)/System.Private.CoreLib.dll" Private="false" />
+    <Reference Include="$(SysRef)/netstandard.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.Collections.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.Collections.Concurrent.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.Collections.Immutable.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.ComponentModel.Primitives.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.IO.FileSystem.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.Linq.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.ObjectModel.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.Runtime.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.Runtime.Extensions.dll" Private="false" />
+    <Reference Include="$(SysRef)/System.Numerics.Vectors.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="refs/Eco.Core.dll" Private="false" />
+    <Reference Include="refs/Eco.Gameplay.dll" Private="false" />
+    <Reference Include="refs/Eco.ModKit.dll" Private="false" />
+    <Reference Include="refs/Eco.Shared.dll" Private="false" />
+    <Reference Include="refs/Eco.Simulation.dll" Private="false" />
+    <Reference Include="refs/Eco.World.dll" Private="false" />
+    <Reference Include="refs/Eco.Stats.dll" Private="false" />
+    <Reference Include="refs/Eco.WorldGenerator.dll" Private="false" />
+    <Reference Include="refs/LiteDB.dll" Private="false" />
+    <Reference Include="refs/Priority Queue.dll" Private="false" />
+    <Reference Include="refs/PropertyChanged.dll" Private="false" />
+    <Reference Include="refs/NetFabric.Hyperlinq.Abstractions.dll" Private="false" />
+    <Reference Include="refs/Eco.Mods.dll" Private="false" />
+  </ItemGroup>
+</Project>

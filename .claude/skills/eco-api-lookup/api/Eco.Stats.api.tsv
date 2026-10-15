@@ -1,0 +1,189 @@
+E:Eco.Stats.ShortNameMap.OnAdded	public event Action<ShortNameEntry> OnAdded
+F:Eco.Stats.ScoreAttribute.Mult	public float Mult
+F:Eco.Stats.StatAttribute.Category	public string Category
+F:Eco.Stats.StatAttribute.Unit	public Unit Unit
+F:Eco.Stats.StatCategory.ChildrenCategories	public List<StatCategory> ChildrenCategories
+F:Eco.Stats.StatCategory.ChildrenStats	public List<StatInfo> ChildrenStats
+F:Eco.Stats.StatCategory.DisplayName	public string DisplayName
+F:Eco.Stats.StatCategory.Name	public string Name
+F:Eco.Stats.StatInfo.Description	public string Description
+F:Eco.Stats.StatInfo.DisplayName	public string DisplayName
+F:Eco.Stats.StatInfo.Name	public string Name
+F:Eco.Stats.StatInfo.NameMap	public static ShortNameMap NameMap
+F:Eco.Stats.StatInfo.ShortName	public string ShortName
+F:Eco.Stats.StatInfo.StatType	public StatType StatType
+F:Eco.Stats.StatInfo.SystemType	public Type SystemType
+F:Eco.Stats.StatInfo.Tags	public string[] Tags
+F:Eco.Stats.StatInfo.Unit	public string Unit
+F:Eco.Stats.StatInfo.UnitDisplayName	public string UnitDisplayName
+F:Eco.Stats.StatInfo.ValueKey	public string ValueKey
+F:Eco.Stats.StatInfoManager.OnRegisterStat	public static Action<StatInfo> OnRegisterStat
+F:Eco.Stats.StatInfoManager.Root	public StatCategory Root
+F:Eco.Stats.StatInfoManager.StatNameToNode	public ConcurrentDictionary<string, StatInfo> StatNameToNode
+F:Eco.Stats.Stats.GetOnlinePlayerCount	public static Func<int> GetOnlinePlayerCount
+F:Eco.Stats.Stats.GetStatsTime	public static Func<double> GetStatsTime
+F:Eco.Stats.StatsGroupingLevel.DontGroup	public const StatsGroupingLevel DontGroup
+F:Eco.Stats.StatsGroupingLevel.GroupByAllFields	public const StatsGroupingLevel GroupByAllFields
+F:Eco.Stats.StatsGroupingLevel.GroupByEssentialFields	public const StatsGroupingLevel GroupByEssentialFields
+F:Eco.Stats.StatsGroupingLevel.value__	public int value__
+F:Eco.Stats.StatType.ContinuousValue	public const StatType ContinuousValue
+F:Eco.Stats.StatType.EventValue	public const StatType EventValue
+F:Eco.Stats.StatType.value__	public int value__
+M:Eco.Stats.DontAggregateAttribute.#ctor	public DontAggregateAttribute()
+M:Eco.Stats.EssentialAggregateGroupingAttribute.#ctor	public EssentialAggregateGroupingAttribute()
+M:Eco.Stats.HasStatPropsAttribute.#ctor	public HasStatPropsAttribute()
+M:Eco.Stats.IgnoreAggregateGroupingAttribute.#ctor	public IgnoreAggregateGroupingAttribute()
+M:Eco.Stats.IndexedAttribute.#ctor	public IndexedAttribute()
+M:Eco.Stats.IStats.AddIndex(System.String,System.String)	void AddIndex(string collection, string propName)
+M:Eco.Stats.IStats.AddIndex(System.Type,System.String)	void AddIndex(Type type, string propName)
+M:Eco.Stats.IStats.CountStat(System.String,System.Single,System.Double,System.Int32)	float CountStat(string stat, float time, double withinSeconds, int userID)
+M:Eco.Stats.IStats.CountStat(System.Type,System.Single,System.Double,System.Int32)	float CountStat(Type stat, float time, double withinSeconds, int userID)
+M:Eco.Stats.IStats.CountStatPerPlayer(System.String,System.Single,System.Double)	Dictionary<int, float> CountStatPerPlayer(string stat, float time, double withinSeconds)
+M:Eco.Stats.IStats.CountStatPerPlayer(System.Type,System.Single,System.Double)	Dictionary<int, float> CountStatPerPlayer(Type stat, float time, double withinSeconds)
+M:Eco.Stats.IStats.DeltaValue(System.String,System.Int32)	float DeltaValue(string collection, int time)
+M:Eco.Stats.IStats.Flush	void Flush()
+M:Eco.Stats.IStats.MostRecentValue(System.String)	float MostRecentValue(string collection)
+M:Eco.Stats.IStats.QueryCollection``1(System.String)	List<T> QueryCollection<T>(string collectionName)
+M:Eco.Stats.IStats.QueryFirstBefore(System.String,System.Int32)	TimeValue QueryFirstBefore(string collectionName, int time)
+M:Eco.Stats.IStats.QueryNeighbors(System.String,System.Int32)	List<TimeValue> QueryNeighbors(string collectionName, int second)
+M:Eco.Stats.IStats.QueryRangeGeneric(Eco.Stats.StatInfo,System.Int32,System.Int32)	IEnumerable<BsonDocument> QueryRangeGeneric(StatInfo info, int startingSecond, int endingSecond)
+M:Eco.Stats.IStats.QueryTimeValueRange(System.String,System.Int32,System.Int32)	List<TimeValue> QueryTimeValueRange(string collectionName, int startingSecond, int endingSecond)
+M:Eco.Stats.IStats.Record(Eco.Stats.IStat)	void Record(IStat obj)
+M:Eco.Stats.IStats.Record(System.Int32,System.String,System.Single)	void Record(int time, string collection, float value)
+M:Eco.Stats.IStats.RecordBulk(System.Collections.Generic.IEnumerable{Eco.Stats.IStat})	void RecordBulk(IEnumerable<IStat> objs)
+M:Eco.Stats.IStats.RecordCustom(System.String,System.Int32,System.Single,System.Int32,System.Nullable{System.Single})	void RecordCustom(string name, int time, float count, int userId, Nullable<float> value)
+M:Eco.Stats.LiteDbEnumMapper.#ctor(Eco.Stats.LiteDbService)	public LiteDbEnumMapper(LiteDbService liteDbService)
+M:Eco.Stats.LiteDbEnumMapper.Initialize	public void Initialize()	// Initializes Eco.Stats.LiteDbEnumMapper. It syncs all stat's enums with database, builds mapping between enum value and mapped value (stored in db) and then registers custom enum members resolver.
+M:Eco.Stats.LiteDbService.#ctor(System.String)	public LiteDbService(string filename)
+M:Eco.Stats.LiteDbService.Dispose	public void Dispose()
+M:Eco.Stats.LiteDbService.WithPausedWritesAsync(System.Func{System.Threading.Tasks.Task},System.Boolean)	public Task WithPausedWritesAsync(Func<Task> action, bool makeCheckpoint = true)	// Invokes with paused the database file writes. It ensures no modifications to the database file happen during the action execution and you can safely copy or backup the file.
+M:Eco.Stats.LiteDbService.WithTransaction(System.Action)	public void WithTransaction(Action action)
+M:Eco.Stats.NoStatsAttribute.#ctor	public NoStatsAttribute()
+M:Eco.Stats.PlotPositionKeyAttribute.#ctor	public PlotPositionKeyAttribute()
+M:Eco.Stats.ScoreAttribute.#ctor(System.Single)	public ScoreAttribute(float mult = 1F)
+M:Eco.Stats.ShortNameEntry.Equals(Eco.Stats.ShortNameEntry)	public bool Equals(ShortNameEntry other)
+M:Eco.Stats.ShortNameEntry.Equals(System.Object)	public override bool Equals(object obj)
+M:Eco.Stats.ShortNameEntry.GetHashCode	public override int GetHashCode()
+M:Eco.Stats.ShortNameEntry.op_Equality(Eco.Stats.ShortNameEntry,Eco.Stats.ShortNameEntry)	public static bool operator ==(ShortNameEntry left, ShortNameEntry right)
+M:Eco.Stats.ShortNameEntry.op_Inequality(Eco.Stats.ShortNameEntry,Eco.Stats.ShortNameEntry)	public static bool operator !=(ShortNameEntry left, ShortNameEntry right)
+M:Eco.Stats.ShortNameEntry.ToString	public override string ToString()
+M:Eco.Stats.ShortNameMap.#ctor	public ShortNameMap()
+M:Eco.Stats.ShortNameMap.Dispose	public void Dispose()
+M:Eco.Stats.ShortNameMap.GetOrAddShortName(System.String)	public string GetOrAddShortName(string longName)
+M:Eco.Stats.ShortNameMap.Init(System.Collections.Generic.IEnumerable{Eco.Stats.ShortNameEntry})	public void Init(IEnumerable<ShortNameEntry> collection)
+M:Eco.Stats.StatAttribute.#ctor	public StatAttribute()
+M:Eco.Stats.StatAttribute.#ctor(System.String,Eco.Stats.Unit,Eco.Stats.StatType)	public StatAttribute(string category, Unit unit, StatType statType)
+M:Eco.Stats.StatCategory.#ctor	public StatCategory()
+M:Eco.Stats.StatCategory.Categories	public IEnumerable<StatCategory> Categories()
+M:Eco.Stats.StatCategory.Flatten	public IEnumerable<StatInfo> Flatten()
+M:Eco.Stats.StatCategory.GetStatPaths(System.String)	public Dictionary<string, StatInfo> GetStatPaths(string currentPath = "")
+M:Eco.Stats.StatInfo.#ctor	public StatInfo()
+M:Eco.Stats.StatInfo.#ctor(Eco.Shared.Localization.LocString,System.String,Eco.Stats.StatAttribute,System.Type,System.String[])	public StatInfo(LocString displayName, string name, StatAttribute stat, Type type, string[] tags)
+M:Eco.Stats.StatInfo.OnDeserialized	public void OnDeserialized()
+M:Eco.Stats.StatInfoManager.#ctor	public StatInfoManager()
+M:Eco.Stats.StatInfoManager.ContainsStat(System.String)	public bool ContainsStat(string s)
+M:Eco.Stats.StatInfoManager.GetInfo(Eco.Stats.IStat)	public StatInfo GetInfo(IStat stat)
+M:Eco.Stats.StatInfoManager.GetInfo(System.String)	public StatInfo GetInfo(string s)
+M:Eco.Stats.StatInfoManager.GetInfo(System.Type)	public StatInfo GetInfo(Type statType)
+M:Eco.Stats.StatInfoManager.Initialize(System.Collections.Generic.ICollection{Eco.Stats.ShortNameEntry})	public void Initialize(ICollection<ShortNameEntry> entries)
+M:Eco.Stats.StatInfoManager.MakeStatInfo(Eco.Shared.Localization.LocString,System.String,System.String,Eco.Stats.StatAttribute,System.Type,System.String[])	public void MakeStatInfo(LocString displayName, string name, string categoriesString, StatAttribute stat, Type type, string[] tags)
+M:Eco.Stats.StatPropAttribute.#ctor(System.String,Eco.Stats.Unit,Eco.Stats.StatType)	public StatPropAttribute(string category, Unit unit, StatType statType)
+M:Eco.Stats.Stats.#ctor	public Stats()
+M:Eco.Stats.Stats.#ctor(Eco.Core.Plugins.PluginConfig{Eco.Stats.StatsConfig},System.String)	public Stats(PluginConfig<StatsConfig> config, string storageDirectory)
+M:Eco.Stats.Stats.AddIndex(System.String,System.String)	public void AddIndex(string collectionName, string propName)
+M:Eco.Stats.Stats.AddIndex(System.Type,System.String)	public void AddIndex(Type type, string propName)
+M:Eco.Stats.Stats.AddTimeIndex(Eco.Stats.StatInfo)	public void AddTimeIndex(StatInfo info)
+M:Eco.Stats.Stats.CountStat(System.String,System.Single,System.Double,System.Int32)	public float CountStat(string stat, float time, double withinSeconds, int userID)	// Returns count for . For Eco.Stats.ICountStat it will use sum of value in Count property, otherwise it will return count of records. If you need info for several users you should avoid use it, use CountStatPerPlayer instead.
+M:Eco.Stats.Stats.CountStat(System.Type,System.Single,System.Double,System.Int32)	public float CountStat(Type stat, float time, double withinSeconds, int userID)	// Returns count for . For Eco.Stats.ICountStat it will use sum of value in Count property, otherwise it will return count of records. If you need info for several users you should avoid use it, use CountStatPerPlayer instead.
+M:Eco.Stats.Stats.CountStatPerPlayer(System.String,System.Single,System.Double)	public Dictionary<int, float> CountStatPerPlayer(string stat, float time, double withinSeconds)
+M:Eco.Stats.Stats.CountStatPerPlayer(System.Type,System.Single,System.Double)	public Dictionary<int, float> CountStatPerPlayer(Type stat, float time, double withinSeconds)
+M:Eco.Stats.Stats.DeltaValue(System.String,System.Int32)	public float DeltaValue(string collection, int time)
+M:Eco.Stats.Stats.Dispose	public void Dispose()
+M:Eco.Stats.Stats.Dispose(System.Boolean)	protected virtual void Dispose(bool disposing)
+M:Eco.Stats.Stats.Finalize	protected override void Finalize()
+M:Eco.Stats.Stats.Flush	public void Flush()
+M:Eco.Stats.Stats.GetCategory	public string GetCategory()
+M:Eco.Stats.Stats.GetDisplayText	public string GetDisplayText()
+M:Eco.Stats.Stats.GetEditObject	public object GetEditObject()
+M:Eco.Stats.Stats.GetStatus	public string GetStatus()
+M:Eco.Stats.Stats.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask timer)
+M:Eco.Stats.Stats.MostRecentValue(System.String)	public float MostRecentValue(string collection)
+M:Eco.Stats.Stats.OnEditObjectChanged(System.Object,System.String)	public void OnEditObjectChanged(object o, string param)
+M:Eco.Stats.Stats.QueryCollection``1(System.String)	public List<T> QueryCollection<T>(string collectionName)
+M:Eco.Stats.Stats.QueryFirstBefore(System.String,System.Int32)	public TimeValue QueryFirstBefore(string collectionName, int time)	// Returns Eco.Stats.TimeValue recorded before or at .
+M:Eco.Stats.Stats.QueryNeighbors(System.String,System.Int32)	public List<TimeValue> QueryNeighbors(string collectionName, int second)
+M:Eco.Stats.Stats.QueryRangeGeneric(Eco.Stats.StatInfo,System.Int32,System.Int32)	public IEnumerable<BsonDocument> QueryRangeGeneric(StatInfo info, int startingSecond, int endingSecond)
+M:Eco.Stats.Stats.QueryTimeValueRange(Eco.Stats.StatInfo,System.Int32,System.Int32)	public List<TimeValue> QueryTimeValueRange(StatInfo info, int startingSecond, int endingSecond)
+M:Eco.Stats.Stats.QueryTimeValueRange(System.String,System.Int32,System.Int32)	public List<TimeValue> QueryTimeValueRange(string collectionName, int startingSecond, int endingSecond)
+M:Eco.Stats.Stats.Record(Eco.Stats.IStat)	public void Record(IStat obj)
+M:Eco.Stats.Stats.Record(System.Int32,System.String,System.Single)	public void Record(int time, string collection, float value)
+M:Eco.Stats.Stats.RecordBulk(System.Collections.Generic.IEnumerable{Eco.Stats.IStat})	public void RecordBulk(IEnumerable<IStat> objs)
+M:Eco.Stats.Stats.RecordCustom(System.String,System.Int32,System.Single,System.Int32,System.Nullable{System.Single})	public void RecordCustom(string statName, int time, float count, int userId, Nullable<float> value)
+M:Eco.Stats.Stats.Run	public void Run()
+M:Eco.Stats.Stats.ShutdownAsync	public Task ShutdownAsync()
+M:Eco.Stats.Stats.ToString	public override string ToString()
+M:Eco.Stats.StatsAggregator.#ctor(Eco.Stats.LiteDbService,Eco.Stats.StatsConfig)	public StatsAggregator(LiteDbService liteDbService, StatsConfig config)
+M:Eco.Stats.StatsAggregator.Aggregate(System.Double)	public void Aggregate(double now)
+M:Eco.Stats.StatsAggregator.Initialize(System.Collections.Generic.IEnumerable{Eco.Stats.StatInfo})	public void Initialize(IEnumerable<StatInfo> statInfos)
+M:Eco.Stats.StatsConfig.#ctor	public StatsConfig()
+M:Eco.Stats.SumInAggregateGroupingAttribute.#ctor	public SumInAggregateGroupingAttribute()
+M:Eco.Stats.TimeValue.#ctor	public TimeValue()
+P:Eco.Stats.IActionStat._id	ObjectId _id { get; set; }
+P:Eco.Stats.IActionStat.StatType	StatType StatType { get; }
+P:Eco.Stats.IActionStat.Time	[IgnoreAggregateGrouping] int Time { get; set; }
+P:Eco.Stats.ICountStat.Count	[SumInAggregateGrouping] float Count { get; set; }
+P:Eco.Stats.LiteDbService.Database	public LiteDatabase Database { get; }
+P:Eco.Stats.NoStatsAttribute.Flags	public override ViewClassFlags Flags { get; }
+P:Eco.Stats.ShortNameEntry.LongName	public string LongName { get; set; }
+P:Eco.Stats.ShortNameEntry.ShortName	public string ShortName { get; set; }
+P:Eco.Stats.ShortNameMap.All	public IEnumerable<ShortNameEntry> All { get; }
+P:Eco.Stats.StatAttribute.StatType	public StatType StatType { get; set; }
+P:Eco.Stats.StatInfo.HasValueKey	public bool HasValueKey { get; set; }
+P:Eco.Stats.StatInfo.IsAction	public bool IsAction { get; }
+P:Eco.Stats.StatInfo.IsAggregatable	public bool IsAggregatable { get; }
+P:Eco.Stats.StatInfo.IsCountable	public bool IsCountable { get; }
+P:Eco.Stats.StatInfo.IsCustom	public bool IsCustom { get; }
+P:Eco.Stats.StatInfo.TimeKey	public string TimeKey { get; }
+P:Eco.Stats.Stats.ParamChanged	public ThreadSafeAction<object, string> ParamChanged { get; set; }
+P:Eco.Stats.Stats.PluginConfig	public IPluginConfig PluginConfig { get; }
+P:Eco.Stats.StatsAggregator.Config	public StatsConfig Config { get; }
+P:Eco.Stats.StatsConfig.BlockBulkActions	public bool BlockBulkActions { get; set; }
+P:Eco.Stats.StatsConfig.GroupingLevel	public StatsGroupingLevel GroupingLevel { get; set; }
+P:Eco.Stats.StatsConfig.KeepDetailsHours	public int KeepDetailsHours { get; set; }
+P:Eco.Stats.StatsConfig.MaxRecordsToGroup	public int MaxRecordsToGroup { get; set; }
+P:Eco.Stats.StatsConfig.RebuildDatabaseOnExit	public bool RebuildDatabaseOnExit { get; set; }
+P:Eco.Stats.StatsConfig.SquashMaxDeferralHours	public double SquashMaxDeferralHours { get; set; }
+P:Eco.Stats.StatsConfig.SquashPopulationThreshold	public int SquashPopulationThreshold { get; set; }
+P:Eco.Stats.StatsConfig.StatsGroupingDays	public int StatsGroupingDays { get; set; }
+P:Eco.Stats.TimeValue.Time	public int Time { get; set; }
+P:Eco.Stats.TimeValue.Value	public float Value { get; set; }
+T:Eco.Stats.DontAggregateAttribute	public class DontAggregateAttribute : Attribute
+T:Eco.Stats.EssentialAggregateGroupingAttribute	public class EssentialAggregateGroupingAttribute : Attribute
+T:Eco.Stats.HasStatPropsAttribute	public class HasStatPropsAttribute : Attribute
+T:Eco.Stats.IActionStat	public interface IActionStat : IStat	// Interface for "action" stats. Action is deterministic and so can be identified by Eco.Stats.IActionStat._id and has Eco.Stats.IActionStat.Time when it happened.
+T:Eco.Stats.IAggregatableStat	public interface IAggregatableStat : ICountStat, IActionStat, IStat
+T:Eco.Stats.ICountStat	public interface ICountStat	// Stat which has Eco.Stats.ICountStat.Count value. It may be used primary for the aggregation or when action performed on multiple items, but should be counted for each of them (i.e. "buy" for N items should be same as two "buy" actions for N/2 items, and for pollution the amount is the total pollu...
+T:Eco.Stats.IgnoreAggregateGroupingAttribute	public class IgnoreAggregateGroupingAttribute : Attribute
+T:Eco.Stats.IndexedAttribute	public class IndexedAttribute : Attribute
+T:Eco.Stats.IStat	public interface IStat	// Interface for all stats which may be recorded in Eco.Stats.Stats database.
+T:Eco.Stats.IStatProperty	public interface IStatProperty
+T:Eco.Stats.IStats	public interface IStats
+T:Eco.Stats.LiteDbEnumMapper	public class LiteDbEnumMapper : Object	// This class responsible for mapping between code enums which uses by IStat and mapped database values. It should be created with Eco.Stats.LiteDbService and then initialized with call to Eco.Stats.LiteDbEnumMapper.Initialize. When initialized it will automatically convert all enum values to intege...
+T:Eco.Stats.LiteDbService	public sealed class LiteDbService : Object, IDisposable	// Eco.Stats.LiteDbService manages creation, access and transactions for LiteDB.
+T:Eco.Stats.NoStatsAttribute	public class NoStatsAttribute : ViewClassAttribute
+T:Eco.Stats.PlotPositionKeyAttribute	public class PlotPositionKeyAttribute : Attribute
+T:Eco.Stats.ScoreAttribute	public class ScoreAttribute : Attribute
+T:Eco.Stats.ShortNameEntry	public sealed class ShortNameEntry : ValueType, IEquatable<ShortNameEntry>
+T:Eco.Stats.ShortNameMap	public sealed class ShortNameMap : Object, IDisposable
+T:Eco.Stats.StatAttribute	public class StatAttribute : Attribute
+T:Eco.Stats.StatCategory	public class StatCategory : Object
+T:Eco.Stats.StatInfo	public class StatInfo : Object
+T:Eco.Stats.StatInfoManager	public class StatInfoManager : AutoSingleton<StatInfoManager>
+T:Eco.Stats.StatPropAttribute	public class StatPropAttribute : StatAttribute
+T:Eco.Stats.Stats	public class Stats : Object, IStats, IDisplayablePlugin, IGUIPlugin, IServerPlugin, IHasDisplayTabs, IDisplayTab, IThreadedPlugin, IShutdownablePlugin, IInitializablePlugin, IConfigurablePlugin, IEditablePlugin, IDisposable
+T:Eco.Stats.StatsAggregator	public class StatsAggregator : Object	// This class responsible for aggregating multiple similar stats into single record per hour when detailed time scale no more needed. Maximum hours to preserve detailed information defined by Eco.Stats.StatsConfig.KeepDetailsHours. This class should be initialize with call to Eco.Stats.StatsAggregat...
+T:Eco.Stats.StatsConfig	public class StatsConfig : Object
+T:Eco.Stats.StatsGroupingLevel	public sealed class StatsGroupingLevel : Enum
+T:Eco.Stats.StatType	public sealed class StatType : Enum
+T:Eco.Stats.SumInAggregateGroupingAttribute	public class SumInAggregateGroupingAttribute : Attribute
+T:Eco.Stats.TimeValue	public class TimeValue : Object

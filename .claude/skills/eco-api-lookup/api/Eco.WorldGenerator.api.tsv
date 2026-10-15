@@ -1,0 +1,396 @@
+F:Eco.WorldGenerator.Biome.BiomeData	public static Array2D<Biome> BiomeData
+F:Eco.WorldGenerator.Biome.BiomeLookupFromColor	public static Dictionary<int, Biome> BiomeLookupFromColor
+F:Eco.WorldGenerator.Biome.Coast	public static Coast Coast
+F:Eco.WorldGenerator.Biome.ColdCoast	public static ColdCoast ColdCoast
+F:Eco.WorldGenerator.Biome.ColdForest	public static ColdForest ColdForest
+F:Eco.WorldGenerator.Biome.Color	public Color Color
+F:Eco.WorldGenerator.Biome.DeepOcean	public static DeepOcean DeepOcean
+F:Eco.WorldGenerator.Biome.Desert	public static Desert Desert
+F:Eco.WorldGenerator.Biome.Grassland	public static Grassland Grassland
+F:Eco.WorldGenerator.Biome.HighDesert	public static HighDesert HighDesert
+F:Eco.WorldGenerator.Biome.Ice	public static Ice Ice
+F:Eco.WorldGenerator.Biome.Name	public string Name
+F:Eco.WorldGenerator.Biome.Ocean	public static Ocean Ocean
+F:Eco.WorldGenerator.Biome.RainForest	public static RainForest RainForest
+F:Eco.WorldGenerator.Biome.Steppe	public static Steppe Steppe
+F:Eco.WorldGenerator.Biome.Taiga	public static Taiga Taiga
+F:Eco.WorldGenerator.Biome.Tundra	public static Tundra Tundra
+F:Eco.WorldGenerator.Biome.WarmCoast	public static WarmCoast WarmCoast
+F:Eco.WorldGenerator.Biome.WarmForest	public static WarmForest WarmForest
+F:Eco.WorldGenerator.Biome.Wetland	public static Wetland Wetland
+F:Eco.WorldGenerator.BiomePolygon.Adjacent	public int[] Adjacent
+F:Eco.WorldGenerator.BiomePolygon.Center	public PointF Center
+F:Eco.WorldGenerator.BiomePolygon.Elevation	public float Elevation
+F:Eco.WorldGenerator.BiomePolygon.HasLake	public bool HasLake
+F:Eco.WorldGenerator.BiomePolygon.HasRiver	public bool HasRiver
+F:Eco.WorldGenerator.BiomePolygon.Index	public int Index
+F:Eco.WorldGenerator.BiomePolygon.MaxElevation	public float MaxElevation
+F:Eco.WorldGenerator.BiomePolygon.Moisture	public float Moisture
+F:Eco.WorldGenerator.BiomePolygon.Points	public PointF[] Points
+F:Eco.WorldGenerator.BiomePolygon.Site	public PointF Site
+F:Eco.WorldGenerator.BiomePolygon.Temperature	public float Temperature
+F:Eco.WorldGenerator.Crater.Center	public Vector2 Center
+F:Eco.WorldGenerator.Crater.Depth	public int Depth
+F:Eco.WorldGenerator.Crater.Noise	public Perlin Noise
+F:Eco.WorldGenerator.Crater.NoiseWeight	public float NoiseWeight
+F:Eco.WorldGenerator.Crater.Radius	public int Radius
+F:Eco.WorldGenerator.GraphEdge.Site1	public int Site1
+F:Eco.WorldGenerator.GraphEdge.Site2	public int Site2
+F:Eco.WorldGenerator.GraphEdge.X1	public double X1
+F:Eco.WorldGenerator.GraphEdge.X2	public double X2
+F:Eco.WorldGenerator.GraphEdge.Y1	public double Y1
+F:Eco.WorldGenerator.GraphEdge.Y2	public double Y2
+F:Eco.WorldGenerator.NoiseDistributionType.Bands	public const NoiseDistributionType Bands
+F:Eco.WorldGenerator.NoiseDistributionType.Blobs	public const NoiseDistributionType Blobs
+F:Eco.WorldGenerator.NoiseDistributionType.value__	public int value__
+F:Eco.WorldGenerator.NoiseType.Billow	public const NoiseType Billow
+F:Eco.WorldGenerator.NoiseType.Perlin	public const NoiseType Perlin
+F:Eco.WorldGenerator.NoiseType.RidgedMulti	public const NoiseType RidgedMulti
+F:Eco.WorldGenerator.NoiseType.value__	public int value__
+F:Eco.WorldGenerator.TerrainGeneratorPosition.RelativeX	public readonly double RelativeX
+F:Eco.WorldGenerator.TerrainGeneratorPosition.RelativeY	public readonly double RelativeY
+F:Eco.WorldGenerator.TerrainGeneratorPosition.RelativeZ	public readonly double RelativeZ
+F:Eco.WorldGenerator.TerrainGeneratorPosition.WorldX	public readonly int WorldX
+F:Eco.WorldGenerator.TerrainGeneratorPosition.WorldY	public readonly int WorldY
+F:Eco.WorldGenerator.TerrainGeneratorPosition.WorldZ	public readonly int WorldZ
+F:Eco.WorldGenerator.WorldGeneratorPlugin.DimensionDivisor	public const int DimensionDivisor = 4
+F:Eco.WorldGenerator.WorldGeneratorPlugin.SetSpawnLocation	public static Action<Vector3i> SetSpawnLocation
+F:Eco.WorldGenerator.WorldSettings.DefaultPreset	public static readonly WorldDimensions.WorldDimensionsPreset DefaultPreset
+M:Eco.WorldGenerator.Biome.#ctor(System.String,Eco.Shared.Math.Range,Eco.Shared.Math.Range,Eco.Shared.Math.Range,System.Drawing.Color,System.Type,System.Int32,Eco.WorldGenerator.Biome[])	public Biome(string name, Range elevationRange, Range temperatureRange, Range moistureRange, Color color, Type geology, int badNeighborsRange = 0, Biome[] badNeighbors = null)
+M:Eco.WorldGenerator.Biome.GetValidPositions(Eco.WorldGenerator.BiomePolygon[])	public HashSet<BiomePolygon> GetValidPositions(BiomePolygon[] polygons)
+M:Eco.WorldGenerator.BiomeExtensions.CanSpawnLake(Eco.WorldGenerator.Biome)	public static bool CanSpawnLake(this Biome biome)
+M:Eco.WorldGenerator.BiomeExtensions.IsDesert(Eco.WorldGenerator.Biome)	public static bool IsDesert(this Biome biome)
+M:Eco.WorldGenerator.BiomeExtensions.IsGrassland(Eco.WorldGenerator.Biome)	public static bool IsGrassland(this Biome biome)
+M:Eco.WorldGenerator.BiomeExtensions.IsLand(Eco.WorldGenerator.Biome)	public static bool IsLand(this Biome biome)
+M:Eco.WorldGenerator.BiomeExtensions.IsOcean(Eco.WorldGenerator.Biome)	public static bool IsOcean(this Biome biome)
+M:Eco.WorldGenerator.BiomePolygon.#ctor	public BiomePolygon()
+M:Eco.WorldGenerator.BiomePolygonCollectionExtensions.AdjacentPolygons(Eco.WorldGenerator.BiomePolygon[],System.Int32,System.Int32)	public static IEnumerable<int> AdjacentPolygons(this BiomePolygon[] polygons, int startPoly, int range)	// Collects indices of all adjacent polygons for startPoly. defines max rank of neighborhood. For range = 1 it will return only direct adjacent, for range = 2 it will also return adjacent of adjacent etc.
+M:Eco.WorldGenerator.BiomePolygonCollectionExtensions.DistanceTo(Eco.WorldGenerator.BiomePolygon[],System.Int32,System.Func{Eco.WorldGenerator.BiomePolygon,System.Boolean})	public static int DistanceTo(this BiomePolygon[] polygons, int startPoly, Func<BiomePolygon, bool> predicate)	// Calculates distance from to first polygon not matching .
+M:Eco.WorldGenerator.BiomePolygonCollectionExtensions.DistanceToOcean(Eco.WorldGenerator.BiomePolygon[],System.Int32)	public static int DistanceToOcean(this BiomePolygon[] polygons, int startPoly)
+M:Eco.WorldGenerator.BiomePolygonCollectionExtensions.GenerateDataByPolygons(Eco.WorldGenerator.BiomePolygon[],System.Int32,System.Func{Eco.WorldGenerator.BiomePolygon,System.Single})	public static Array2D<float> GenerateDataByPolygons(this BiomePolygon[] polygons, int worldSize, Func<BiomePolygon, float> valueGetter)	// Generates layer data from using to obtain polygon value. The value should be within range 0-1. Produced value error less than 1e-7.
+M:Eco.WorldGenerator.BiomePolygonCollectionExtensions.LandFloodFill(Eco.WorldGenerator.BiomePolygon[],Eco.WorldGenerator.BiomePolygon)	public static IReadOnlyCollection<BiomePolygon> LandFloodFill(this BiomePolygon[] polygons, BiomePolygon startPoly)
+M:Eco.WorldGenerator.BiomeTerrainModule.#ctor	public BiomeTerrainModule()
+M:Eco.WorldGenerator.BiomeTerrainModule.Clear	public virtual void Clear()
+M:Eco.WorldGenerator.BiomeTerrainModule.CollectSpawners(System.Collections.Generic.Queue{Eco.WorldGenerator.IBlocksSpawner},System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	public void CollectSpawners(Queue<IBlocksSpawner> spawners, IDictionary<Vector3i, Type> spawnedPoints)
+M:Eco.WorldGenerator.BiomeTerrainModule.Eco#WorldGenerator#ITerrainModule#TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	bool ITerrainModule.TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.BiomeTerrainModule.Initialize(System.Random)	public virtual void Initialize(Random randomizer)
+M:Eco.WorldGenerator.BiomeTerrainModule.ToString	public override string ToString()
+M:Eco.WorldGenerator.BiomeTerrainModule.TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	public bool TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.BlockDepthRange.#ctor	public BlockDepthRange()
+M:Eco.WorldGenerator.BlockDepthRange.ToString	public override string ToString()
+M:Eco.WorldGenerator.CliffExtruder.ExtrudeCliffs(System.Random)	public static void ExtrudeCliffs(Random randomizer)
+M:Eco.WorldGenerator.Coast.#ctor	public Coast()
+M:Eco.WorldGenerator.ColdCoast.#ctor	public ColdCoast()
+M:Eco.WorldGenerator.ColdForest.#ctor	public ColdForest()
+M:Eco.WorldGenerator.Crater.#ctor(Eco.Shared.Math.Vector2,System.Int32,System.Random,Eco.WorldGenerator.WorldSettings)	public Crater(Vector2 center, int radius, Random randomizer, WorldSettings settings)
+M:Eco.WorldGenerator.Crater.RadialNoise(System.Single)	public float RadialNoise(float angle)
+M:Eco.WorldGenerator.CraterGenerator.#ctor(Eco.WorldGenerator.WorldSettings)	public CraterGenerator(WorldSettings settings)
+M:Eco.WorldGenerator.CraterGenerator.Generate(System.Action{System.Single})	public void Generate(Action<float> updateAction)
+M:Eco.WorldGenerator.DeepOcean.#ctor	public DeepOcean()
+M:Eco.WorldGenerator.DepositTerrainModule.#ctor	public DepositTerrainModule()
+M:Eco.WorldGenerator.DepositTerrainModule.Clear	public void Clear()
+M:Eco.WorldGenerator.DepositTerrainModule.CollectSpawners(System.Collections.Generic.Queue{Eco.WorldGenerator.IBlocksSpawner},System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type},Eco.Shared.Math.Vector3i)	public void CollectSpawners(Queue<IBlocksSpawner> spawners, IDictionary<Vector3i, Type> spawnedPoints, Vector3i worldSize)
+M:Eco.WorldGenerator.DepositTerrainModule.DepositSpawner.#ctor(Eco.Shared.Math.Vector3i,System.Int32,System.Type,Eco.Shared.Math.Range,System.Random,System.Numerics.Vector3,System.Numerics.Vector3)	public DepositSpawner(Vector3i worldSize, int numberToSpawn, Type blockType, Range heightRange, Random random, Vector3 weights, Vector3 weightVariance)
+M:Eco.WorldGenerator.DepositTerrainModule.DepositSpawner.TrySpawn(Eco.Shared.Math.Vector3i,System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type},System.Single)	public bool TrySpawn(Vector3i point, IDictionary<Vector3i, Type> spawnedPoints, float priority = 0F)	// Tries to spawn block at specified point. It will add all out coming directions to candidates queue. For every direction it also will calculate priority - directions with lower priority value will be preferred. Priority calculated based on direction weights. Higher weight will result in lower prio...
+M:Eco.WorldGenerator.DepositTerrainModule.DepositSpawner.TrySpawnNext(System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	public bool TrySpawnNext(IDictionary<Vector3i, Type> spawnedPoints)	// Tries to spawn next candidate using Eco.WorldGenerator.DepositTerrainModule.DepositSpawner.TrySpawn(Eco.Shared.Math.Vector3i,System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type},System.Single) method.
+M:Eco.WorldGenerator.DepositTerrainModule.Eco#WorldGenerator#ITerrainModule#CollectSpawners(System.Collections.Generic.Queue{Eco.WorldGenerator.IBlocksSpawner},System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	void ITerrainModule.CollectSpawners(Queue<IBlocksSpawner> spawners, IDictionary<Vector3i, Type> spawnedPoints)
+M:Eco.WorldGenerator.DepositTerrainModule.Eco#WorldGenerator#ITerrainModule#TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	bool ITerrainModule.TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.DepositTerrainModule.Initialize(System.Random)	public void Initialize(Random random)
+M:Eco.WorldGenerator.DepositTerrainModule.ToString	public override string ToString()
+M:Eco.WorldGenerator.DepositTerrainModule.TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	public bool TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.Desert.#ctor	public Desert()
+M:Eco.WorldGenerator.DirectBitmap.#ctor(Eco.WorldGenerator.DirectBitmap)	public DirectBitmap(DirectBitmap source)
+M:Eco.WorldGenerator.DirectBitmap.#ctor(System.Int32,System.Int32)	public DirectBitmap(int width, int height)
+M:Eco.WorldGenerator.DirectBitmap.Dispose	public void Dispose()
+M:Eco.WorldGenerator.DirectBitmap.GetB(System.Int32,System.Int32)	public byte GetB(int x, int y)
+M:Eco.WorldGenerator.DirectBitmap.GetG(System.Int32,System.Int32)	public byte GetG(int x, int y)
+M:Eco.WorldGenerator.DirectBitmap.GetPixel(System.Int32,System.Int32)	public Color GetPixel(int x, int y)
+M:Eco.WorldGenerator.DirectBitmap.GetR(System.Int32,System.Int32)	public byte GetR(int x, int y)
+M:Eco.WorldGenerator.DirectBitmap.op_Implicit(Eco.WorldGenerator.DirectBitmap)~System.Drawing.Bitmap	public static implicit operator Bitmap(DirectBitmap dbm)
+M:Eco.WorldGenerator.DirectBitmap.SetPixel(System.Int32,System.Int32,System.Drawing.Color)	public void SetPixel(int x, int y, Color color)
+M:Eco.WorldGenerator.GraphEdge.#ctor	public GraphEdge()
+M:Eco.WorldGenerator.Grassland.#ctor	public Grassland()
+M:Eco.WorldGenerator.HighDesert.#ctor	public HighDesert()
+M:Eco.WorldGenerator.IBlocksSpawner.TrySpawnNext(System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	bool TrySpawnNext(IDictionary<Vector3i, Type> spawnedPoints)	// Tries to spawn next block. If returns false then it won't spawn anymore blocks.
+M:Eco.WorldGenerator.Ice.#ctor	public Ice()
+M:Eco.WorldGenerator.ITerrainModule.Clear	void Clear()
+M:Eco.WorldGenerator.ITerrainModule.CollectSpawners(System.Collections.Generic.Queue{Eco.WorldGenerator.IBlocksSpawner},System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	void CollectSpawners(Queue<IBlocksSpawner> spawners, IDictionary<Vector3i, Type> spawnedPoints)	// Collects additional blocks spawners after initial module generation finished. Block spawners then may generate additional blocks using own custom algorithm (like Eco.WorldGenerator.DepositTerrainModule.DepositSpawner).
+M:Eco.WorldGenerator.ITerrainModule.Initialize(System.Random)	void Initialize(Random randomizer)
+M:Eco.WorldGenerator.ITerrainModule.TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	bool TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)	// Tries to spawn block at specific terrain position. In case of success it returns in output parameter.
+M:Eco.WorldGenerator.IWorldGenFeature.Generate(System.Random,System.Numerics.Vector3,Eco.WorldGenerator.WorldSettings)	void Generate(Random seed, Vector3 voxelSize, WorldSettings settings)
+M:Eco.WorldGenerator.Ocean.#ctor	public Ocean()
+M:Eco.WorldGenerator.PoissonDiscSampler.#ctor(System.Int32,System.Int32,System.Single,System.Random)	public PoissonDiscSampler(int width, int height, float radius, Random r)
+M:Eco.WorldGenerator.PoissonDiscSampler.Samples	public IEnumerable<PointF> Samples()
+M:Eco.WorldGenerator.RainForest.#ctor	public RainForest()
+M:Eco.WorldGenerator.SeamlessNoise.#ctor	public SeamlessNoise()
+M:Eco.WorldGenerator.SeamlessNoise.#ctor(SharpNoise.Modules.Module)	public SeamlessNoise(Module module)
+M:Eco.WorldGenerator.SeamlessNoise.GetValue(System.Double,System.Double,System.Double)	public override double GetValue(double x, double y, double z)
+M:Eco.WorldGenerator.SpecialFeatureGenerator.#ctor(Eco.WorldGenerator.WorldSettings)	public SpecialFeatureGenerator(WorldSettings settings)
+M:Eco.WorldGenerator.SpecialFeatureGenerator.Generate(System.Action{System.Single})	public void Generate(Action<float> updateAction)
+M:Eco.WorldGenerator.StandardTerrainModule.#ctor	public StandardTerrainModule()
+M:Eco.WorldGenerator.StandardTerrainModule.Clear	public void Clear()
+M:Eco.WorldGenerator.StandardTerrainModule.CollectSpawners(System.Collections.Generic.Queue{Eco.WorldGenerator.IBlocksSpawner},System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	public void CollectSpawners(Queue<IBlocksSpawner> spawners, IDictionary<Vector3i, Type> spawnedPoints)
+M:Eco.WorldGenerator.StandardTerrainModule.Eco#WorldGenerator#ITerrainModule#TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	bool ITerrainModule.TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.StandardTerrainModule.Initialize(System.Random)	public void Initialize(Random randomizer)
+M:Eco.WorldGenerator.StandardTerrainModule.ToString	public override string ToString()
+M:Eco.WorldGenerator.StandardTerrainModule.TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	public bool TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.Steppe.#ctor	public Steppe()
+M:Eco.WorldGenerator.Taiga.#ctor	public Taiga()
+M:Eco.WorldGenerator.TerrainDepthModule.#ctor	public TerrainDepthModule()
+M:Eco.WorldGenerator.TerrainDepthModule.Clear	public void Clear()
+M:Eco.WorldGenerator.TerrainDepthModule.CollectSpawners(System.Collections.Generic.Queue{Eco.WorldGenerator.IBlocksSpawner},System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	public void CollectSpawners(Queue<IBlocksSpawner> spawners, IDictionary<Vector3i, Type> spawnedPoints)
+M:Eco.WorldGenerator.TerrainDepthModule.Eco#WorldGenerator#ITerrainModule#TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	bool ITerrainModule.TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.TerrainDepthModule.Initialize(System.Random)	public virtual void Initialize(Random randomizer)
+M:Eco.WorldGenerator.TerrainDepthModule.ToString	public override string ToString()
+M:Eco.WorldGenerator.TerrainDepthModule.TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	public bool TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.TerrainGenerator.#ctor(Eco.WorldGenerator.WorldSettings)	public TerrainGenerator(WorldSettings settings)
+M:Eco.WorldGenerator.TerrainGenerator.Generate(System.Int32,System.Int32)	public void Generate(int chunkPosX, int chunkPosZ)
+M:Eco.WorldGenerator.TerrainGenerator.SpawnBlocks(System.Action{System.Single})	public void SpawnBlocks(Action<float> progressPercentageCallback)	// Spawns blocks using Eco.WorldGenerator.IBlocksSpawner collection. Should be called after Eco.WorldGenerator.TerrainGenerator.Generate(System.Int32,System.Int32).
+M:Eco.WorldGenerator.TerrainGeneratorPosition.#ctor(Eco.Shared.Math.Vector3i,System.Double,System.Double,System.Double)	public TerrainGeneratorPosition(Vector3i worldPos, double relativeX, double relativeY, double relativeZ)
+M:Eco.WorldGenerator.TerrainGeneratorPosition.GetWorldPos	public Vector3i GetWorldPos()
+M:Eco.WorldGenerator.TerrainGeneratorUtils.CreateChunkColumnRandom(System.Int32,System.Int32,System.Int32)	public static Random CreateChunkColumnRandom(int seed, int columnX, int columnZ)	// Creates System.Random scoped to chunk column (all chunks with same x and z coordinates).
+M:Eco.WorldGenerator.TerrainModule.#ctor	public TerrainModule()
+M:Eco.WorldGenerator.TerrainModule.Clear	public void Clear()
+M:Eco.WorldGenerator.TerrainModule.Eco#WorldGenerator#ITerrainModule#CollectSpawners(System.Collections.Generic.Queue{Eco.WorldGenerator.IBlocksSpawner},System.Collections.Generic.IDictionary{Eco.Shared.Math.Vector3i,System.Type})	void ITerrainModule.CollectSpawners(Queue<IBlocksSpawner> spawners, IDictionary<Vector3i, Type> spawnedPoints)
+M:Eco.WorldGenerator.TerrainModule.Eco#WorldGenerator#ITerrainModule#TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	bool ITerrainModule.TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.TerrainModule.Initialize(System.Random)	public void Initialize(Random randomizer)
+M:Eco.WorldGenerator.TerrainModule.ToString	public override string ToString()
+M:Eco.WorldGenerator.TerrainModule.TrySpawnBlock(Eco.WorldGenerator.TerrainGeneratorPosition@,System.Double,System.Int32,System.Random,System.Type,System.Type@)	public bool TrySpawnBlock(in TerrainGeneratorPosition pos, double height, int depth, Random random, Type parentBlockType, out Type blockType)
+M:Eco.WorldGenerator.Tundra.#ctor	public Tundra()
+M:Eco.WorldGenerator.UI.TerrainEditorContainer.#ctor(Eco.WorldGenerator.WorldGeneratorPlugin)	public TerrainEditorContainer(WorldGeneratorPlugin plugin)
+M:Eco.WorldGenerator.UI.TerrainEditorContainer.Dispose(System.Boolean)	protected override void Dispose(bool disposing)
+M:Eco.WorldGenerator.UI.TerrainEditorContainer.OnEnter	public void OnEnter()
+M:Eco.WorldGenerator.UI.TerrainEditorContainer.OnLeave	public void OnLeave()
+M:Eco.WorldGenerator.UI.TerrainEditorContainer.Refresh	public override void Refresh()
+M:Eco.WorldGenerator.UI.TerrainEditorPanel.#ctor(Eco.WorldGenerator.UI.TerrainEditorContainer,Eco.WorldGenerator.WorldGeneratorPlugin)	public TerrainEditorPanel(TerrainEditorContainer container, WorldGeneratorPlugin plugin)
+M:Eco.WorldGenerator.UI.TerrainEditorPanel.Config	public object Config()
+M:Eco.WorldGenerator.UI.TerrainEditorPanel.Dispose(System.Boolean)	protected override void Dispose(bool disposing)
+M:Eco.WorldGenerator.UI.TerrainEditorPanel.StartGenerateThread	public void StartGenerateThread()
+M:Eco.WorldGenerator.Utils.BitmapExtensions.FlipHorizontal(System.Drawing.Bitmap,System.Drawing.RotateFlipType)	public static Bitmap FlipHorizontal(this Bitmap bitmap, RotateFlipType rotateFlipType)	// Returns a new instance of and flips using the .
+M:Eco.WorldGenerator.Voronoi.#ctor(System.Double)	public Voronoi(double minDistanceBetweenSites)
+M:Eco.WorldGenerator.Voronoi.GenerateVoronoi(System.Double[],System.Double[],System.Double,System.Double,System.Double,System.Double)	public List<GraphEdge> GenerateVoronoi(double[] xValuesIn, double[] yValuesIn, double minX, double maxX, double minY, double maxY)
+M:Eco.WorldGenerator.VoronoiWorldGenerator.#ctor(System.Boolean,System.Boolean)	public VoronoiWorldGenerator(bool previewOnly, bool skipSetSpawnLocation)
+M:Eco.WorldGenerator.VoronoiWorldGenerator.ClosestWrappedLocation(System.Drawing.PointF,System.Drawing.PointF,System.Int32)	public static PointF ClosestWrappedLocation(PointF viewPosition, PointF position, int worldSize = 500)
+M:Eco.WorldGenerator.VoronoiWorldGenerator.Generate(Eco.WorldGenerator.VoronoiWorldGeneratorConfig)	public void Generate(VoronoiWorldGeneratorConfig config)
+M:Eco.WorldGenerator.VoronoiWorldGenerator.InitializeConfig(Eco.WorldGenerator.VoronoiWorldGeneratorConfig)	public void InitializeConfig(VoronoiWorldGeneratorConfig config)
+M:Eco.WorldGenerator.VoronoiWorldGenerator.RenderMaps(Eco.WorldGenerator.VoronoiWorldGeneratorConfig)	public void RenderMaps(VoronoiWorldGeneratorConfig config)
+M:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.#ctor	public VoronoiWorldGeneratorConfig()
+M:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.GenerateWorld(System.Boolean,System.Boolean)	public VoronoiWorldGenerator GenerateWorld(bool previewOnly = false, bool skipSetSpawnLocation = false)
+M:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.Initialize(System.Random)	public void Initialize(Random random)
+M:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.Reset	public void Reset()
+M:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.SetPreset(Eco.Shared.Settings.WorldDimensions.WorldDimensionsPreset)	public void SetPreset(WorldDimensions.WorldDimensionsPreset preset)	// Update properties with Eco.WorldGenerator.WorldPresetsValue attribute based on corresponding value
+M:Eco.WorldGenerator.VoronoiWorldGeneratorExtensions.Lerp(System.Drawing.Color,System.Drawing.Color,System.Single)	public static Color Lerp(this Color start, Color end, float amount)
+M:Eco.WorldGenerator.WarmCoast.#ctor	public WarmCoast()
+M:Eco.WorldGenerator.WarmForest.#ctor	public WarmForest()
+M:Eco.WorldGenerator.Wetland.#ctor	public Wetland()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.#ctor	public WorldGeneratorPlugin()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.CreateWorld	public void CreateWorld()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.GenerateStats	public void GenerateStats()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.GetCategory	public string GetCategory()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.GetCustomUIControl	public object GetCustomUIControl()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.GetCustomUIName	public string GetCustomUIName()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.GetDisplayText	public string GetDisplayText()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.GetEditObject	public object GetEditObject()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.GetStatus	public string GetStatus()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.Initialize(Eco.Core.Utils.TimedTask)	public void Initialize(TimedTask timer)
+M:Eco.WorldGenerator.WorldGeneratorPlugin.OnEditObjectChanged(System.Object,System.String)	public void OnEditObjectChanged(object o, string param)
+M:Eco.WorldGenerator.WorldGeneratorPlugin.OnEnter	public void OnEnter()
+M:Eco.WorldGenerator.WorldGeneratorPlugin.ToString	public override string ToString()
+M:Eco.WorldGenerator.WorldPresetsPropertyCorrespondence.#ctor	protected WorldPresetsPropertyCorrespondence()
+M:Eco.WorldGenerator.WorldPresetsPropertyCorrespondence.PresetValue(Eco.Shared.Settings.WorldDimensions.WorldDimensionsPreset)	public abstract object PresetValue(WorldDimensions.WorldDimensionsPreset preset)
+M:Eco.WorldGenerator.WorldPresetsRange.#ctor(System.Single[])	public WorldPresetsRange(params float[] values)
+M:Eco.WorldGenerator.WorldPresetsRange.PresetValue(Eco.Shared.Settings.WorldDimensions.WorldDimensionsPreset)	public override object PresetValue(WorldDimensions.WorldDimensionsPreset preset)
+M:Eco.WorldGenerator.WorldPresetsValue.#ctor(System.Object[])	public WorldPresetsValue(params object[] values)
+M:Eco.WorldGenerator.WorldPresetsValue.PresetValue(Eco.Shared.Settings.WorldDimensions.WorldDimensionsPreset)	public override object PresetValue(WorldDimensions.WorldDimensionsPreset preset)
+M:Eco.WorldGenerator.WorldSettings.#ctor	public WorldSettings()
+M:Eco.WorldGenerator.WorldSettings.CraterSettings.#ctor	public CraterSettings()
+M:Eco.WorldGenerator.WorldSettings.OnParamChanged(System.String)	public void OnParamChanged(string param)
+M:Eco.WorldGenerator.WorldSettings.ValidateMaxBuildHeight(System.Int32)	public int ValidateMaxBuildHeight(int value = -1)
+P:Eco.WorldGenerator.Biome.BadNeighbors	public Biome[] BadNeighbors { get; }
+P:Eco.WorldGenerator.Biome.BadNeighborsRange	public int BadNeighborsRange { get; }
+P:Eco.WorldGenerator.Biome.ElevationRange	public Range ElevationRange { get; }
+P:Eco.WorldGenerator.Biome.MoistureRange	public Range MoistureRange { get; }
+P:Eco.WorldGenerator.Biome.PrevailingRockType	public Type PrevailingRockType { get; }
+P:Eco.WorldGenerator.Biome.TemperatureRange	public Range TemperatureRange { get; }
+P:Eco.WorldGenerator.Biome.UpperHeight	public float UpperHeight { get; }
+P:Eco.WorldGenerator.BiomePolygon.Biome	public Biome Biome { get; set; }
+P:Eco.WorldGenerator.BiomePolygon.Brush	public Brush Brush { get; }
+P:Eco.WorldGenerator.BiomePolygon.Color	public Color Color { get; }
+P:Eco.WorldGenerator.BiomePolygon.HeightmapColor	public Color HeightmapColor { get; }
+P:Eco.WorldGenerator.BiomePolygon.PreviousBiome	public Biome PreviousBiome { get; }
+P:Eco.WorldGenerator.BiomeTerrainModule.BiomeName	public string BiomeName { get; set; }
+P:Eco.WorldGenerator.BiomeTerrainModule.Module	public TerrainDepthModule Module { get; set; }
+P:Eco.WorldGenerator.BlockDepthRange.BlockType	public BlockType BlockType { get; set; }
+P:Eco.WorldGenerator.BlockDepthRange.Max	public int Max { get; set; }
+P:Eco.WorldGenerator.BlockDepthRange.Min	public int Min { get; set; }
+P:Eco.WorldGenerator.BlockDepthRange.NoiseFrequency	public float NoiseFrequency { get; set; }
+P:Eco.WorldGenerator.BlockDepthRange.SubModules	public List<ITerrainModule> SubModules { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.BlocksCountRange	public Range BlocksCountRange { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.BlockType	public BlockType BlockType { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.DepositDepthRange	public Range DepositDepthRange { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.DepositSpawner.HeightRange	public Range HeightRange { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.DepositSpawner.NumberToSpawn	public int NumberToSpawn { get; }
+P:Eco.WorldGenerator.DepositTerrainModule.DepthRange	public Range DepthRange { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.DirectionWeights	public List<Vector3> DirectionWeights { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.SpawnAtLeastOne	public bool SpawnAtLeastOne { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.SpawnPercentChance	public float SpawnPercentChance { get; set; }
+P:Eco.WorldGenerator.DepositTerrainModule.WeightVariance	public Vector3 WeightVariance { get; set; }
+P:Eco.WorldGenerator.DirectBitmap.Bitmap	public Bitmap Bitmap { get; }
+P:Eco.WorldGenerator.DirectBitmap.Bits	public int[] Bits { get; }
+P:Eco.WorldGenerator.DirectBitmap.Disposed	public bool Disposed { get; }
+P:Eco.WorldGenerator.DirectBitmap.Height	public int Height { get; }
+P:Eco.WorldGenerator.DirectBitmap.Width	public int Width { get; }
+P:Eco.WorldGenerator.IBlocksSpawner.NumberToSpawn	int NumberToSpawn { get; }
+P:Eco.WorldGenerator.SeamlessNoise.Source	public Module Source { get; set; }
+P:Eco.WorldGenerator.StandardTerrainModule.BlockType	public BlockType BlockType { get; set; }
+P:Eco.WorldGenerator.StandardTerrainModule.DepthRange	public Range DepthRange { get; set; }
+P:Eco.WorldGenerator.StandardTerrainModule.HeightRange	public Range HeightRange { get; set; }
+P:Eco.WorldGenerator.StandardTerrainModule.NoiseDistributionType	public NoiseDistributionType NoiseDistributionType { get; set; }
+P:Eco.WorldGenerator.StandardTerrainModule.NoiseFrequency	public float NoiseFrequency { get; set; }
+P:Eco.WorldGenerator.StandardTerrainModule.NoiseType	public NoiseType NoiseType { get; set; }
+P:Eco.WorldGenerator.StandardTerrainModule.PercentChance	public float PercentChance { get; set; }
+P:Eco.WorldGenerator.TerrainDepthModule.BlockDepthRanges	public List<BlockDepthRange> BlockDepthRanges { get; set; }
+P:Eco.WorldGenerator.TerrainModule.Modules	public List<ITerrainModule> Modules { get; set; }
+P:Eco.WorldGenerator.TerrainModule.Name	public string Name { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.HeightData	public Array2D<float> HeightData { get; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.HeightMap	public Bitmap HeightMap { get; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.RainfallData	public Array2D<float> RainfallData { get; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.TemperatureData	public Array2D<float> TemperatureData { get; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.TerrainMap	public Bitmap TerrainMap { get; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.WaterData	public Array2D<float> WaterData { get; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.WaterLevelMap	public Bitmap WaterLevelMap { get; }
+P:Eco.WorldGenerator.VoronoiWorldGenerator.WorldSize	public int WorldSize { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.AutoScale	public bool AutoScale { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.AutoScaleExponent	public float AutoScaleExponent { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.CoastlineSize	public int CoastlineSize { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.ContinentAvoidRange	public Range ContinentAvoidRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.CoolForestWeight	public float CoolForestWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.DesertWeight	public float DesertWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.ElevationPower	public float ElevationPower { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.HighDesertWeight	public float HighDesertWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.IceWeight	public float IceWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.InverseLinearScaleModifier	public float InverseLinearScaleModifier { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.InverseScaleModifier	public float InverseScaleModifier { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.IslandAvoidRange	public Range IslandAvoidRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.IslandWeight	[WorldPresetsValue(new object[]{0.05F, 0.04F, 0.03F})] public float IslandWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.LakeSizeRange	[WorldPresetsRange(new float[]{0.0018F, 0.003F, 0.0025F, 0.0035F, 0.003F, 0.004F})] public Range LakeSizeRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.LandPercent	public float LandPercent { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.LandPercentRange	public Range LandPercentRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.LinearScaleModifier	public float LinearScaleModifier { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.MaxElevationOceanDistance	public float MaxElevationOceanDistance { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumContinents	public int NumContinents { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumContinentsRange	[WorldPresetsRange(new float[]{1F, 3F, 2F, 4F, 3F, 4F})] public Range NumContinentsRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumCoolForests	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumCoolForests { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumDeserts	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumDeserts { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumHighDeserts	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumHighDeserts { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumIces	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumIces { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumLakes	public int NumLakes { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumLakesRange	[WorldPresetsRange(new float[]{2F, 4F, 3F, 5F, 4F, 5F})] public Range NumLakesRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumRainforests	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumRainforests { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumRivers	public int NumRivers { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumRiversRange	[WorldPresetsRange(new float[]{1F, 3F, 2F, 4F, 3F, 4F})] public Range NumRiversRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumSmallIslands	public int NumSmallIslands { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumSmallIslandsRange	[WorldPresetsRange(new float[]{1F, 3F, 2F, 4F, 3F, 4F})] public Range NumSmallIslandsRange { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumSteppes	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumSteppes { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumTaigas	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumTaigas { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumTundras	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumTundras { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumWarmForests	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumWarmForests { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.NumWetlands	[WorldPresetsValue(new object[]{1, 2, 2})] public int NumWetlands { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.PointRadius	public float PointRadius { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.RainforestWeight	public float RainforestWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.RiverCellAvoidance	public int RiverCellAvoidance { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.RiverCellWidth	public float RiverCellWidth { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.SaveTerrainImage	public bool SaveTerrainImage { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.ScaleModifier	public float ScaleModifier { get; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.Seed	public int Seed { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.ShallowOceanSize	public int ShallowOceanSize { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.SteppeWeight	public float SteppeWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.TaigaWeight	public float TaigaWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.TundraWeight	public float TundraWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.WarmForestWeight	public float WarmForestWeight { get; set; }
+P:Eco.WorldGenerator.VoronoiWorldGeneratorConfig.WetlandWeight	public float WetlandWeight { get; set; }
+P:Eco.WorldGenerator.WorldGeneratorPlugin.Init	public static Initializer Init { get; }
+P:Eco.WorldGenerator.WorldGeneratorPlugin.IsGenerating	public static bool IsGenerating { get; }
+P:Eco.WorldGenerator.WorldGeneratorPlugin.OnCompleted	public static ThreadSafeAction OnCompleted { get; }
+P:Eco.WorldGenerator.WorldGeneratorPlugin.OnFinishGenerate	public static ThreadSafeAction OnFinishGenerate { get; }
+P:Eco.WorldGenerator.WorldGeneratorPlugin.ParamChanged	public ThreadSafeAction<object, string> ParamChanged { get; set; }
+P:Eco.WorldGenerator.WorldGeneratorPlugin.PluginConfig	public IPluginConfig PluginConfig { get; }
+P:Eco.WorldGenerator.WorldGeneratorPlugin.Settings	public static WorldSettings Settings { get; }
+P:Eco.WorldGenerator.WorldSettings.ChunkDimensions	public Vector2i ChunkDimensions { get; }
+P:Eco.WorldGenerator.WorldSettings.ConfigVersion	public int ConfigVersion { get; set; }
+P:Eco.WorldGenerator.WorldSettings.Crater	public WorldSettings.CraterSettings Crater { get; set; }
+P:Eco.WorldGenerator.WorldSettings.CraterSettings.DepthRange	public Range DepthRange { get; set; }
+P:Eco.WorldGenerator.WorldSettings.CraterSettings.Frequency	public float Frequency { get; set; }
+P:Eco.WorldGenerator.WorldSettings.CraterSettings.RadiusRange	public Range RadiusRange { get; set; }
+P:Eco.WorldGenerator.WorldSettings.Dimensions	public WorldDimensions Dimensions { get; set; }
+P:Eco.WorldGenerator.WorldSettings.FrequencyScale	public float FrequencyScale { get; }
+P:Eco.WorldGenerator.WorldSettings.HeightmapModule	public Module HeightmapModule { get; set; }
+P:Eco.WorldGenerator.WorldSettings.LastConfigVersion	public int LastConfigVersion { get; }
+P:Eco.WorldGenerator.WorldSettings.MapSizePreset	public WorldDimensions.WorldDimensionsPreset MapSizePreset { get; set; }
+P:Eco.WorldGenerator.WorldSettings.MaxBuildHeight	public int MaxBuildHeight { get; set; }
+P:Eco.WorldGenerator.WorldSettings.MaxGenerationHeight	public int MaxGenerationHeight { get; set; }
+P:Eco.WorldGenerator.WorldSettings.RainfallModule	public Module RainfallModule { get; set; }
+P:Eco.WorldGenerator.WorldSettings.Seed	public int Seed { get; set; }
+P:Eco.WorldGenerator.WorldSettings.SizeDescription	public string SizeDescription { get; }
+P:Eco.WorldGenerator.WorldSettings.TemperatureModule	public Module TemperatureModule { get; set; }
+P:Eco.WorldGenerator.WorldSettings.TerrainModule	public ITerrainModule TerrainModule { get; set; }
+P:Eco.WorldGenerator.WorldSettings.VoronoiWorldGeneratorConfig	public VoronoiWorldGeneratorConfig VoronoiWorldGeneratorConfig { get; }
+P:Eco.WorldGenerator.WorldSettings.VoxelSize	public Vector2i VoxelSize { get; }
+P:Eco.WorldGenerator.WorldSettings.WaterLevel	public int WaterLevel { get; set; }
+P:Eco.WorldGenerator.WorldSettings.WaterModule	public Module WaterModule { get; set; }
+T:Eco.WorldGenerator.Biome	public abstract class Biome : Object
+T:Eco.WorldGenerator.BiomeExtensions	public static class BiomeExtensions : Object
+T:Eco.WorldGenerator.BiomePolygon	public class BiomePolygon : Object	// Represents Eco.WorldGenerator.BiomePolygon.Biome polygon with associated temperature, moisture and elevation. One biome may have multiple polygons with slightly different characteristics.
+T:Eco.WorldGenerator.BiomePolygonCollectionExtensions	public static class BiomePolygonCollectionExtensions : Object	// Extension methods for array of Eco.WorldGenerator.BiomePolygon objets.
+T:Eco.WorldGenerator.BiomeTerrainModule	public class BiomeTerrainModule : Object, ITerrainModule
+T:Eco.WorldGenerator.BlockDepthRange	public class BlockDepthRange : Object
+T:Eco.WorldGenerator.CliffExtruder	public static class CliffExtruder : Object
+T:Eco.WorldGenerator.Coast	public class Coast : Biome
+T:Eco.WorldGenerator.ColdCoast	public class ColdCoast : Biome
+T:Eco.WorldGenerator.ColdForest	public class ColdForest : Biome
+T:Eco.WorldGenerator.Crater	public class Crater : Object
+T:Eco.WorldGenerator.CraterGenerator	public class CraterGenerator : Object
+T:Eco.WorldGenerator.DeepOcean	public class DeepOcean : Biome
+T:Eco.WorldGenerator.DepositTerrainModule	public class DepositTerrainModule : Object, ITerrainModule	// DepositTerrainModule allows to create deposit using random spawn point with configurable spawn percent chance, depth range and blocks count range. You can specify own weight for every direction (X, Y, Z) and variance for every direction (to add a bit of noise in generation). It also may be setup ...
+T:Eco.WorldGenerator.DepositTerrainModule.DepositSpawner	public class DepositSpawner : Object, IBlocksSpawner	// Implements Eco.WorldGenerator.IBlocksSpawner for Deposit Spawning. Deposit differs from random spawn because it spawns all blocks around spawn point using set of direction weights. It also ensures that all blocks in the deposit are connected.
+T:Eco.WorldGenerator.Desert	public class Desert : Biome
+T:Eco.WorldGenerator.DirectBitmap	public sealed class DirectBitmap : Object, IDisposable
+T:Eco.WorldGenerator.GraphEdge	public class GraphEdge : Object
+T:Eco.WorldGenerator.Grassland	public class Grassland : Biome
+T:Eco.WorldGenerator.HighDesert	public class HighDesert : Biome
+T:Eco.WorldGenerator.IBlocksSpawner	public interface IBlocksSpawner
+T:Eco.WorldGenerator.Ice	public class Ice : Biome
+T:Eco.WorldGenerator.ITerrainModule	public interface ITerrainModule
+T:Eco.WorldGenerator.IWorldGenFeature	public interface IWorldGenFeature
+T:Eco.WorldGenerator.NoiseDistributionType	public sealed class NoiseDistributionType : Enum
+T:Eco.WorldGenerator.NoiseType	public sealed class NoiseType : Enum
+T:Eco.WorldGenerator.Ocean	public class Ocean : Biome
+T:Eco.WorldGenerator.PoissonDiscSampler	public class PoissonDiscSampler : Object
+T:Eco.WorldGenerator.RainForest	public class RainForest : Biome
+T:Eco.WorldGenerator.SeamlessNoise	public class SeamlessNoise : Module
+T:Eco.WorldGenerator.SpecialFeatureGenerator	public class SpecialFeatureGenerator : Object
+T:Eco.WorldGenerator.StandardTerrainModule	public class StandardTerrainModule : Object, ITerrainModule
+T:Eco.WorldGenerator.Steppe	public class Steppe : Biome
+T:Eco.WorldGenerator.Taiga	public class Taiga : Biome
+T:Eco.WorldGenerator.TerrainDepthModule	public class TerrainDepthModule : Object, ITerrainModule
+T:Eco.WorldGenerator.TerrainGenerator	public class TerrainGenerator : Object
+T:Eco.WorldGenerator.TerrainGeneratorPosition	public sealed class TerrainGeneratorPosition : ValueType
+T:Eco.WorldGenerator.TerrainGeneratorUtils	public static class TerrainGeneratorUtils : Object
+T:Eco.WorldGenerator.TerrainModule	public sealed class TerrainModule : Object, ITerrainModule
+T:Eco.WorldGenerator.Tundra	public class Tundra : Biome
+T:Eco.WorldGenerator.UI.TerrainEditorContainer	public class TerrainEditorContainer : SplitContainer, ITabPage	// The terrain editor is made up of two separate controls. Eco.WorldGenerator.UI.TerrainEditorPanel: This is the main panel used to interact with the terrain editor. PropertyGrid: This panel hosts all of the properties relating to the terrain editor.
+T:Eco.WorldGenerator.UI.TerrainEditorPanel	public class TerrainEditorPanel : UserControl	// The WinForm control for the Terrain Editor. WinForm control functionality is implemented here. Also see the parent UI class Eco.WorldGenerator.WorldGeneratorPlugin
+T:Eco.WorldGenerator.Utils.BitmapExtensions	public static class BitmapExtensions : Object
+T:Eco.WorldGenerator.Voronoi	public class Voronoi : Object
+T:Eco.WorldGenerator.VoronoiWorldGenerator	public class VoronoiWorldGenerator : Object
+T:Eco.WorldGenerator.VoronoiWorldGeneratorConfig	public class VoronoiWorldGeneratorConfig : Object	// The world settings used in the heightmap module in the WorldGenerator.eco config. Also see Eco.WorldGenerator.UI.TerrainEditorPanel
+T:Eco.WorldGenerator.VoronoiWorldGeneratorExtensions	public static class VoronoiWorldGeneratorExtensions : Object
+T:Eco.WorldGenerator.WarmCoast	public class WarmCoast : Biome
+T:Eco.WorldGenerator.WarmForest	public class WarmForest : Biome
+T:Eco.WorldGenerator.Wetland	public class Wetland : Biome
+T:Eco.WorldGenerator.WorldGeneratorPlugin	public class WorldGeneratorPlugin : Object, IConfigurablePlugin, IEditablePlugin, IGUIPlugin, IServerPlugin, ICustomUIPlugin, IDisplayablePlugin, IHasDisplayTabs, IDisplayTab, IInitializablePlugin	// This is the world generator page that is in charge of any function or configuration regarding the world. Information on the Terrain Editor's UI can be found in Eco.WorldGenerator.UI.TerrainEditorContainer.
+T:Eco.WorldGenerator.WorldPresetsPropertyCorrespondence	public abstract class WorldPresetsPropertyCorrespondence : Attribute
+T:Eco.WorldGenerator.WorldPresetsRange	public sealed class WorldPresetsRange : WorldPresetsPropertyCorrespondence	// Specify a correspondence between a property pair of values as ranges and the selected Eco.Shared.Settings.WorldDimensions.WorldDimensionsPreset. The Eco.Shared.Math.Range of properties with this attribute is updated when the selected preset (Eco.WorldGenerator.WorldSettings.MapSizePreset) is chan...
+T:Eco.WorldGenerator.WorldPresetsValue	public sealed class WorldPresetsValue : WorldPresetsPropertyCorrespondence	// Specify a correspondence between a property value and the selected Eco.Shared.Settings.WorldDimensions.WorldDimensionsPreset. The value of properties with this attribute is updated when the selected preset (Eco.WorldGenerator.WorldSettings.MapSizePreset) is changed.
+T:Eco.WorldGenerator.WorldSettings	public class WorldSettings : Object, IVersionedConfig, IValidatableConfig	// The world settings used to generate the world. Config file can be found at Config/WorldGenerator.ecoAlso see Eco.WorldGenerator.WorldSettings.VoronoiWorldGeneratorConfig for the rest of the world settings.
+T:Eco.WorldGenerator.WorldSettings.CraterSettings	public class CraterSettings : Object

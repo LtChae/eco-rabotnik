@@ -1,0 +1,20 @@
+{
+    "name": "Editor.Rabotnik",
+    "rootNamespace": "",
+    "references": [
+        "Eco.Client",
+        "Unity.TextMeshPro",
+        "Eco.Client.Utils"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
