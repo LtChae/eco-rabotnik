@@ -31,3 +31,5 @@ $ribbonColor = [System.Drawing.Color]::FromArgb(235, 28, 32, 24)
 $edgeColor   = [System.Drawing.Color]::FromArgb(255, 110, 190, 30)
 $footerColor = [System.Drawing.Color]::FromArgb(255, 28, 32, 24)
 $textColor   = [System.Drawing.Color]::White
+# Navy margin from the Ecopedia screenshot; pads every homepage image out to 16:9.
+$padColor    = [System.Drawing.Color]::FromArgb(255, 19, 25, 35)

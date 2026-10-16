@@ -1,5 +1,6 @@
 # Builds the mod homepage images: each screenshot in images/documentation gets a
-# tagline footer strip and a 45-degree corner ribbon carrying the Rabotnik mask.
+# 1920x1080 navy-padded canvas, a tagline footer strip and a 45-degree corner ribbon
+# carrying the Rabotnik mask.
 # Output goes to images/homepage. Run: powershell -File images\annotate.ps1
 . (Join-Path $PSScriptRoot 'common.ps1')
 
@@ -25,27 +26,33 @@ New-Item -ItemType Directory -Force $outDir | Out-Null
 
 foreach ($file in Get-ChildItem $srcDir -Filter *.png) {
     $shot = [System.Drawing.Image]::FromFile($file.FullName)
-    $w = $shot.Width
+    # Every image is the same 16:9 canvas, as mod.io's gallery expects; the screenshot
+    # sits centred on navy padding above the footer, shrunk only if it doesn't fit.
+    $w = 1920; $h = 1080
     $scale   = 1.0   # fixed so banners are the same pixel size on every screenshot
     $footerH = [int](64 * $scale)
-    $h = $shot.Height + $footerH
+    $areaH   = $h - $footerH
+    $margin  = 24
+    $fit   = [Math]::Min(1.0, [Math]::Min(($w - 2 * $margin) / $shot.Width, ($areaH - 2 * $margin) / $shot.Height))
+    $shotW = [int]($shot.Width * $fit); $shotH = [int]($shot.Height * $fit)
 
     $bmp = New-Object System.Drawing.Bitmap $w, $h
     $g = [System.Drawing.Graphics]::FromImage($bmp)
     $g.SmoothingMode     = 'AntiAlias'
     $g.InterpolationMode = 'HighQualityBicubic'
     $g.TextRenderingHint = 'AntiAliasGridFit'
-    $g.DrawImage($shot, 0, 0, $w, $shot.Height)
+    $g.Clear($padColor)
+    $g.DrawImage($shot, [int](($w - $shotW) / 2), [int](($areaH - $shotH) / 2), $shotW, $shotH)
 
     # Footer strip with a thin accent line on top.
-    $g.FillRectangle((New-Object System.Drawing.SolidBrush $footerColor), 0, $shot.Height, $w, $footerH)
-    $g.FillRectangle((New-Object System.Drawing.SolidBrush $edgeColor), 0, $shot.Height, $w, [Math]::Max(2, [int](3 * $scale)))
+    $g.FillRectangle((New-Object System.Drawing.SolidBrush $footerColor), 0, $areaH, $w, $footerH)
+    $g.FillRectangle((New-Object System.Drawing.SolidBrush $edgeColor), 0, $areaH, $w, [Math]::Max(2, [int](3 * $scale)))
     $tagline = $taglines[$file.Name]
     if ($tagline) {
         $font = New-Object System.Drawing.Font 'Segoe UI Semibold', ([single](26 * $scale)), ([System.Drawing.FontStyle]::Regular), ([System.Drawing.GraphicsUnit]::Pixel)
         $fmt = New-Object System.Drawing.StringFormat
         $fmt.Alignment = 'Center'; $fmt.LineAlignment = 'Center'
-        $rect = New-Object System.Drawing.RectangleF 0, $shot.Height, $w, $footerH
+        $rect = New-Object System.Drawing.RectangleF 0, $areaH, $w, $footerH
         $g.DrawString($tagline, $font, (New-Object System.Drawing.SolidBrush $textColor), $rect, $fmt)
     }
 
